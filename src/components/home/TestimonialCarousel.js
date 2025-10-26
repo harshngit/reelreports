@@ -1,0 +1,199 @@
+import React, { useState } from 'react';
+import { ChevronLeft, ChevronRight, Play } from 'lucide-react';
+
+const TestimonialCarousel = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [hoveredCard, setHoveredCard] = useState(null);
+
+  const testimonials = [
+    {
+      id: 1,
+      category: "TECHNICAL TRAINING",
+      logo: "opentext",
+      quote: "50% faster content. Without sacrificing quality",
+      name: "Miki Ishikawa",
+      title: "Director, Learning Services",
+      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=500&fit=crop",
+      bgColor: "bg-gray-200"
+    },
+    {
+      id: 2,
+      category: "EMPLOYEE TRAINING",
+      logo: "sap",
+      quote: "Teams adopt it fast and use it across the company.",
+      name: "Sabrina Childress",
+      title: "Innovation, Enablement, and Adoption",
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=500&fit=crop",
+      bgColor: "bg-gray-900"
+    },
+    {
+      id: 3,
+      category: "EMPLOYEE TRAINING",
+      logo: "boldyn",
+      quote: "Interactive video is redefining training for us",
+      name: "Jen Ruthven",
+      title: "Group Director, Learning & Career Development",
+      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=500&fit=crop",
+      bgColor: "bg-gray-700"
+    },
+    {
+      id: 4,
+      category: "COMPLIANCE TRAINING",
+      logo: "BRINKS",
+      quote: "We push updates without touching the LMS.",
+      name: "Mark Stauffer",
+      title: "Senior Manager, Global L&D",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop",
+      bgColor: "bg-gray-600"
+    },
+    {
+      id: 5,
+      category: "EMPLOYEE TRAINING",
+      logo: "metrobank",
+      quote: "We saved $50K and hit 100+ customer videos",
+      name: "Matt Moser",
+      title: "Senior Director, Customer Engagement",
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=500&fit=crop",
+      bgColor: "bg-gray-300"
+    }
+  ];
+
+  const visibleCards = 3;
+  const maxIndex = testimonials.length - visibleCards;
+
+  const handlePrev = () => {
+    setCurrentIndex((prev) => Math.max(0, prev - 1));
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prev) => Math.min(maxIndex, prev + 1));
+  };
+
+  return (
+    <div className="w-full bg-gray-50 py-16 px-4">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <div className="inline-block px-4 py-1 border border-gray-300 rounded-full text-xs font-semibold text-gray-600 mb-4">
+            USE CASES
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+            Train, market and sell like a<br />Fortune 100 company
+          </h2>
+        </div>
+
+        {/* Carousel */}
+        <div className="relative">
+          {/* Cards Container */}
+          <div className="overflow-hidden">
+            <div 
+              className="flex transition-transform duration-500 ease-out gap-6"
+              style={{ transform: `translateX(-${currentIndex * (100 / visibleCards)}%)` }}
+            >
+              {testimonials.map((testimonial) => (
+                <div
+                  key={testimonial.id}
+                  className="min-w-[calc(33.333%-1rem)] flex-shrink-0"
+                >
+                  <div 
+                    className={`${testimonial.bgColor} rounded-2xl overflow-hidden shadow-lg h-[500px] relative group cursor-pointer`}
+                    onMouseEnter={() => setHoveredCard(testimonial.id)}
+                    onMouseLeave={() => setHoveredCard(null)}
+                  >
+                    {/* Category Badge */}
+                    <div className="absolute top-6 left-6 z-10">
+                      <span className="bg-white px-3 py-1 rounded-full text-xs font-semibold text-gray-700">
+                        {testimonial.category}
+                      </span>
+                    </div>
+
+                    {/* Logo */}
+                    <div className="absolute top-6 right-6 z-10">
+                      <div className="text-white font-bold text-xl">
+                        {testimonial.logo}
+                      </div>
+                    </div>
+
+                    {/* Image */}
+                    <div className="absolute inset-0">
+                      <img 
+                        src={testimonial.image} 
+                        alt={testimonial.name}
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                    </div>
+
+                    {/* Content - Slides down and disappears on hover */}
+                    <div className={`absolute bottom-0 backdrop-blur-sm bg-black/20 left-0 right-0 p-8 text-white transition-all duration-500 ease-out ${
+                      hoveredCard === testimonial.id 
+                        ? 'translate-y-full opacity-0' 
+                        : 'translate-y-0 opacity-100'
+                    }`}>
+                      <div className="p-0">
+                        <p className="text-2xl font-bold mb-4 leading-tight">
+                          "{testimonial.quote}"
+                        </p>
+                        <p className="font-semibold text-sm">{testimonial.name}</p>
+                        <p className="text-sm text-gray-300">{testimonial.title}</p>
+                      </div>
+                    </div>
+
+                    {/* Play Button - Appears in content area on hover */}
+                    <div className={`absolute bottom-0 left-0 right-0 p-8 flex items-center justify-center z-20 transition-all duration-500 ease-out ${
+                      hoveredCard === testimonial.id 
+                        ? 'translate-y-0 opacity-100' 
+                        : 'translate-y-full opacity-0'
+                    }`}>
+                      <div className="bg-white rounded-full px-4 py-2 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200 flex items-center gap-3">
+                        {/* Circular Play Icon */}
+                        <div className="w-8 h-8 rounded-full border border-gray-200 bg-white flex items-center justify-center">
+                          <Play className="w-4 h-4 text-gray-800 fill-gray-800 ml-0.5" />
+                        </div>
+                        {/* Play Text */}
+                        <span className="text-gray-800 font-medium text-sm">Play story</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Navigation Buttons */}
+          <button
+            onClick={handlePrev}
+            disabled={currentIndex === 0}
+            className={`absolute left-0 top-1/2 -translate-y-1/2 -translate-x-6 w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center transition-all ${
+              currentIndex === 0 ? 'opacity-50 cursor-not-allowed' : 'hover:scale-110'
+            }`}
+          >
+            <ChevronLeft className="w-6 h-6 text-gray-700" />
+          </button>
+
+          <button
+            onClick={handleNext}
+            disabled={currentIndex === maxIndex}
+            className={`absolute right-0 top-1/2 -translate-y-1/2 translate-x-6 w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center transition-all ${
+              currentIndex === maxIndex ? 'opacity-50 cursor-not-allowed' : 'hover:scale-110'
+            }`}
+          >
+            <ChevronRight className="w-6 h-6 text-gray-700" />
+          </button>
+        </div>
+
+        {/* Bottom CTA */}
+        <div className="text-center mt-12">
+          <p className="text-gray-700">
+            Get custom pricing, a personalized tour, and learn how teams like yours succeed.{' '}
+            <a href="#" className="text-blue-600 font-semibold hover:underline inline-flex items-center gap-1">
+              Book demo →
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default TestimonialCarousel;
