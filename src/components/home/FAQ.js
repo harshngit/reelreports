@@ -42,9 +42,9 @@ function FAQ() {
 					{/* Left side - Heading */}
 					<div className="flex flex-col justify-start">
 						<div className="mb-6">
-							<span className="inline-flex items-center rounded-full px-4 py-2 text-xs font-semibold tracking-wide uppercase" style={{ color: '#0013C1', backgroundColor: '#E5E2FF' }}>
-								FAQS
-							</span>
+						<span className="inline-flex items-center rounded-full px-4 py-2 text-xs font-semibold tracking-wide uppercase border border-[#c6c1f0] transition-all duration-300">
+						FAQS
+					</span>
 						</div>
 						<h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
 							You've likely got a few questions
@@ -54,13 +54,13 @@ function FAQ() {
 					{/* Right side - FAQ Accordion */}
 					<div className="flex flex-col gap-4">
 						{faqs.map((faq, index) => (
-							<div 
-								key={index}
-								className="rounded-2xl transition-all duration-300"
-								style={{ 
-									backgroundColor: openIndex === index ? '#E5E2FF' : '#F8F9FA',
-								}}
-							>
+					<div 
+						key={index}
+						className="rounded-2xl transition-colors duration-300"
+						style={{ 
+							backgroundColor: openIndex === index ? '#E5E2FF' : '#F8F9FA',
+						}}
+					>
 								<button
 									onClick={() => toggleFAQ(index)}
 									className="w-full flex items-center justify-between p-6 text-left focus:outline-none"
@@ -71,26 +71,24 @@ function FAQ() {
 									>
 										{faq.question}
 									</span>
-									{openIndex === index ? (
-										<ChevronUpIcon 
-											className="w-5 h-5 flex-shrink-0 transition-transform" 
-											style={{ color: '#0013C1' }}
-										/>
-									) : (
-										<ChevronDownIcon 
-											className="w-5 h-5 flex-shrink-0 transition-transform" 
-											style={{ color: '#0013C1' }}
-										/>
-									)}
+						<span className={`transition-transform duration-300 ${openIndex === index ? 'rotate-180' : 'rotate-0'}`}>
+							<ChevronDownIcon 
+								className="w-5 h-5 flex-shrink-0" 
+								style={{ color: '#cf7bff' }}
+							/>
+						</span>
 								</button>
 								
-								{/* Answer - Animated dropdown */}
-								<div 
-									className={`overflow-hidden transition-all duration-300 ease-in-out ${
-										openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-									}`}
-								>
-									<div className="px-6 pb-6 pt-0">
+					{/* Answer - Animated dropdown */}
+					<div 
+						className="overflow-hidden"
+						style={{
+							maxHeight: openIndex === index ? '400px' : '0px',
+							opacity: openIndex === index ? 1 : 0,
+							transition: 'max-height 400ms ease, opacity 300ms ease'
+						}}
+					>
+						<div className="px-6 pb-6 pt-0">
 										<p className="text-gray-700 leading-relaxed">
 											{faq.answer.split('Learn more about all available plans')[0]}
 											{faq.answer.includes('Learn more about all available plans') && (

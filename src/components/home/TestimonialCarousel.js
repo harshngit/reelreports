@@ -70,13 +70,13 @@ const TestimonialCarousel = () => {
   };
 
   return (
-    <div className="w-full bg-gray-50 py-16 px-4">
+    <div className="w-full py-16 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-block px-4 py-1 border border-gray-300 rounded-full text-xs font-semibold text-gray-600 mb-4">
-            USE CASES
-          </div>
+        <span className="inline-flex items-center rounded-full px-4 py-2 text-xs font-semibold tracking-wide uppercase border border-[#c6c1f0] transition-all duration-300">
+						USE CASES
+					</span>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
             Train, market and sell like a<br />Fortune 100 company
           </h2>
