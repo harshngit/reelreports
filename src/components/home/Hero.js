@@ -46,29 +46,40 @@ function Hero() {
 		{/* Tabs Section */}
 		<section className="relative py-10 sm:py-12 md:py-16 bg-gradient-to-b from-gray-50/50 to-white" style={{fontFamily:'var(--brand-font)'}}>
 			<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-				<div className="flex w-full justify-center overflow-x-auto pb-3 sm:pb-0" style={{
-					scrollbarWidth: 'none',
-					msOverflowStyle: 'none'
-				}}>
-					<div className="inline-flex w-full justify-center items-center gap-2 rounded-full p-2 border-2 border-gray-300 bg-white shadow-lg flex-nowrap">
-						{Object.keys(tabData).map((tab) => (
-							<motion.button 
-								whileTap={{ scale: 0.98 }} 
-								whileHover={{ scale: 1.02 }} 
-								key={tab} 
-								onClick={() => setActiveTab(tab)} 
-								className={`px-4 py-2 sm:px-5 md:px-6 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 whitespace-nowrap ${
-									activeTab === tab 
-										? 'text-white shadow-md' 
-										: 'text-gray-700 hover:bg-gray-100'
-								}`} 
-								style={{
-									backgroundImage: activeTab === tab ? 'linear-gradient(90deg, #0118D8 0%, #B771E5 100%)' : 'none',
-								}}
-							>
-								{tab}
-							</motion.button>
-						))}
+				{/* Mobile & Tablet: Scrollable container */}
+				<div className="flex justify-center lg:justify-center">
+					<div 
+						className="overflow-x-auto lg:overflow-x-visible pb-3 lg:pb-0 w-full lg:w-auto" 
+						style={{
+							scrollbarWidth: 'none',
+							msOverflowStyle: 'none',
+						}}
+					>
+						<style>{`
+							.tabs-container::-webkit-scrollbar {
+								display: none;
+							}
+						`}</style>
+						<div className="tabs-container inline-flex items-center gap-1.5 sm:gap-2 rounded-full p-1.5 sm:p-2 border-2 border-gray-300 bg-white shadow-lg lg:shadow-lg min-w-fit">
+							{Object.keys(tabData).map((tab) => (
+								<motion.button 
+									whileTap={{ scale: 0.98 }} 
+									whileHover={{ scale: 1.02 }} 
+									key={tab} 
+									onClick={() => setActiveTab(tab)} 
+									className={`px-5 py-2 sm:px-6 md:px-7 lg:px-8 sm:py-2.5 rounded-full text-sm sm:text-base font-semibold transition-all duration-300 whitespace-nowrap ${
+										activeTab === tab 
+											? 'text-white shadow-md' 
+											: 'text-gray-700 hover:bg-gray-50'
+									}`} 
+									style={{
+										backgroundImage: activeTab === tab ? 'linear-gradient(90deg, #0118D8 0%, #B771E5 100%)' : 'none',
+									}}
+								>
+									{tab}
+								</motion.button>
+							))}
+						</div>
 					</div>
 				</div>
 
