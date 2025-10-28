@@ -6,9 +6,9 @@ import { ArrowRightIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/outlin
 const NAV_BG_COLOR = '#E5E2FF';
 
 const navItems = [
-	{ label: 'Feature', to: '/#feature' },
-	{ label: 'Solution', to: '/#solution' },
-	{ label: 'Pricing', to: '/#pricing' },
+	{ label: 'Feature', to: '/feature' },
+	{ label: 'Solution', to: '/solution' },
+	{ label: 'Pricing', to: '/pricing' },
 ];
 
 function Navbar() {
@@ -147,5 +147,3 @@ function Navbar() {
 }
 
 export default Navbar;
-
-

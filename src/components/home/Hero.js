@@ -29,15 +29,18 @@ function Hero() {
 			<section className="relative" style={{fontFamily:'var(--brand-font)', backgroundImage:`url(${reelbg})`, backgroundSize:'cover', backgroundPosition:'center', backgroundRepeat:'no-repeat'}}>
 			<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24">
 				<div className="text-center">
-					<motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="inline-flex items-center rounded-full px-2 py-1 sm:px-3 text-xs sm:text-sm md:text-md font-medium text-[#cf7bff] border border-[#cf7bff] shadow-sm" >#1 AI VIDEO PLATFORM FOR BUSINESS</motion.div>
-					<motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }} className="mt-4 sm:mt-6 text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold tracking-tight text-gray-900 px-2">
-						Turn Document Into <br className="hidden sm:block" /> <span className="text-[#cf7bff] mt-1">Animated Video</span>
-					</motion.h1>
+					<motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="inline-flex items-center rounded-full px-2 py-1 sm:px-3 text-xs sm:text-sm md:text-md font-medium text-[#cf7bff] border border-[#cf7bff] shadow-sm" >#1 TEXT to VIDEO platform for business</motion.div>
+					<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }} className="max-w-6xl mx-auto mt-4 sm:mt-6 text-3xl md:text-5xl  font-extrabold tracking-tight text-gray-900 px-2">
+					Communication, brought to life, within branding guidelines <br className="hidden sm:block" /> <span className="text-[#cf7bff] mt-1">and under your control</span>
+					</motion.div>
+					<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }} className="max-w-2xl mx-auto mt-4 sm:mt-6 text-sm md:text-base tracking-tight text-gray-900 px-2">
+					Summarize the deck in a brand aligned video with avatars, infographics, charts and
+					voiceover and save upto 90% of time and cost on video production					</motion.div>
 					
 					<motion.div initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5, delay: 0.2 }} className="mt-6 sm:mt-8 md:mt-10 flex items-center justify-center gap-4">
 						<a href="#get-started" className="inline-flex items-center rounded-md px-5 py-2.5 sm:px-6 sm:py-3 text-sm sm:text-base font-semibold text-white shadow-sm" style={{
 							backgroundImage:'linear-gradient(90deg, #0118D8 0%, #B771E5 100%)'
-						}}>Get started for FREE</a>
+						}}>Request platform invite</a>
 					</motion.div>
 				</div>
 			</div>
