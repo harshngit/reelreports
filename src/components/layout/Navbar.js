@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../../assets/img/logoreelreports.png';
-import { ArrowRightIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { ArrowRightIcon, Bars3Icon, XMarkIcon, ChevronDownIcon } from '@heroicons/react/24/outline';
+import FeatureDropdown from './FeatureDropdown';
+import SolutionDropdown from './SolutionDropdown';
 
 const NAV_BG_COLOR = '#E5E2FF';
 
 const navItems = [
-	{ label: 'Feature', to: '/feature' },
-	{ label: 'Solution', to: '/solution' },
+	{ label: 'Feature', to: '/feature', hasDropdown: true, dropdownType: 'feature' },
+	{ label: 'Solution', to: '/solution', hasDropdown: true, dropdownType: 'solution' },
 	{ label: 'Pricing', to: '/pricing' },
 ];
 
@@ -16,6 +18,8 @@ function Navbar() {
     const location = useLocation();
     const currentHash = location.hash || '';
     const [mobileOpen, setMobileOpen] = useState(false);
+    const [featureDropdownOpen, setFeatureDropdownOpen] = useState(false);
+    const [solutionDropdownOpen, setSolutionDropdownOpen] = useState(false);
 
     const getLinkClasses = (hash) => {
         const isActive = currentHash === hash;
@@ -34,6 +38,32 @@ function Navbar() {
 		window.addEventListener('scroll', onScroll, { passive: true });
 		return () => window.removeEventListener('scroll', onScroll);
 	}, []);
+
+    // Close dropdowns when clicking outside
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            // Check if click is outside dropdown areas
+            if (!event.target.closest('.dropdown-container')) {
+                setFeatureDropdownOpen(false);
+                setSolutionDropdownOpen(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
+
+    const toggleDropdown = (dropdownType) => {
+        if (dropdownType === 'feature') {
+            setFeatureDropdownOpen(!featureDropdownOpen);
+            setSolutionDropdownOpen(false); // Close other dropdown
+        } else if (dropdownType === 'solution') {
+            setSolutionDropdownOpen(!solutionDropdownOpen);
+            setFeatureDropdownOpen(false); // Close other dropdown
+        }
+    };
 
 	return (
 		<header
@@ -55,8 +85,51 @@ function Navbar() {
 					<div className="hidden md:flex items-center gap-6">
 						{navItems.map((item) => {
                             const hash = item.to.replace('/', '');
+                            
+                            // Special handling for items with dropdown
+                            if (item.hasDropdown) {
+                                const isFeature = item.dropdownType === 'feature';
+                                const isSolution = item.dropdownType === 'solution';
+                                const isOpen = isFeature ? featureDropdownOpen : solutionDropdownOpen;
+                                
+                                return (
+                                    <div 
+                                        key={item.label} 
+                                        className="relative dropdown-container"
+                                    >
+                                        <button
+                                            className={`${getLinkClasses(hash)} flex items-center gap-1 cursor-pointer`}
+                                            aria-expanded={isOpen}
+                                            onClick={() => toggleDropdown(item.dropdownType)}
+                                        >
+                                            {item.label}
+                                            <ChevronDownIcon 
+                                                className={`w-4 h-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+                                            />
+                                        </button>
+                                        {isFeature && (
+                                            <FeatureDropdown 
+                                                isActive={featureDropdownOpen} 
+                                                onClose={() => setFeatureDropdownOpen(false)}
+                                            />
+                                        )}
+                                        {isSolution && (
+                                            <SolutionDropdown 
+                                                isActive={solutionDropdownOpen} 
+                                                onClose={() => setSolutionDropdownOpen(false)}
+                                            />
+                                        )}
+                                    </div>
+                                );
+                            }
+                            
                             return (
-                                <Link key={item.label} to={item.to} className={getLinkClasses(hash)} aria-current={currentHash === hash ? 'page' : undefined}>
+                                <Link 
+                                    key={item.label} 
+                                    to={item.to} 
+                                    className={getLinkClasses(hash)} 
+                                    aria-current={currentHash === hash ? 'page' : undefined}
+                                >
                                     {item.label}
                                 </Link>
                             );

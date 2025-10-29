@@ -8,7 +8,7 @@ function AppLayout({ children }) {
 			backgroundImage: 'linear-gradient(180deg, #E5E2FF 0%, #FFFFFF 50%, #FFFFFF 100%)'
 		}}>
 			<Navbar />
-			<main className="pt-16 flex-1">{children}</main>
+			<main className="pt-[6rem] flex-1">{children}</main>
 			<Footer />
 		</div>
 	);
