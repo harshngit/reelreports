@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../../assets/img/logoreelreports.png';
 import { ArrowRightIcon, Bars3Icon, XMarkIcon, ChevronDownIcon } from '@heroicons/react/24/outline';
@@ -20,6 +20,11 @@ function Navbar() {
     const [mobileOpen, setMobileOpen] = useState(false);
     const [featureDropdownOpen, setFeatureDropdownOpen] = useState(false);
     const [solutionDropdownOpen, setSolutionDropdownOpen] = useState(false);
+    
+    const featureDropdownRef = useRef(null);
+    const solutionDropdownRef = useRef(null);
+    const featureCloseTimeoutRef = useRef(null);
+    const solutionCloseTimeoutRef = useRef(null);
 
     const getLinkClasses = (hash) => {
         const isActive = currentHash === hash;
@@ -39,31 +44,48 @@ function Navbar() {
 		return () => window.removeEventListener('scroll', onScroll);
 	}, []);
 
-    // Close dropdowns when clicking outside
-    useEffect(() => {
-        const handleClickOutside = (event) => {
-            // Check if click is outside dropdown areas
-            if (!event.target.closest('.dropdown-container')) {
-                setFeatureDropdownOpen(false);
-                setSolutionDropdownOpen(false);
-            }
-        };
-
-        document.addEventListener('mousedown', handleClickOutside);
-        return () => {
-            document.removeEventListener('mousedown', handleClickOutside);
-        };
-    }, []);
-
-    const toggleDropdown = (dropdownType) => {
+    const handleMouseEnter = (dropdownType) => {
         if (dropdownType === 'feature') {
-            setFeatureDropdownOpen(!featureDropdownOpen);
-            setSolutionDropdownOpen(false); // Close other dropdown
+            if (featureCloseTimeoutRef.current) {
+                clearTimeout(featureCloseTimeoutRef.current);
+                featureCloseTimeoutRef.current = null;
+            }
+            setFeatureDropdownOpen(true);
+            setSolutionDropdownOpen(false);
         } else if (dropdownType === 'solution') {
-            setSolutionDropdownOpen(!solutionDropdownOpen);
-            setFeatureDropdownOpen(false); // Close other dropdown
+            if (solutionCloseTimeoutRef.current) {
+                clearTimeout(solutionCloseTimeoutRef.current);
+                solutionCloseTimeoutRef.current = null;
+            }
+            setSolutionDropdownOpen(true);
+            setFeatureDropdownOpen(false);
         }
     };
+
+    const handleMouseLeave = (dropdownType) => {
+        if (dropdownType === 'feature') {
+            if (featureCloseTimeoutRef.current) {
+                clearTimeout(featureCloseTimeoutRef.current);
+            }
+            featureCloseTimeoutRef.current = setTimeout(() => {
+                setFeatureDropdownOpen(false);
+            }, 200);
+        } else if (dropdownType === 'solution') {
+            if (solutionCloseTimeoutRef.current) {
+                clearTimeout(solutionCloseTimeoutRef.current);
+            }
+            solutionCloseTimeoutRef.current = setTimeout(() => {
+                setSolutionDropdownOpen(false);
+            }, 200);
+        }
+    };
+
+    useEffect(() => {
+        return () => {
+            if (featureCloseTimeoutRef.current) clearTimeout(featureCloseTimeoutRef.current);
+            if (solutionCloseTimeoutRef.current) clearTimeout(solutionCloseTimeoutRef.current);
+        };
+    }, []);
 
 	return (
 		<header
@@ -91,16 +113,20 @@ function Navbar() {
                                 const isFeature = item.dropdownType === 'feature';
                                 const isSolution = item.dropdownType === 'solution';
                                 const isOpen = isFeature ? featureDropdownOpen : solutionDropdownOpen;
+                                const dropdownRef = isFeature ? featureDropdownRef : solutionDropdownRef;
                                 
                                 return (
                                     <div 
                                         key={item.label} 
+                                        ref={dropdownRef}
                                         className="relative dropdown-container"
+                                        onMouseEnter={() => handleMouseEnter(item.dropdownType)}
+                                        onMouseLeave={() => handleMouseLeave(item.dropdownType)}
                                     >
                                         <button
+                                            type="button"
                                             className={`${getLinkClasses(hash)} flex items-center gap-1 cursor-pointer`}
                                             aria-expanded={isOpen}
-                                            onClick={() => toggleDropdown(item.dropdownType)}
                                         >
                                             {item.label}
                                             <ChevronDownIcon 

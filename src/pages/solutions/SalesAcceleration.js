@@ -24,8 +24,8 @@ const SalesAcceleration = () => {
                 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-20">
                     {/* Top Banner */}
                     <div className="mb-8">
-                        <div className="inline-flex items-center rounded-full px-4 py-2 bg-blue-100 border border-blue-200">
-                            <span className="text-sm font-semibold text-blue-900">
+                        <div className="inline-flex items-center rounded-full px-4 py-2 border" style={{ backgroundColor: '#E5E2FF', borderColor: '#cf7bff' }}>
+                            <span className="text-sm font-semibold" style={{ color: '#0013C1' }}>
                                 #1 AI VIDEO PLATFORM FOR SALES ENABLEMENT
                             </span>
                         </div>
@@ -34,33 +34,33 @@ const SalesAcceleration = () => {
                     {/* Main Headline */}
                     <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight max-w-4xl">
                         <span className="text-gray-900">Create</span>{' '}
-                        <span className="text-orange-600">sales</span>{' '}
-                        <span className="text-red-900">training videos in</span>{' '}
-                        <span className="text-gray-900">minutes</span>
+                        <span className="text-[#cf7bff]">engaging pitch reels</span>{' '}
+                        <span className="text-gray-900">that close deals</span>
                     </h1>
 
                     {/* Description */}
                     <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-3xl">
-                        Turn boring docs and PPTs into engaging sales enablement videos with AI avatars - no video editing skills required.
+                        Engaging, targeted pitch reels that stand out and help close deals faster - transform your sales presentations into compelling video content with AI avatars.
                     </p>
 
                     {/* CTA Button */}
                     <div className="mb-4">
                         <Link
                             to="/create-free"
-                            className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200 shadow-lg"
+                            className="inline-flex items-center gap-2 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200 shadow-lg hover:opacity-90"
+                            style={{ background: 'linear-gradient(90deg, #0118D8 0%, #B771E5 100%)' }}
                         >
-                            Create free AI video
+                            Create free pitch reel
                             <ArrowRightIcon className="w-5 h-5" />
                         </Link>
                     </div>
-
-                    {/* Sub-text */}
+                        
+                        {/* Sub-text */}
                     <p className="text-sm text-gray-600 mb-12">
                         No credit card required.
                     </p>
-
-                    {/* Social Proof */}
+                        
+                        {/* Social Proof */}
                     <div className="flex items-center gap-4">
                         {/* Avatar Stack */}
                         <div className="flex -space-x-3">
@@ -75,9 +75,9 @@ const SalesAcceleration = () => {
                                     }}
                                 />
                             ))}
-                        </div>
-
-                        {/* Rating */}
+                            </div>
+                            
+                            {/* Rating */}
                         <div className="flex flex-col">
                             <div className="flex items-center gap-2">
                                 {/* Stars */}
@@ -96,21 +96,21 @@ const SalesAcceleration = () => {
                 </div>
             </div>
 
-            {/* Interactive Training Video Section */}
+            {/* Sales Pitch Reel Showcase Section */}
             <div className="bg-gradient-to-b from-gray-50 to-white py-20" style={{ fontFamily: 'var(--brand-font)' }}>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     {/* Video/Image Container */}
                     <div className="mb-16">
                         <img 
-                            src="/path/to/your/training-video-screenshot.png" 
-                            alt="Interactive Sales Training Video"
+                            src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&h=675&fit=crop" 
+                            alt="Sales Pitch Reel Showcase"
                             className="w-full rounded-3xl shadow-2xl"
                             onError={(e) => {
                                 e.target.onerror = null;
-                                e.target.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675"%3E%3Crect fill="%23E5E7EB" width="1200" height="675"/%3E%3Cg fill="%239CA3AF"%3E%3Cpath d="M450 250h300v175H450z"/%3E%3Ccircle cx="525" cy="312" r="25"/%3E%3Cpath d="M475 375l50-50 50 50 75-75 75 75v50H475z"/%3E%3C/g%3E%3Ctext x="600" y="500" font-family="Arial, sans-serif" font-size="24" fill="%239CA3AF" text-anchor="middle"%3EInteractive Sales Training Video%3C/text%3E%3C/svg%3E';
+                                e.target.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675"%3E%3Crect fill="%23E5E7EB" width="1200" height="675"/%3E%3Cg fill="%239CA3AF"%3E%3Cpath d="M450 250h300v175H450z"/%3E%3Ccircle cx="525" cy="312" r="25"/%3E%3Cpath d="M475 375l50-50 50 50 75-75 75 75v50H475z"/%3E%3C/g%3E%3Ctext x="600" y="500" font-family="Arial, sans-serif" font-size="24" fill="%239CA3AF" text-anchor="middle"%3ESales Pitch Reel Showcase%3C/text%3E%3C/svg%3E';
                             }}
                         />
-                    </div>
+                </div>
                     
                     {/* Company Logos Section */}
                     <div className="flex flex-col md:flex-row items-center justify-between gap-8">
@@ -118,7 +118,7 @@ const SalesAcceleration = () => {
                             <p className="text-base text-gray-700 font-medium">Trusted by over 50,000</p>
                             <p className="text-base text-gray-600">companies of all sizes</p>
                         </div>
-                        
+
                         {/* Logos Marquee */}
                         <div className="flex items-center gap-12 flex-wrap justify-center md:justify-end flex-1">
                             <div className="text-2xl font-bold text-gray-700" style={{ fontFamily: 'Arial, sans-serif' }}>
@@ -159,13 +159,13 @@ const SalesAcceleration = () => {
                         {/* Tag - Brand color badge */}
                         <div className="mb-6">
                             <span className="inline-block px-4 py-1.5 rounded-lg text-sm font-semibold uppercase tracking-wide border" style={{ color: '#cf7bff', borderColor: '#cf7bff' }}>
-                                QUICK AND EASY
+                                SALES ACCELERATION
                             </span>
                         </div>
 
                         {/* Heading */}
-                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight">
-                            Turn text into<br />high-quality voiceovers
+                        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 leading-tight">
+                            Personalized pitch reels<br />that convert
                         </h2>
 
                         {/* Features List */}
@@ -177,7 +177,7 @@ const SalesAcceleration = () => {
                                     </svg>
                                 </div>
                                 <p className="text-base md:text-lg text-gray-700">
-                                    Get consistent voiceovers in over 140+ languages
+                                    Prospect-specific personalization in minutes
                                 </p>
                             </div>
 
@@ -188,7 +188,7 @@ const SalesAcceleration = () => {
                                     </svg>
                                 </div>
                                 <p className="text-base md:text-lg text-gray-700">
-                                    Automatic closed captions included
+                                    Data-driven storytelling with animated charts
                                 </p>
                             </div>
 
@@ -199,23 +199,23 @@ const SalesAcceleration = () => {
                                     </svg>
                                 </div>
                                 <p className="text-base md:text-lg text-gray-700">
-                                    Clone your own voice
+                                    Track engagement and optimize follow-up timing
                                 </p>
                             </div>
                         </div>
 
                         {/* CTA Button - White with brand color border */}
                         <Link
-                            to="/languages"
+                            to="/create-pitch-reel"
                             className="inline-flex items-center gap-2 px-6 py-3 bg-white text-gray-900 font-semibold text-base rounded-lg hover:opacity-90 transition-all group"
                             style={{ border: '2px solid #cf7bff' }}
                         >
-                            Test all languages
+                            Create pitch reel
                             <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                             </svg>
                         </Link>
-                    </div>
+                            </div>
 
                     {/* Right Side - Video with Language Buttons */}
                     <div>
@@ -277,16 +277,16 @@ const SalesAcceleration = () => {
                         <span className="inline-block px-4 py-1.5 rounded-lg text-sm font-semibold uppercase tracking-wide" style={{ backgroundColor: '#E5E2FF', color: '#0013C1' }}>
                             THE ROI FOR YOUR BUSINESS
                         </span>
-                    </div>
+                </div>
 
                     {/* Main Title */}
                     <h2 className="text-4xl md:text-5xl font-bold text-center mb-16" style={{ color: '#2D3748' }}>
-                        You don't have to choose between cost, time, and quality
+                        Sales teams that close more deals faster
                     </h2>
 
                     {/* Cards Grid */}
                     <div className="grid md:grid-cols-3 gap-6">
-                        {/* Card 1: Cost Savings */}
+                        {/* Card 1: Response Rates */}
                         <div className="bg-[#F8F9FC] rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
                             {/* Logo */}
                             <div className="mb-6">
@@ -296,14 +296,14 @@ const SalesAcceleration = () => {
                             {/* Metric */}
                             <div className="mb-4">
                                 <div className="flex items-center gap-2 mb-2">
-                                    <span className="text-5xl font-bold" style={{ color: '#cf7bff' }}>↓$10K</span>
+                                    <span className="text-5xl font-bold" style={{ color: '#cf7bff' }}>↑3x</span>
                                 </div>
-                                <p className="text-sm font-medium" style={{ color: '#4A5568' }}>PER VIDEO</p>
+                                <p className="text-sm font-medium" style={{ color: '#4A5568' }}>RESPONSE RATES</p>
                             </div>
 
                             {/* Description */}
                             <p className="text-base mb-6 leading-relaxed" style={{ color: '#4A5568' }}>
-                                DuPont's Operational Excellence team reduced video production costs by $10,000 per training video compared to 3rd party providers.
+                                DuPont's sales team achieved 3x higher response rates with personalized pitch reels compared to traditional email outreach.
                             </p>
 
                             {/* CTA Link */}
@@ -319,7 +319,7 @@ const SalesAcceleration = () => {
                             </Link>
                         </div>
 
-                        {/* Card 2: Time Savings */}
+                        {/* Card 2: Deal Cycle */}
                         <div className="bg-[#F8F9FC] rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
                             {/* Logo */}
                             <div className="mb-6">
@@ -329,14 +329,14 @@ const SalesAcceleration = () => {
                             {/* Metric */}
                             <div className="mb-4">
                                 <div className="flex items-center gap-2 mb-2">
-                                    <span className="text-5xl font-bold" style={{ color: '#cf7bff' }}>↑90%</span>
+                                    <span className="text-5xl font-bold" style={{ color: '#cf7bff' }}>↓50%</span>
                                 </div>
-                                <p className="text-sm font-medium" style={{ color: '#4A5568' }}>TIME SAVINGS</p>
+                                <p className="text-sm font-medium" style={{ color: '#4A5568' }}>DEAL CYCLE TIME</p>
                             </div>
 
                             {/* Description */}
                             <p className="text-base mb-6 leading-relaxed" style={{ color: '#4A5568' }}>
-                                Zoom's sales training team cut 90% off their video creation time – from days to hours, compared to traditional video creation methods.
+                                Zoom's sales team reduced deal cycle time by 50% using targeted pitch reels that address specific prospect pain points upfront.
                             </p>
 
                             {/* CTA Link */}
@@ -352,29 +352,29 @@ const SalesAcceleration = () => {
                             </Link>
                         </div>
 
-                        {/* Card 3: Engagement Increase */}
+                        {/* Card 3: Conversion Rate */}
                         <div className="bg-[#F8F9FC] rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
                             {/* Logo */}
                             <div className="mb-6">
-                                <h3 className="text-2xl font-bold" style={{ color: '#2D3748' }}>B/S/H/</h3>
+                                <h3 className="text-2xl font-bold" style={{ color: '#2D3748' }}>SAP</h3>
                             </div>
 
                             {/* Metric */}
                             <div className="mb-4">
                                 <div className="flex items-center gap-2 mb-2">
-                                    <span className="text-5xl font-bold" style={{ color: '#cf7bff' }}>↑30%</span>
+                                    <span className="text-5xl font-bold" style={{ color: '#cf7bff' }}>↑2x</span>
                                 </div>
-                                <p className="text-sm font-medium" style={{ color: '#4A5568' }}>ENGAGEMENT INCREASE</p>
+                                <p className="text-sm font-medium" style={{ color: '#4A5568' }}>CONVERSION RATE</p>
                             </div>
 
                             {/* Description */}
                             <p className="text-base mb-6 leading-relaxed" style={{ color: '#4A5568' }}>
-                                BSH experienced over 30% increase in engagement with their e-learning, compared to text-based e-learning modules and PowerPoints.
+                                SAP's enterprise sales team doubled their conversion rate using data-driven pitch reels with ROI calculators and animated charts.
                             </p>
 
                             {/* CTA Link */}
                             <Link
-                                to="/case-study/bsh"
+                                to="/case-study/sap"
                                 className="inline-flex items-center gap-2 text-base font-medium hover:gap-3 transition-all"
                                 style={{ color: '#cf7bff' }}
                             >

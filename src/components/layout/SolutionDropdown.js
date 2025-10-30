@@ -111,12 +111,7 @@ const SolutionDropdown = ({ isActive, onClose }) => {
                     })}
                 </div>
 
-                {/* Bottom Note */}
-                <div className="mt-8 pt-6 border-t border-gray-200">
-                    <p className="text-center text-base text-gray-700 font-medium">
-                        For each there's a solution a page that describes the solutions and sends the user to a "request platform invite" button
-                    </p>
-                </div>
+                
             </div>
 
             {/* Bottom CTA Bar */}
