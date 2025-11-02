@@ -66,7 +66,7 @@ const SolutionDropdown = ({ isActive, onClose }) => {
     return (
         <div 
             ref={dropdownRef}
-            className="absolute top-full left-0 mt-3 bg-white rounded-xl shadow-2xl overflow-hidden"
+            className="absolute top-full left-0 mt-1 bg-white rounded-xl shadow-2xl overflow-hidden"
             style={{ 
                 fontFamily: 'var(--brand-font)',
                 boxShadow: '0 10px 40px rgba(0, 0, 0, 0.12)',

@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../../assets/img/logoreelreports.png';
+import logo from '../../assets/img/reportlogo.png';
 import { ArrowRightIcon, Bars3Icon, XMarkIcon, ChevronDownIcon } from '@heroicons/react/24/outline';
 import FeatureDropdown from './FeatureDropdown';
 import SolutionDropdown from './SolutionDropdown';
