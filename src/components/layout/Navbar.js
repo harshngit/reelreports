@@ -173,8 +173,8 @@ function Navbar() {
 						</Link>
 						<Link
 							to="/#get-started"
-							className="inline-flex items-center rounded-md gap-2 px-4 py-2 text-md font-semibold text-[#fff] bg-[#1470D2] hover:bg-[#1453d2] transition-all duration-300 shadow-sm"
-							
+							className="inline-flex items-center rounded-md gap-2 px-4 py-2 text-md font-semibold text-[#fff] transition-all duration-300 shadow-sm"
+							style={{ backgroundImage: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' }}
 						>
 							Get started
 							<ArrowRightIcon className="w-4 h-4" />

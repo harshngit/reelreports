@@ -49,7 +49,7 @@ const Marketing = () => {
                         <Link
                             to="/create-free"
                             className="inline-flex items-center gap-2 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200 shadow-lg hover:opacity-90"
-                            style={{ background: 'linear-gradient(90deg, #1470D2 0%, #F96A17 100%)' }}
+                            style={{ background: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' }}
                         >
                             Create free marketing video
                             <ArrowRightIcon className="w-5 h-5" />
@@ -242,7 +242,7 @@ const Marketing = () => {
                         {/* Language Selection Buttons */}
                         <div className="flex gap-3">
                             {/* US ENGLISH - Selected (Brand Purple) */}
-                            <button className="flex-1 flex items-center justify-center gap-2 px-4 py-3 text-white font-semibold rounded-lg border-2 border-white shadow-md hover:opacity-90 transition-colors" style={{ background: 'linear-gradient(90deg, #1470D2 0%, #F96A17 100%)' }}>
+                            <button className="flex-1 flex items-center justify-center gap-2 px-4 py-3 text-white font-semibold rounded-lg border-2 border-white shadow-md hover:opacity-90 transition-colors" style={{ background: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' }}>
                                 <span className="text-lg">🇺🇸</span>
                                 <span className="text-xs">US ENGLISH</span>
                             </button>

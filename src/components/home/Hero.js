@@ -39,7 +39,7 @@ function Hero() {
 					
 					<motion.div initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5, delay: 0.2 }} className="mt-6 sm:mt-8 md:mt-10 flex items-center justify-center gap-4">
 						<a href="#get-started" className="inline-flex items-center rounded-md px-5 py-2.5 sm:px-6 sm:py-3 text-sm sm:text-base font-semibold text-white shadow-sm" style={{
-							backgroundImage:'linear-gradient(90deg, #1470D2 0%, #F96A17 100%)'
+							backgroundImage:'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)'
 						}}>Request platform invite</a>
 					</motion.div>
 				</div>
@@ -76,7 +76,7 @@ function Hero() {
 											: 'text-gray-700 hover:bg-gray-50'
 									}`} 
 									style={{
-										backgroundImage: activeTab === tab ? 'linear-gradient(90deg, #1470D2 0%, #F96A17 100%)' : 'none',
+										backgroundImage: activeTab === tab ? 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' : 'none',
 									}}
 								>
 									{tab}

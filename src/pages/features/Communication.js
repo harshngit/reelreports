@@ -103,9 +103,9 @@ const Communication = () => {
                                 </div>
                                 
                                 <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                                    Intelligent Document
-                                    <span className="block bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                                        Summarization
+                                    Transform Ideas Into
+                                    <span className="block bg-gradient-to-r from-[#1470D2] to-[#8E23C0] bg-clip-text text-transparent">
+                                        Engaging Stories
                                     </span>
                                 </h1>
                                 
@@ -136,7 +136,8 @@ const Communication = () => {
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <Link
                                     to="/request-invite"
-                                    className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold px-8 py-4 rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                                    className="inline-flex items-center justify-center gap-2 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                                    style={{ backgroundImage: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' }}
                                 >
                                     Try Summarization
                                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -220,7 +221,7 @@ const Communication = () => {
                                                     Product Launch Announcement - B2B Tech
                                                 </p>
                                             </div>
-                                            <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg text-sm font-semibold hover:shadow-lg transition-shadow">
+                                            <button className="px-4 py-2 text-white rounded-lg text-sm font-semibold hover:shadow-lg transition-shadow" style={{ backgroundImage: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' }}>
                                                 Apply
                                             </button>
                                         </div>
@@ -261,7 +262,7 @@ const Communication = () => {
                                                 </svg>
                                                 Save Template
                                             </button>
-                                            <button className="flex items-center gap-2 px-4 py-2 text-sm bg-green-50 text-green-700 rounded-lg hover:bg-green-100 transition-colors ml-auto">
+                                            <button className="flex items-center gap-2 px-4 py-2 text-sm bg-indigo-50 text-indigo-700 rounded-lg hover:bg-green-100 transition-colors ml-auto">
                                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                                                 </svg>
@@ -397,8 +398,8 @@ const Communication = () => {
                         {/* Card 3: Interactive Elements */}
                         <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-shadow duration-300">
                             <div className="p-8">
-                                <div className="w-12 h-12 bg-gradient-to-br from-green-100 to-green-200 rounded-xl flex items-center justify-center mb-4">
-                                    <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <div className="w-12 h-12 bg-gradient-to-br from-indigo-100 to-indigo-200 rounded-xl flex items-center justify-center mb-4">
+                                    <svg className="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
                                     </svg>
                                 </div>
@@ -408,7 +409,7 @@ const Communication = () => {
                                 <p className="text-gray-600 mb-6 leading-relaxed">
                                     Add professional transitions, callouts, and emphasis effects that guide viewer attention to key data points automatically.
                                 </p>
-                                <Link to="#" className="inline-flex items-center gap-2 text-green-600 hover:text-green-700 font-semibold group">
+                                <Link to="#" className="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-700 font-semibold group">
                                     View Transitions
                                     <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -417,7 +418,7 @@ const Communication = () => {
                             </div>
                             
                             {/* Language Selector Preview */}
-                            <div className="relative bg-gradient-to-br from-green-50 to-teal-50 h-64 p-6 group cursor-pointer">
+                            <div className="relative bg-gradient-to-br from-indigo-50 to-blue-50 h-64 p-6 group cursor-pointer">
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                                 
                                 {/* Video Player with Language Menu */}
@@ -427,7 +428,7 @@ const Communication = () => {
                                     {/* Language Dropdown */}
                                     <div className="absolute top-4 right-4 bg-white rounded-lg shadow-xl p-2 min-w-[160px]">
                                         <div className="flex items-center gap-2 px-3 py-2 hover:bg-green-50 rounded cursor-pointer">
-                                            <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                                            <div className="w-2 h-2 bg-indigo-500 rounded-full"></div>
                                             <span className="text-sm font-medium text-gray-700">EN English</span>
                                         </div>
                                         <div className="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 rounded cursor-pointer">
@@ -447,7 +448,7 @@ const Communication = () => {
                                     {/* Play Button */}
                                     <div className="absolute inset-0 flex items-center justify-center">
                                         <div className="w-16 h-16 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
-                                            <svg className="w-7 h-7 text-green-600 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                            <svg className="w-7 h-7 text-indigo-600 ml-1" fill="currentColor" viewBox="0 0 24 24">
                                                 <path d="M8 5v14l11-7z" />
                                             </svg>
                                         </div>
@@ -618,7 +619,8 @@ const Communication = () => {
                             <div className="flex flex-wrap gap-3">
                                 <Link 
                                     to="/request-invite" 
-                                    className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold px-6 py-3 rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200 shadow-lg"
+                                    className="inline-flex items-center gap-2 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 shadow-lg"
+                                    style={{ backgroundImage: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' }}
                                 >
                                     Try Caption Generator
                                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -888,7 +890,7 @@ const Communication = () => {
 
 
                 {/* CTA Section */}
-                <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-12 text-center text-white">
+                <div className="rounded-2xl p-12 text-center text-white" style={{ backgroundImage: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' }}>
                     <h2 className="text-3xl font-bold mb-4">
                         Ready to Transform Your Communication?
                     </h2>

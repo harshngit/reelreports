@@ -69,7 +69,7 @@ const UserControl = () => {
                                 
                                 <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
                                     Powerful Video
-                                    <span className="block bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+                                    <span className="block bg-gradient-to-r from-[#1470D2] to-[#8E23C0] bg-clip-text text-transparent">
                                         Editing Suite
                                     </span>
                         </h1>
@@ -101,7 +101,8 @@ const UserControl = () => {
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <Link
                                     to="/request-invite"
-                                    className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold px-8 py-4 rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                                    className="inline-flex items-center justify-center gap-2 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                                    style={{ backgroundImage: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' }}
                                 >
                                     Start Editing
                                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -141,9 +142,10 @@ const UserControl = () => {
                             onClick={() => setActiveEditTab('timeline')}
                             className={`inline-flex items-center gap-3 px-6 py-3 rounded-2xl font-semibold text-base transition-all duration-300 ${
                                 activeEditTab === 'timeline'
-                                    ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white shadow-lg scale-105'
-                                    : 'bg-white text-gray-700 border-2 border-gray-200 hover:border-blue-300 hover:shadow-md'
+                                    ? 'text-white shadow-lg scale-105'
+                                    : 'bg-white text-gray-700 border-2 border-gray-200 hover:border-[#1470D2] hover:shadow-md'
                             }`}
+                            style={activeEditTab === 'timeline' ? { backgroundImage: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' } : {}}
                         >
                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
@@ -155,9 +157,10 @@ const UserControl = () => {
                             onClick={() => setActiveEditTab('reorder')}
                             className={`inline-flex items-center gap-3 px-6 py-3 rounded-2xl font-semibold text-base transition-all duration-300 ${
                                 activeEditTab === 'reorder'
-                                    ? 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white shadow-lg scale-105'
-                                    : 'bg-white text-gray-700 border-2 border-gray-200 hover:border-indigo-300 hover:shadow-md'
+                                    ? 'text-white shadow-lg scale-105'
+                                    : 'bg-white text-gray-700 border-2 border-gray-200 hover:border-[#1470D2] hover:shadow-md'
                             }`}
+                            style={activeEditTab === 'reorder' ? { backgroundImage: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' } : {}}
                         >
                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
@@ -169,9 +172,10 @@ const UserControl = () => {
                             onClick={() => setActiveEditTab('customize')}
                             className={`inline-flex items-center gap-3 px-6 py-3 rounded-2xl font-semibold text-base transition-all duration-300 ${
                                 activeEditTab === 'customize'
-                                    ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg scale-105'
-                                    : 'bg-white text-gray-700 border-2 border-gray-200 hover:border-purple-300 hover:shadow-md'
+                                    ? 'text-white shadow-lg scale-105'
+                                    : 'bg-white text-gray-700 border-2 border-gray-200 hover:border-[#1470D2] hover:shadow-md'
                             }`}
+                            style={activeEditTab === 'customize' ? { backgroundImage: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' } : {}}
                         >
                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
@@ -200,7 +204,8 @@ const UserControl = () => {
                                         </p>
                                         <Link
                                             to="/request-invite"
-                                            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold px-8 py-4 rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                                            className="inline-flex items-center gap-2 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                                            style={{ backgroundImage: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' }}
                                         >
                                             Explore Timeline
                                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -225,7 +230,8 @@ const UserControl = () => {
                                         </p>
                                         <Link
                                             to="/request-invite"
-                                            className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold px-8 py-4 rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                                            className="inline-flex items-center gap-2 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                                            style={{ backgroundImage: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' }}
                                         >
                                             Try Scene Reordering
                                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -250,7 +256,8 @@ const UserControl = () => {
                                         </p>
                                         <Link
                                             to="/request-invite"
-                                            className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold px-8 py-4 rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                                            className="inline-flex items-center gap-2 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                                            style={{ backgroundImage: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' }}
                                         >
                                             Customize Scenes
                                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -383,7 +390,7 @@ const UserControl = () => {
                                                 <div className="bg-indigo-50 rounded-lg p-4">
                                                     <label className="text-sm font-semibold text-gray-900 mb-2 block">Transition</label>
                                                     <div className="grid grid-cols-3 gap-2">
-                                                        <button className="h-10 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-md text-white text-xs font-medium">Fade</button>
+                                                        <button className="h-10 rounded-md text-white text-xs font-medium" style={{ backgroundImage: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' }}>Fade</button>
                                                         <button className="h-10 bg-white border border-gray-200 rounded-md text-gray-700 text-xs font-medium">Slide</button>
                                                         <button className="h-10 bg-white border border-gray-200 rounded-md text-gray-700 text-xs font-medium">Zoom</button>
                                                     </div>
@@ -494,7 +501,8 @@ const UserControl = () => {
 
                             <Link
                                 to="/request-invite"
-                                className="inline-flex items-center gap-2 bg-gradient-to-r from-pink-600 to-rose-600 text-white font-semibold px-8 py-4 rounded-xl hover:from-pink-700 hover:to-rose-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                                className="inline-flex items-center gap-2 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                                style={{ backgroundImage: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' }}
                             >
                                 Explore Text Tools
                                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -650,7 +658,7 @@ const UserControl = () => {
 
                 {/* CTA Section */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-                <div className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl p-12 text-center text-white">
+                <div className="rounded-2xl p-12 text-center text-white" style={{ backgroundImage: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' }}>
                     <h2 className="text-3xl font-bold mb-4">
                         Take Full Control of Your Videos
                     </h2>

@@ -68,7 +68,7 @@ const BrandingGuidelines = () => {
                                 
                                 <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
                                     Smart Brand
-                                    <span className="block bg-gradient-to-r from-indigo-600 to-cyan-600 bg-clip-text text-transparent">
+                                    <span className="block bg-gradient-to-r from-[#1470D2] to-[#8E23C0] bg-clip-text text-transparent">
                                         Sensing
                                     </span>
                                 </h1>
@@ -100,7 +100,8 @@ const BrandingGuidelines = () => {
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <Link
                                     to="/request-invite"
-                                    className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-indigo-600 to-cyan-600 text-white font-semibold px-8 py-4 rounded-xl hover:from-indigo-700 hover:to-cyan-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                                    className="inline-flex items-center justify-center gap-2 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                                    style={{ backgroundImage: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' }}
                                 >
                                     Try Brand Sensing
                                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -274,7 +275,8 @@ const BrandingGuidelines = () => {
 
                             <Link
                                 to="/request-invite"
-                                className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold px-8 py-4 rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                                className="inline-flex items-center gap-2 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                                style={{ backgroundImage: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' }}
                             >
                                 Manage Multiple Brands
                                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -305,16 +307,16 @@ const BrandingGuidelines = () => {
                     {/* Two Mode Cards */}
                     <div className="grid md:grid-cols-2 gap-8 mb-16">
                         {/* Strict Mode Card */}
-                        <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-green-200 hover:shadow-2xl transition-shadow">
+                        <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-blue-200 hover:shadow-2xl transition-shadow">
                             <div className="flex items-center gap-3 mb-6">
-                                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center">
+                                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">
                                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                                     </svg>
                                 </div>
                                 <div>
                                     <h3 className="text-2xl font-bold text-gray-900">Strict Adherence</h3>
-                                    <p className="text-sm text-green-600 font-semibold">100% Brand Consistency</p>
+                                    <p className="text-sm text-blue-600 font-semibold">100% Brand Consistency</p>
                                 </div>
                             </div>
 
@@ -324,33 +326,33 @@ const BrandingGuidelines = () => {
                             </p>
 
                             <div className="space-y-3 mb-6">
-                                <div className="flex items-center gap-3 p-3 bg-green-50 rounded-lg">
-                                    <svg className="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <div className="flex items-center gap-3 p-3 bg-blue-50 rounded-lg">
+                                    <svg className="w-5 h-5 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                     </svg>
                                     <span className="text-sm text-gray-700">Exact color matching (HEX/RGB)</span>
                                 </div>
-                                <div className="flex items-center gap-3 p-3 bg-green-50 rounded-lg">
-                                    <svg className="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <div className="flex items-center gap-3 p-3 bg-blue-50 rounded-lg">
+                                    <svg className="w-5 h-5 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                     </svg>
                                     <span className="text-sm text-gray-700">Approved fonts & styles only</span>
                                 </div>
-                                <div className="flex items-center gap-3 p-3 bg-green-50 rounded-lg">
-                                    <svg className="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <div className="flex items-center gap-3 p-3 bg-blue-50 rounded-lg">
+                                    <svg className="w-5 h-5 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                     </svg>
                                     <span className="text-sm text-gray-700">Locked logo placement</span>
                                 </div>
-                                <div className="flex items-center gap-3 p-3 bg-green-50 rounded-lg">
-                                    <svg className="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <div className="flex items-center gap-3 p-3 bg-blue-50 rounded-lg">
+                                    <svg className="w-5 h-5 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                     </svg>
                                     <span className="text-sm text-gray-700">Compliance-ready output</span>
                                 </div>
                             </div>
 
-                            <div className="bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg p-4 text-white">
+                            <div className="rounded-lg p-4 text-white" style={{ backgroundImage: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' }}>
                                 <p className="text-sm font-semibold mb-1">Best For:</p>
                                 <p className="text-sm">Enterprises, Financial Services, Healthcare, Legal</p>
                             </div>
@@ -402,7 +404,7 @@ const BrandingGuidelines = () => {
                                 </div>
                             </div>
 
-                            <div className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg p-4 text-white">
+                            <div className="rounded-lg p-4 text-white" style={{ backgroundImage: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' }}>
                                 <p className="text-sm font-semibold mb-1">Best For:</p>
                                 <p className="text-sm">Startups, Creative Agencies, Tech Companies, E-commerce</p>
                             </div>
@@ -481,7 +483,7 @@ const BrandingGuidelines = () => {
 
             {/* CTA Section */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-                <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-12 text-center text-white">
+                <div className="rounded-2xl p-12 text-center text-white" style={{ backgroundImage: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' }}>
                     <h2 className="text-3xl font-bold mb-4">
                         Maintain Perfect Brand Consistency
                     </h2>

@@ -69,7 +69,7 @@ const BroughtToLife = () => {
                                 
                                 <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
                                     Dynamic Video
-                                    <span className="block bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+                                    <span className="block bg-gradient-to-r from-[#1470D2] to-[#8E23C0] bg-clip-text text-transparent">
                                         Generation
                                     </span>
                                 </h1>
@@ -101,7 +101,8 @@ const BroughtToLife = () => {
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <Link
                                     to="/request-invite"
-                                    className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold px-8 py-4 rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                                    className="inline-flex items-center justify-center gap-2 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                                    style={{ backgroundImage: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' }}
                                 >
                                     Start Creating
                                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -240,9 +241,10 @@ const BroughtToLife = () => {
                             onClick={() => setActiveTab('motion')}
                             className={`inline-flex items-center gap-3 px-6 py-3 rounded-2xl font-semibold text-base transition-all duration-300 ${
                                 activeTab === 'motion'
-                                    ? 'bg-gradient-to-r from-orange-500 to-amber-500 text-white shadow-lg scale-105'
-                                    : 'bg-white text-gray-700 border-2 border-gray-200 hover:border-orange-300 hover:shadow-md'
+                                    ? 'text-white shadow-lg scale-105'
+                                    : 'bg-white text-gray-700 border-2 border-gray-200 hover:border-[#1470D2] hover:shadow-md'
                             }`}
+                            style={activeTab === 'motion' ? { backgroundImage: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' } : {}}
                         >
                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -254,9 +256,10 @@ const BroughtToLife = () => {
                             onClick={() => setActiveTab('transitions')}
                             className={`inline-flex items-center gap-3 px-6 py-3 rounded-2xl font-semibold text-base transition-all duration-300 ${
                                 activeTab === 'transitions'
-                                    ? 'bg-gradient-to-r from-purple-500 to-indigo-500 text-white shadow-lg scale-105'
-                                    : 'bg-white text-gray-700 border-2 border-gray-200 hover:border-purple-300 hover:shadow-md'
+                                    ? 'text-white shadow-lg scale-105'
+                                    : 'bg-white text-gray-700 border-2 border-gray-200 hover:border-[#1470D2] hover:shadow-md'
                             }`}
+                            style={activeTab === 'transitions' ? { backgroundImage: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' } : {}}
                         >
                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
@@ -268,9 +271,10 @@ const BroughtToLife = () => {
                             onClick={() => setActiveTab('presets')}
                             className={`inline-flex items-center gap-3 px-6 py-3 rounded-2xl font-semibold text-base transition-all duration-300 ${
                                 activeTab === 'presets'
-                                    ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white shadow-lg scale-105'
-                                    : 'bg-white text-gray-700 border-2 border-gray-200 hover:border-blue-300 hover:shadow-md'
+                                    ? 'text-white shadow-lg scale-105'
+                                    : 'bg-white text-gray-700 border-2 border-gray-200 hover:border-[#1470D2] hover:shadow-md'
                             }`}
+                            style={activeTab === 'presets' ? { backgroundImage: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' } : {}}
                         >
                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
@@ -299,7 +303,8 @@ const BroughtToLife = () => {
                                         </p>
                                         <Link
                                             to="/request-invite"
-                                            className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-600 to-amber-600 text-white font-semibold px-8 py-4 rounded-xl hover:from-orange-700 hover:to-amber-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                                            className="inline-flex items-center gap-2 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                                            style={{ backgroundImage: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' }}
                                         >
                                             Explore Motion Graphics
                                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -324,7 +329,8 @@ const BroughtToLife = () => {
                                         </p>
                                         <Link
                                             to="/request-invite"
-                                            className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-semibold px-8 py-4 rounded-xl hover:from-purple-700 hover:to-indigo-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                                            className="inline-flex items-center gap-2 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                                            style={{ backgroundImage: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' }}
                                         >
                                             View Transitions
                                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -349,7 +355,8 @@ const BroughtToLife = () => {
                                         </p>
                                         <Link
                                             to="/request-invite"
-                                            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold px-8 py-4 rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                                            className="inline-flex items-center gap-2 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                                            style={{ backgroundImage: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' }}
                                         >
                                             Browse Library
                                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -502,7 +509,7 @@ const BroughtToLife = () => {
                     <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
                         {/* Left Side - Content */}
                         <div>
-                            <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                            <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">
                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
                                 </svg>
@@ -521,7 +528,7 @@ const BroughtToLife = () => {
 
                             <div className="space-y-4 mb-8">
                                 <div className="flex items-start gap-3">
-                                    <div className="flex items-center justify-center h-6 w-6 rounded-full bg-green-600 flex-shrink-0 mt-1">
+                                    <div className="flex items-center justify-center h-6 w-6 rounded-full bg-purple-600 flex-shrink-0 mt-1">
                                         <FiCheck className="h-4 w-4 text-white" />
                                     </div>
                                     <div>
@@ -530,7 +537,7 @@ const BroughtToLife = () => {
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-3">
-                                    <div className="flex items-center justify-center h-6 w-6 rounded-full bg-emerald-600 flex-shrink-0 mt-1">
+                                    <div className="flex items-center justify-center h-6 w-6 rounded-full bg-indigo-600 flex-shrink-0 mt-1">
                                         <FiCheck className="h-4 w-4 text-white" />
                                     </div>
                                     <div>
@@ -539,7 +546,7 @@ const BroughtToLife = () => {
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-3">
-                                    <div className="flex items-center justify-center h-6 w-6 rounded-full bg-teal-600 flex-shrink-0 mt-1">
+                                    <div className="flex items-center justify-center h-6 w-6 rounded-full bg-violet-600 flex-shrink-0 mt-1">
                                         <FiCheck className="h-4 w-4 text-white" />
                                     </div>
                                     <div>
@@ -548,7 +555,7 @@ const BroughtToLife = () => {
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-3">
-                                    <div className="flex items-center justify-center h-6 w-6 rounded-full bg-cyan-600 flex-shrink-0 mt-1">
+                                    <div className="flex items-center justify-center h-6 w-6 rounded-full bg-purple-500 flex-shrink-0 mt-1">
                                         <FiCheck className="h-4 w-4 text-white" />
                                     </div>
                                     <div>
@@ -561,7 +568,8 @@ const BroughtToLife = () => {
                             <div className="flex flex-wrap gap-3">
                                 <Link 
                                     to="/request-invite" 
-                                    className="inline-flex items-center gap-2 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold px-6 py-3 rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-200 shadow-lg"
+                                    className="inline-flex items-center gap-2 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 shadow-lg"
+                                    style={{ backgroundImage: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' }}
                                 >
                                     Try Voice Cloning
                                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -574,7 +582,7 @@ const BroughtToLife = () => {
                         {/* Right Side - Voice Interface Demo */}
                         <div className="relative">
                             {/* Voice Selection Interface */}
-                            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl overflow-hidden shadow-2xl border border-green-100">
+                            <div className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl overflow-hidden shadow-2xl border border-purple-100">
                                 {/* Header */}
                                 <div className="bg-white px-6 py-4 border-b border-gray-200">
                                     <h3 className="text-lg font-semibold text-gray-900">Voice Library</h3>
@@ -584,10 +592,10 @@ const BroughtToLife = () => {
                                 {/* Voice Options */}
                                 <div className="p-6 space-y-3">
                                     {/* Voice 1 */}
-                                    <div className="bg-white rounded-lg p-4 border-2 border-green-500 shadow-md">
+                                    <div className="bg-white rounded-lg p-4 border-2 border-purple-500 shadow-md">
                                         <div className="flex items-center justify-between mb-2">
                                             <div className="flex items-center gap-3">
-                                                <div className="w-10 h-10 bg-gradient-to-br from-green-400 to-emerald-400 rounded-full flex items-center justify-center">
+                                                <div className="w-10 h-10 bg-gradient-to-br from-purple-400 to-indigo-400 rounded-full flex items-center justify-center">
                                                     <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                                                     </svg>
@@ -597,14 +605,14 @@ const BroughtToLife = () => {
                                                     <p className="text-xs text-gray-500">English (US) • Female</p>
                                                 </div>
                                             </div>
-                                            <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
+                                            <div className="w-5 h-5 bg-purple-500 rounded-full flex items-center justify-center">
                                                 <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                                                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                                                 </svg>
                                             </div>
                                         </div>
                                         <div className="flex items-center gap-2">
-                                            <button className="flex-1 bg-green-50 text-green-700 px-3 py-2 rounded-md text-sm font-medium hover:bg-green-100 transition-colors">
+                                            <button className="flex-1 bg-purple-50 text-purple-700 px-3 py-2 rounded-md text-sm font-medium hover:bg-purple-100 transition-colors">
                                                 <svg className="w-4 h-4 inline mr-1" fill="currentColor" viewBox="0 0 20 20">
                                                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
                                                 </svg>
@@ -612,7 +620,7 @@ const BroughtToLife = () => {
                                             </button>
                                             <div className="flex gap-1">
                                                 {[1,2,3,4,5].map(i => (
-                                                    <div key={i} className="w-1 h-8 bg-green-400 rounded-full animate-pulse" style={{animationDelay: `${i * 0.1}s`}}></div>
+                                                    <div key={i} className="w-1 h-8 bg-purple-400 rounded-full animate-pulse" style={{animationDelay: `${i * 0.1}s`}}></div>
                                                 ))}
                                             </div>
                                         </div>
@@ -665,7 +673,7 @@ const BroughtToLife = () => {
                                     </div>
 
                                     {/* Voice Cloning Option */}
-                                    <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg p-4 text-white">
+                                    <div className="rounded-lg p-4 text-white" style={{ backgroundImage: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' }}>
                                         <div className="flex items-center justify-between mb-2">
                                             <div className="flex items-center gap-3">
                                                 <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
@@ -689,8 +697,8 @@ const BroughtToLife = () => {
                             {/* Floating Stats */}
                             <div className="absolute -right-4 top-8 bg-white rounded-xl shadow-xl p-4 max-w-[180px] border border-gray-100">
                                 <div className="flex items-center gap-3">
-                                    <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
-                                        <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
+                                        <svg className="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
                                         </svg>
                                     </div>
@@ -703,8 +711,8 @@ const BroughtToLife = () => {
 
                             <div className="absolute -left-4 bottom-8 bg-white rounded-xl shadow-xl p-4 max-w-[180px] border border-gray-100">
                                 <div className="flex items-center gap-3">
-                                    <div className="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center">
-                                        <svg className="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <div className="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center">
+                                        <svg className="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
                                         </svg>
                                     </div>
@@ -721,7 +729,7 @@ const BroughtToLife = () => {
 
             {/* CTA Section */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-                <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-12 text-center text-white">
+                <div className="rounded-2xl p-12 text-center text-white" style={{ backgroundImage: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' }}>
                     <h2 className="text-3xl font-bold mb-4">
                         Ready to Bring Your Content to Life?
                     </h2>

@@ -22,7 +22,7 @@ function WhySynthesia() {
 					{/* Feature 1 */}
 							<div className="flex flex-col p-6 rounded-2xl border border-[#c6c1f0] hover:border-[#0013C1] transition-all duration-300 bg-white shadow-sm ring-1 ring-black/5">
 						<div className="mb-4">
-							<div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{backgroundImage:'linear-gradient(90deg, #1470D2 0%, #F96A17 100%)'}}>
+							<div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{backgroundImage:'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)'}}>
 								<svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
 									<path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5zm0 18c-4 0-7-3-7-7V8l7-3.5L19 8v5c0 4-3 7-7 7z"/>
 									<circle cx="12" cy="12" r="3"/>
@@ -61,7 +61,7 @@ function WhySynthesia() {
 					{/* Feature 3 */}
 					<div className="flex flex-col p-6 rounded-2xl border border-[#c6c1f0] hover:border-[#0013C1] transition-all duration-300 bg-white shadow-sm ring-1 ring-black/5">
 						<div className="mb-4">
-							<div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{backgroundImage:'linear-gradient(90deg, #1470D2 0%, #F96A17 100%)'}}>
+							<div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{backgroundImage:'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)'}}>
 								<svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
 									<path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/>
 								</svg>

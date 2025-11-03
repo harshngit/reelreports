@@ -30,7 +30,7 @@ function SolutionsSection() {
 							transition={{ duration: 0.45, delay: idx * 0.06 }}
 							className={`${card.size === 'rect' ? ' h-44' : 'h-44'} p-6 rounded-2xl bg-white shadow-sm ring-1 ring-black/5 border border-[#c6c1f0] hover:border-[#0013C1] hover:shadow-md transition-all duration-300 flex`}
 						>
-							<div className="w-12 h-12 mr-4 rounded-xl flex items-center justify-center flex-shrink-0" style={{backgroundImage:'linear-gradient(90deg, #1470D2 0%, #F96A17 100%)'}}>
+							<div className="w-12 h-12 mr-4 rounded-xl flex items-center justify-center flex-shrink-0" style={{backgroundImage:'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)'}}>
 								<card.icon className="w-6 h-6 text-white" />
 							</div>
 							<div className="flex flex-col justify-center">
