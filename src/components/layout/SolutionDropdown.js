@@ -83,7 +83,7 @@ const SolutionDropdown = ({ isActive, onClose }) => {
                             <Link
                                 key={solution.key}
                                 to={`/solution/${solution.key}`}
-                                className="group p-6 rounded-xl border-2 border-transparent hover:border-indigo-200 bg-gradient-to-br from-gray-50/50 to-white hover:from-indigo-50/50 hover:to-purple-50/30 transition-all duration-300"
+                                className="group p-6 rounded-xl border-2 border-transparent hover:border-blue-200 bg-gradient-to-br from-gray-50/50 to-white hover:from-[#1470D2]/10 hover:to-[#8E23C0]/10 transition-all duration-300"
                                 onClick={onClose}
                             >
                                 {/* Icon */}
@@ -115,7 +115,7 @@ const SolutionDropdown = ({ isActive, onClose }) => {
             </div>
 
             {/* Bottom CTA Bar */}
-            <div className="bg-gradient-to-r from-indigo-900 to-indigo-800 px-12 py-5 flex items-center justify-between">
+            <div className="bg-gradient-to-r from-[#1470D2] to-[#8E23C0] px-12 py-5 flex items-center justify-between">
                 <Link
                     to="/create-free"
                     className="text-white font-semibold text-base hover:text-indigo-200 transition-colors"

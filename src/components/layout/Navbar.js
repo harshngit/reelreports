@@ -5,7 +5,7 @@ import { ArrowRightIcon, Bars3Icon, XMarkIcon, ChevronDownIcon } from '@heroicon
 import FeatureDropdown from './FeatureDropdown';
 import SolutionDropdown from './SolutionDropdown';
 
-const NAV_BG_COLOR = '#E5E2FF';
+const NAV_BG_COLOR = '#D4E4FF';
 
 const navItems = [
 	{ label: 'Feature', to: '/feature', hasDropdown: true, dropdownType: 'feature' },
@@ -31,7 +31,7 @@ function Navbar() {
         return `text-base font-semibold rounded-md px-2 py-1 ${
             isActive
                 ? 'text-[#0013C1] bg-white/60'
-                : 'text-gray-700 hover:text-[#9314DC]'
+                : 'text-gray-700 hover:text-[#1470D2]'
         }`;
     };
 
@@ -173,7 +173,7 @@ function Navbar() {
 						</Link>
 						<Link
 							to="/#get-started"
-							className="inline-flex items-center rounded-md gap-2 px-4 py-2 text-md font-semibold text-[#fff] bg-[#cf7bff] hover:bg-[#9314DC] transition-all duration-300 shadow-sm"
+							className="inline-flex items-center rounded-md gap-2 px-4 py-2 text-md font-semibold text-[#fff] bg-[#1470D2] hover:bg-[#1453d2] transition-all duration-300 shadow-sm"
 							
 						>
 							Get started
@@ -233,8 +233,8 @@ function Navbar() {
 						</Link>
 						<Link
 							to="/#get-started"
-							className="mt-2 inline-flex items-center justify-center rounded-md px-4 py-3 text-base font-semibold text-[#0013C1] shadow-sm"
-							style={{ backgroundImage: 'linear-gradient(90deg, #E5E2FF 0%, #B771E5 100%)' }}
+							className="mt-2 inline-flex items-center justify-center rounded-md px-4 py-3 text-base font-semibold text-white shadow-sm"
+							style={{ backgroundImage: 'linear-gradient(90deg, #1470D2 0%, #8E23C0 100%)' }}
 							onClick={() => setMobileOpen(false)}
 						>
 							Get started

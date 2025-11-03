@@ -34,7 +34,7 @@ const SalesAcceleration = () => {
                     {/* Main Headline */}
                     <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight max-w-4xl">
                         <span className="text-gray-900">Create</span>{' '}
-                        <span className="text-[#cf7bff]">engaging pitch reels</span>{' '}
+                        <span className="text-[#1470D2]">engaging pitch reels</span>{' '}
                         <span className="text-gray-900">that close deals</span>
                     </h1>
 
@@ -48,7 +48,7 @@ const SalesAcceleration = () => {
                         <Link
                             to="/create-free"
                             className="inline-flex items-center gap-2 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200 shadow-lg hover:opacity-90"
-                            style={{ background: 'linear-gradient(90deg, #0118D8 0%, #B771E5 100%)' }}
+                            style={{ background: 'linear-gradient(90deg, #1470D2 0%, #F96A17 100%)' }}
                         >
                             Create free pitch reel
                             <ArrowRightIcon className="w-5 h-5" />
@@ -158,7 +158,7 @@ const SalesAcceleration = () => {
                     <div>
                         {/* Tag - Brand color badge */}
                         <div className="mb-6">
-                            <span className="inline-block px-4 py-1.5 rounded-lg text-sm font-semibold uppercase tracking-wide border" style={{ color: '#cf7bff', borderColor: '#cf7bff' }}>
+                            <span className="inline-block px-4 py-1.5 rounded-lg text-sm font-semibold uppercase tracking-wide border" style={{ color: '#1470D2', borderColor: '#1470D2' }}>
                                 SALES ACCELERATION
                             </span>
                         </div>
@@ -171,7 +171,7 @@ const SalesAcceleration = () => {
                         {/* Features List */}
                         <div className="space-y-5 mb-10">
                             <div className="flex items-start gap-3">
-                                <div className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center mt-0.5" style={{ backgroundColor: '#cf7bff' }}>
+                                <div className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center mt-0.5" style={{ backgroundColor: '#1470D2' }}>
                                     <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                                     </svg>
@@ -182,7 +182,7 @@ const SalesAcceleration = () => {
                             </div>
 
                             <div className="flex items-start gap-3">
-                                <div className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center mt-0.5" style={{ backgroundColor: '#cf7bff' }}>
+                                <div className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center mt-0.5" style={{ backgroundColor: '#1470D2' }}>
                                     <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                                     </svg>
@@ -193,7 +193,7 @@ const SalesAcceleration = () => {
                             </div>
 
                             <div className="flex items-start gap-3">
-                                <div className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center mt-0.5" style={{ backgroundColor: '#cf7bff' }}>
+                                <div className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center mt-0.5" style={{ backgroundColor: '#1470D2' }}>
                                     <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                                     </svg>
@@ -208,7 +208,7 @@ const SalesAcceleration = () => {
                         <Link
                             to="/create-pitch-reel"
                             className="inline-flex items-center gap-2 px-6 py-3 bg-white text-gray-900 font-semibold text-base rounded-lg hover:opacity-90 transition-all group"
-                            style={{ border: '2px solid #cf7bff' }}
+                            style={{ border: '2px solid #1470D2' }}
                         >
                             Create pitch reel
                             <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -241,7 +241,7 @@ const SalesAcceleration = () => {
                         {/* Language Selection Buttons */}
                         <div className="flex gap-3">
                             {/* US ENGLISH - Selected (Brand Purple) */}
-                            <button className="flex-1 flex items-center justify-center gap-2 px-4 py-3 text-white font-semibold rounded-lg border-2 border-white shadow-md hover:opacity-90 transition-colors" style={{ background: 'linear-gradient(90deg, #0118D8 0%, #B771E5 100%)' }}>
+                            <button className="flex-1 flex items-center justify-center gap-2 px-4 py-3 text-white font-semibold rounded-lg border-2 border-white shadow-md hover:opacity-90 transition-colors" style={{ background: 'linear-gradient(90deg, #1470D2 0%, #F96A17 100%)' }}>
                                 <span className="text-lg">🇺🇸</span>
                                 <span className="text-xs">US ENGLISH</span>
                             </button>
@@ -296,7 +296,7 @@ const SalesAcceleration = () => {
                             {/* Metric */}
                             <div className="mb-4">
                                 <div className="flex items-center gap-2 mb-2">
-                                    <span className="text-5xl font-bold" style={{ color: '#cf7bff' }}>↑3x</span>
+                                    <span className="text-5xl font-bold" style={{ color: '#1470D2' }}>↑3x</span>
                                 </div>
                                 <p className="text-sm font-medium" style={{ color: '#4A5568' }}>RESPONSE RATES</p>
                             </div>
@@ -310,7 +310,7 @@ const SalesAcceleration = () => {
                             <Link
                                 to="/case-study/dupont"
                                 className="inline-flex items-center gap-2 text-base font-medium hover:gap-3 transition-all"
-                                style={{ color: '#cf7bff' }}
+                                style={{ color: '#1470D2' }}
                             >
                                 Read case study
                                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -329,7 +329,7 @@ const SalesAcceleration = () => {
                             {/* Metric */}
                             <div className="mb-4">
                                 <div className="flex items-center gap-2 mb-2">
-                                    <span className="text-5xl font-bold" style={{ color: '#cf7bff' }}>↓50%</span>
+                                    <span className="text-5xl font-bold" style={{ color: '#1470D2' }}>↓50%</span>
                                 </div>
                                 <p className="text-sm font-medium" style={{ color: '#4A5568' }}>DEAL CYCLE TIME</p>
                             </div>
@@ -343,7 +343,7 @@ const SalesAcceleration = () => {
                             <Link
                                 to="/case-study/zoom"
                                 className="inline-flex items-center gap-2 text-base font-medium hover:gap-3 transition-all"
-                                style={{ color: '#cf7bff' }}
+                                style={{ color: '#1470D2' }}
                             >
                                 Read case study
                                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -362,7 +362,7 @@ const SalesAcceleration = () => {
                             {/* Metric */}
                             <div className="mb-4">
                                 <div className="flex items-center gap-2 mb-2">
-                                    <span className="text-5xl font-bold" style={{ color: '#cf7bff' }}>↑2x</span>
+                                    <span className="text-5xl font-bold" style={{ color: '#1470D2' }}>↑2x</span>
                                 </div>
                                 <p className="text-sm font-medium" style={{ color: '#4A5568' }}>CONVERSION RATE</p>
                             </div>
@@ -376,7 +376,7 @@ const SalesAcceleration = () => {
                             <Link
                                 to="/case-study/sap"
                                 className="inline-flex items-center gap-2 text-base font-medium hover:gap-3 transition-all"
-                                style={{ color: '#cf7bff' }}
+                                style={{ color: '#1470D2' }}
                             >
                                 Read case study
                                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

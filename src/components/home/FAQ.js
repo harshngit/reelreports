@@ -74,7 +74,7 @@ function FAQ() {
 						<span className={`transition-transform duration-300 ${openIndex === index ? 'rotate-180' : 'rotate-0'}`}>
 							<ChevronDownIcon 
 								className="w-5 h-5 flex-shrink-0" 
-								style={{ color: '#cf7bff' }}
+								style={{ color: '#1470D2' }}
 							/>
 						</span>
 								</button>

@@ -25,7 +25,7 @@ const KnowledgeManagement = () => {
                 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-20">
                     {/* Top Banner */}
                     <div className="mb-8">
-                        <div className="inline-flex items-center rounded-full px-4 py-2 border" style={{ backgroundColor: '#E5E2FF', borderColor: '#cf7bff' }}>
+                        <div className="inline-flex items-center rounded-full px-4 py-2 border" style={{ backgroundColor: '#E5E2FF', borderColor: '#1470D2' }}>
                             <span className="text-sm font-semibold" style={{ color: '#0013C1' }}>
                                 #1 AI VIDEO PLATFORM FOR KNOWLEDGE MANAGEMENT
                             </span>
@@ -35,7 +35,7 @@ const KnowledgeManagement = () => {
                     {/* Main Headline */}
                     <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight max-w-4xl">
                         <span className="text-gray-900">Summarize knowledge in</span>{' '}
-                        <span className="text-[#cf7bff]">engaging teaser reels</span>
+                        <span className="text-[#1470D2]">engaging teaser reels</span>
                     </h1>
 
                     {/* Description */}
@@ -48,7 +48,7 @@ const KnowledgeManagement = () => {
                         <Link
                             to="/create-free"
                             className="inline-flex items-center gap-2 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200 shadow-lg hover:opacity-90"
-                            style={{ background: 'linear-gradient(90deg, #0118D8 0%, #B771E5 100%)' }}
+                            style={{ background: 'linear-gradient(90deg, #1470D2 0%, #F96A17 100%)' }}
                         >
                             Create knowledge reel
                             <ArrowRightIcon className="w-5 h-5" />
@@ -158,7 +158,7 @@ const KnowledgeManagement = () => {
                     <div>
                         {/* Tag - Brand color badge */}
                         <div className="mb-6">
-                            <span className="inline-block px-4 py-1.5 rounded-lg text-sm font-semibold uppercase tracking-wide border" style={{ color: '#cf7bff', borderColor: '#cf7bff' }}>
+                            <span className="inline-block px-4 py-1.5 rounded-lg text-sm font-semibold uppercase tracking-wide border" style={{ color: '#1470D2', borderColor: '#1470D2' }}>
                                 KNOWLEDGE MANAGEMENT
                             </span>
                         </div>
@@ -171,7 +171,7 @@ const KnowledgeManagement = () => {
                         {/* Features List */}
                         <div className="space-y-5 mb-10">
                             <div className="flex items-start gap-3">
-                                <div className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center mt-0.5" style={{ backgroundColor: '#cf7bff' }}>
+                                <div className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center mt-0.5" style={{ backgroundColor: '#1470D2' }}>
                                     <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                                     </svg>
@@ -182,7 +182,7 @@ const KnowledgeManagement = () => {
                             </div>
 
                             <div className="flex items-start gap-3">
-                                <div className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center mt-0.5" style={{ backgroundColor: '#cf7bff' }}>
+                                <div className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center mt-0.5" style={{ backgroundColor: '#1470D2' }}>
                                     <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                                     </svg>
@@ -193,7 +193,7 @@ const KnowledgeManagement = () => {
                             </div>
 
                             <div className="flex items-start gap-3">
-                                <div className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center mt-0.5" style={{ backgroundColor: '#cf7bff' }}>
+                                <div className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center mt-0.5" style={{ backgroundColor: '#1470D2' }}>
                                     <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                                     </svg>
@@ -208,7 +208,7 @@ const KnowledgeManagement = () => {
                         <Link
                             to="/create-knowledge-reel"
                             className="inline-flex items-center gap-2 px-6 py-3 bg-white text-gray-900 font-semibold text-base rounded-lg hover:opacity-90 transition-all group"
-                            style={{ border: '2px solid #cf7bff' }}
+                            style={{ border: '2px solid #1470D2' }}
                         >
                             Create knowledge reel
                             <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -231,7 +231,7 @@ const KnowledgeManagement = () => {
                             {/* Play Button - Upper Left Corner, White Circular with Brand Color Triangle */}
                             <div className="absolute top-4 left-4">
                                 <button className="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition-transform">
-                                    <svg className="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 24 24" style={{ color: '#cf7bff' }}>
+                                    <svg className="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 24 24" style={{ color: '#1470D2' }}>
                                         <path d="M8 5v14l11-7z" />
                                     </svg>
                                 </button>
@@ -241,7 +241,7 @@ const KnowledgeManagement = () => {
                         {/* Language Selection Buttons */}
                         <div className="flex gap-3">
                             {/* US ENGLISH - Selected (Brand Purple) */}
-                            <button className="flex-1 flex items-center justify-center gap-2 px-4 py-3 text-white font-semibold rounded-lg border-2 border-white shadow-md hover:opacity-90 transition-colors" style={{ background: 'linear-gradient(90deg, #0118D8 0%, #B771E5 100%)' }}>
+                            <button className="flex-1 flex items-center justify-center gap-2 px-4 py-3 text-white font-semibold rounded-lg border-2 border-white shadow-md hover:opacity-90 transition-colors" style={{ background: 'linear-gradient(90deg, #1470D2 0%, #F96A17 100%)' }}>
                                 <span className="text-lg">🇺🇸</span>
                                 <span className="text-xs">US ENGLISH</span>
                             </button>
@@ -296,7 +296,7 @@ const KnowledgeManagement = () => {
                             {/* Metric */}
                             <div className="mb-4">
                                 <div className="flex items-center gap-2 mb-2">
-                                    <span className="text-5xl font-bold" style={{ color: '#cf7bff' }}>↑65%</span>
+                                    <span className="text-5xl font-bold" style={{ color: '#1470D2' }}>↑65%</span>
                                 </div>
                                 <p className="text-sm font-medium" style={{ color: '#4A5568' }}>KNOWLEDGE RETENTION</p>
                             </div>
@@ -310,7 +310,7 @@ const KnowledgeManagement = () => {
                             <Link
                                 to="/case-study/merck"
                                 className="inline-flex items-center gap-2 text-base font-medium hover:gap-3 transition-all"
-                                style={{ color: '#cf7bff' }}
+                                style={{ color: '#1470D2' }}
                             >
                                 Read case study
                                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -329,7 +329,7 @@ const KnowledgeManagement = () => {
                             {/* Metric */}
                             <div className="mb-4">
                                 <div className="flex items-center gap-2 mb-2">
-                                    <span className="text-5xl font-bold" style={{ color: '#cf7bff' }}>↑3x</span>
+                                    <span className="text-5xl font-bold" style={{ color: '#1470D2' }}>↑3x</span>
                                 </div>
                                 <p className="text-sm font-medium" style={{ color: '#4A5568' }}>LEARNING ENGAGEMENT</p>
                             </div>
@@ -343,7 +343,7 @@ const KnowledgeManagement = () => {
                             <Link
                                 to="/case-study/reuters"
                                 className="inline-flex items-center gap-2 text-base font-medium hover:gap-3 transition-all"
-                                style={{ color: '#cf7bff' }}
+                                style={{ color: '#1470D2' }}
                             >
                                 Read case study
                                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -362,7 +362,7 @@ const KnowledgeManagement = () => {
                             {/* Metric */}
                             <div className="mb-4">
                                 <div className="flex items-center gap-2 mb-2">
-                                    <span className="text-5xl font-bold" style={{ color: '#cf7bff' }}>↓70%</span>
+                                    <span className="text-5xl font-bold" style={{ color: '#1470D2' }}>↓70%</span>
                                 </div>
                                 <p className="text-sm font-medium" style={{ color: '#4A5568' }}>TIME TO KNOWLEDGE</p>
                             </div>
@@ -376,7 +376,7 @@ const KnowledgeManagement = () => {
                             <Link
                                 to="/case-study/opentext"
                                 className="inline-flex items-center gap-2 text-base font-medium hover:gap-3 transition-all"
-                                style={{ color: '#cf7bff' }}
+                                style={{ color: '#1470D2' }}
                             >
                                 Read case study
                                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

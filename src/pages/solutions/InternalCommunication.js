@@ -26,7 +26,7 @@ const InternalCommunication = () => {
                 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-20">
                     {/* Top Banner */}
                     <div className="mb-8">
-                        <div className="inline-flex items-center rounded-full px-4 py-2 border" style={{ backgroundColor: '#E5E2FF', borderColor: '#cf7bff' }}>
+                        <div className="inline-flex items-center rounded-full px-4 py-2 border" style={{ backgroundColor: '#E5E2FF', borderColor: '#1470D2' }}>
                             <span className="text-sm font-semibold" style={{ color: '#0013C1' }}>
                                 #1 AI VIDEO PLATFORM FOR INTERNAL COMMUNICATION
                             </span>
@@ -36,7 +36,7 @@ const InternalCommunication = () => {
                     {/* Main Headline */}
                     <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight max-w-4xl">
                         <span className="text-gray-900">Communicate</span>{' '}
-                        <span className="text-[#cf7bff]">clear engaging updates</span>{' '}
+                        <span className="text-[#1470D2]">clear engaging updates</span>{' '}
                         <span className="text-gray-900">to your team</span>
                     </h1>
 
@@ -50,7 +50,7 @@ const InternalCommunication = () => {
                         <Link
                             to="/create-free"
                             className="inline-flex items-center gap-2 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200 shadow-lg hover:opacity-90"
-                            style={{ background: 'linear-gradient(90deg, #0118D8 0%, #B771E5 100%)' }}
+                            style={{ background: 'linear-gradient(90deg, #1470D2 0%, #F96A17 100%)' }}
                         >
                             Create internal update video
                             <ArrowRightIcon className="w-5 h-5" />
@@ -160,7 +160,7 @@ const InternalCommunication = () => {
                     <div>
                         {/* Tag - Brand color badge */}
                         <div className="mb-6">
-                            <span className="inline-block px-4 py-1.5 rounded-lg text-sm font-semibold uppercase tracking-wide border" style={{ color: '#cf7bff', borderColor: '#cf7bff' }}>
+                            <span className="inline-block px-4 py-1.5 rounded-lg text-sm font-semibold uppercase tracking-wide border" style={{ color: '#1470D2', borderColor: '#1470D2' }}>
                                 INTERNAL COMMUNICATION
                             </span>
                         </div>
@@ -173,7 +173,7 @@ const InternalCommunication = () => {
                         {/* Features List */}
                         <div className="space-y-5 mb-10">
                             <div className="flex items-start gap-3">
-                                <div className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center mt-0.5" style={{ backgroundColor: '#cf7bff' }}>
+                                <div className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center mt-0.5" style={{ backgroundColor: '#1470D2' }}>
                                     <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                                     </svg>
@@ -184,7 +184,7 @@ const InternalCommunication = () => {
                             </div>
 
                             <div className="flex items-start gap-3">
-                                <div className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center mt-0.5" style={{ backgroundColor: '#cf7bff' }}>
+                                <div className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center mt-0.5" style={{ backgroundColor: '#1470D2' }}>
                                     <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                                     </svg>
@@ -195,7 +195,7 @@ const InternalCommunication = () => {
                             </div>
 
                             <div className="flex items-start gap-3">
-                                <div className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center mt-0.5" style={{ backgroundColor: '#cf7bff' }}>
+                                <div className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center mt-0.5" style={{ backgroundColor: '#1470D2' }}>
                                     <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                                     </svg>
@@ -210,7 +210,7 @@ const InternalCommunication = () => {
                         <Link
                             to="/create-update-video"
                             className="inline-flex items-center gap-2 px-6 py-3 bg-white text-gray-900 font-semibold text-base rounded-lg hover:opacity-90 transition-all group"
-                            style={{ border: '2px solid #cf7bff' }}
+                            style={{ border: '2px solid #1470D2' }}
                         >
                             Create team update
                             <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -233,7 +233,7 @@ const InternalCommunication = () => {
                             {/* Play Button - Upper Left Corner, White Circular with Brand Color Triangle */}
                             <div className="absolute top-4 left-4">
                                 <button className="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition-transform">
-                                    <svg className="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 24 24" style={{ color: '#cf7bff' }}>
+                                    <svg className="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 24 24" style={{ color: '#1470D2' }}>
                                         <path d="M8 5v14l11-7z" />
                                     </svg>
                                 </button>
@@ -243,7 +243,7 @@ const InternalCommunication = () => {
                         {/* Language Selection Buttons */}
                         <div className="flex gap-3">
                             {/* US ENGLISH - Selected (Brand Purple) */}
-                            <button className="flex-1 flex items-center justify-center gap-2 px-4 py-3 text-white font-semibold rounded-lg border-2 border-white shadow-md hover:opacity-90 transition-colors" style={{ background: 'linear-gradient(90deg, #0118D8 0%, #B771E5 100%)' }}>
+                            <button className="flex-1 flex items-center justify-center gap-2 px-4 py-3 text-white font-semibold rounded-lg border-2 border-white shadow-md hover:opacity-90 transition-colors" style={{ background: 'linear-gradient(90deg, #1470D2 0%, #F96A17 100%)' }}>
                                 <span className="text-lg">🇺🇸</span>
                                 <span className="text-xs">US ENGLISH</span>
                             </button>
@@ -298,7 +298,7 @@ const InternalCommunication = () => {
                             {/* Metric */}
                             <div className="mb-4">
                                 <div className="flex items-center gap-2 mb-2">
-                                    <span className="text-5xl font-bold" style={{ color: '#cf7bff' }}>↑75%</span>
+                                    <span className="text-5xl font-bold" style={{ color: '#1470D2' }}>↑75%</span>
                                 </div>
                                 <p className="text-sm font-medium" style={{ color: '#4A5568' }}>VIEW RATE</p>
                             </div>
@@ -312,7 +312,7 @@ const InternalCommunication = () => {
                             <Link
                                 to="/case-study/heineken"
                                 className="inline-flex items-center gap-2 text-base font-medium hover:gap-3 transition-all"
-                                style={{ color: '#cf7bff' }}
+                                style={{ color: '#1470D2' }}
                             >
                                 Read case study
                                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -331,7 +331,7 @@ const InternalCommunication = () => {
                             {/* Metric */}
                             <div className="mb-4">
                                 <div className="flex items-center gap-2 mb-2">
-                                    <span className="text-5xl font-bold" style={{ color: '#cf7bff' }}>↑95%</span>
+                                    <span className="text-5xl font-bold" style={{ color: '#1470D2' }}>↑95%</span>
                                 </div>
                                 <p className="text-sm font-medium" style={{ color: '#4A5568' }}>MESSAGE CONSISTENCY</p>
                             </div>
@@ -345,7 +345,7 @@ const InternalCommunication = () => {
                             <Link
                                 to="/case-study/sap"
                                 className="inline-flex items-center gap-2 text-base font-medium hover:gap-3 transition-all"
-                                style={{ color: '#cf7bff' }}
+                                style={{ color: '#1470D2' }}
                             >
                                 Read case study
                                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -364,7 +364,7 @@ const InternalCommunication = () => {
                             {/* Metric */}
                             <div className="mb-4">
                                 <div className="flex items-center gap-2 mb-2">
-                                    <span className="text-5xl font-bold" style={{ color: '#cf7bff' }}>↓60%</span>
+                                    <span className="text-5xl font-bold" style={{ color: '#1470D2' }}>↓60%</span>
                                 </div>
                                 <p className="text-sm font-medium" style={{ color: '#4A5568' }}>COMMUNICATION TIME</p>
                             </div>
@@ -378,7 +378,7 @@ const InternalCommunication = () => {
                             <Link
                                 to="/case-study/moodys"
                                 className="inline-flex items-center gap-2 text-base font-medium hover:gap-3 transition-all"
-                                style={{ color: '#cf7bff' }}
+                                style={{ color: '#1470D2' }}
                             >
                                 Read case study
                                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

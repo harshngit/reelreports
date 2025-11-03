@@ -70,7 +70,7 @@ function FeaturesSection() {
 					{groups.map((group) => (
 						<div key={group.id} className="p-6 rounded-2xl bg-white shadow-sm ring-1 ring-black/5 border border-[#c6c1f0] hover:border-[#0013C1] transition-all duration-300">
 							<div className="flex items-center gap-3 mb-4">
-								<div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{backgroundImage:'linear-gradient(90deg, #0118D8 0%, #B771E5 100%)'}}>
+								<div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{backgroundImage:'linear-gradient(90deg, #1470D2 0%, #F96A17 100%)'}}>
 									<group.icon className="w-5 h-5 text-white" />
 								</div>
 								<h3 className="text-lg font-bold text-gray-900">{group.title}</h3>
