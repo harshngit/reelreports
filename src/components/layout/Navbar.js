@@ -20,6 +20,8 @@ function Navbar() {
     const [mobileOpen, setMobileOpen] = useState(false);
     const [featureDropdownOpen, setFeatureDropdownOpen] = useState(false);
     const [solutionDropdownOpen, setSolutionDropdownOpen] = useState(false);
+    const [mobileFeatureOpen, setMobileFeatureOpen] = useState(false);
+    const [mobileSolutionOpen, setMobileSolutionOpen] = useState(false);
     
     const featureDropdownRef = useRef(null);
     const solutionDropdownRef = useRef(null);
@@ -216,6 +218,65 @@ function Navbar() {
 						{navItems.map((item) => {
 							const hash = item.to.replace('/', '');
 							const active = currentHash === hash;
+							
+							// Handle items with dropdown
+							if (item.hasDropdown) {
+								const isFeature = item.dropdownType === 'feature';
+								const isSolution = item.dropdownType === 'solution';
+								const isExpanded = isFeature ? mobileFeatureOpen : mobileSolutionOpen;
+								const toggleExpanded = isFeature 
+									? () => setMobileFeatureOpen(!mobileFeatureOpen)
+									: () => setMobileSolutionOpen(!mobileSolutionOpen);
+								
+								// Define submenu items
+								const featureSubItems = [
+									{ title: 'Communication', path: '/feature/communication' },
+									{ title: 'Brought to life', path: '/feature/brought-to-life' },
+									{ title: 'Within branding guidelines', path: '/feature/branding-guidelines' },
+									{ title: 'And full user control', path: '/feature/user-control' }
+								];
+								
+								const solutionSubItems = [
+									{ title: 'Sales acceleration', path: '/solution/sales-acceleration' },
+									{ title: 'Marketing', path: '/solution/marketing' },
+									{ title: 'Internal communication', path: '/solution/internal-communication' },
+									{ title: 'Knowledge management', path: '/solution/knowledge-management' }
+								];
+								
+								const subItems = isFeature ? featureSubItems : solutionSubItems;
+								
+								return (
+									<div key={item.label}>
+										<button
+											className={`w-full text-left flex items-center justify-between text-base font-semibold rounded-md px-2 py-2 ${active ? 'text-[#0013C1] bg-[#E5E2FF]/70' : 'text-gray-700 hover:text-gray-900'}`}
+											onClick={toggleExpanded}
+										>
+											<span>{item.label}</span>
+											<ChevronDownIcon 
+												className={`w-4 h-4 transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`}
+											/>
+										</button>
+										
+										{/* Submenu */}
+										{isExpanded && (
+											<div className="ml-4 mt-2 space-y-1 border-l-2 border-gray-200 pl-3">
+												{subItems.map((subItem, idx) => (
+													<Link
+														key={idx}
+														to={subItem.path}
+														className="block text-sm font-medium text-gray-600 hover:text-[#1470D2] py-2 px-2 rounded-md hover:bg-gray-50 transition-colors"
+														onClick={() => setMobileOpen(false)}
+													>
+														{subItem.title}
+													</Link>
+												))}
+											</div>
+										)}
+									</div>
+								);
+							}
+							
+							// Regular items without dropdown
 							return (
 								<Link
 									key={item.label}

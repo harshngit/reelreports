@@ -8,11 +8,11 @@ const UserControl = () => {
     return (
         <div className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-indigo-50">
             {/* Video Editing Tools Section */}
-            <div className="pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+            <div className="pt-16 sm:pt-20 md:pt-24 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
-                    <div className="grid md:grid-cols-2 gap-12 items-center">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
                         {/* Left Side - Banner/Illustration */}
-                        <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-2xl">
+                        <div className="relative h-[300px] sm:h-[400px] md:h-[500px] rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl order-2 md:order-1">
                             {/* Animated gradient background */}
                             <div className="absolute inset-0 bg-gradient-to-br from-purple-600 via-indigo-600 to-blue-600 animate-gradient">
                                 <div className="absolute inset-0 opacity-30 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')]"></div>
@@ -58,23 +58,23 @@ const UserControl = () => {
                         </div>
 
                         {/* Right Side - Content */}
-                        <div className="space-y-8">
+                        <div className="space-y-6 sm:space-y-8 order-1 md:order-2">
                             <div>
-                                <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-700 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6">
+                                    <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="currentColor" viewBox="0 0 20 20">
                                         <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
                                     </svg>
                                     Professional Tools
                                 </div>
                                 
-                                <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
                                     Powerful Video
                                     <span className="block bg-gradient-to-r from-[#1470D2] to-[#8E23C0] bg-clip-text text-transparent">
                                         Editing Suite
                                     </span>
                         </h1>
                                 
-                                <p className="text-xl text-gray-600 leading-relaxed mb-8">
+                                <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed mb-6 sm:mb-8">
                                     Take complete control with professional-grade editing tools. Intuitive timeline editor, 
                                     precise trimming, seamless merging, and advanced effects—all in a user-friendly interface 
                                     that makes professional editing accessible to everyone.
@@ -82,18 +82,18 @@ const UserControl = () => {
                             </div>
 
                             {/* Key Stats */}
-                            <div className="grid grid-cols-3 gap-6 py-6 border-y border-gray-200">
+                            <div className="grid grid-cols-3 gap-3 sm:gap-6 py-4 sm:py-6 border-y border-gray-200">
                                 <div>
-                                    <div className="text-3xl font-bold text-purple-600 mb-1">Pro</div>
-                                    <div className="text-sm text-gray-600">Grade Tools</div>
+                                    <div className="text-2xl sm:text-3xl font-bold text-purple-600 mb-1">Pro</div>
+                                    <div className="text-xs sm:text-sm text-gray-600">Grade Tools</div>
                                 </div>
                                 <div>
-                                    <div className="text-3xl font-bold text-indigo-600 mb-1">Real</div>
-                                    <div className="text-sm text-gray-600">Time Edit</div>
+                                    <div className="text-2xl sm:text-3xl font-bold text-indigo-600 mb-1">Real</div>
+                                    <div className="text-xs sm:text-sm text-gray-600">Time Edit</div>
                                 </div>
                                 <div>
-                                    <div className="text-3xl font-bold text-blue-600 mb-1">Easy</div>
-                                    <div className="text-sm text-gray-600">Interface</div>
+                                    <div className="text-2xl sm:text-3xl font-bold text-blue-600 mb-1">Easy</div>
+                                    <div className="text-xs sm:text-sm text-gray-600">Interface</div>
                                 </div>
                             </div>
 
@@ -124,11 +124,11 @@ const UserControl = () => {
             </div>
 
             {/* Scene Level Edits - Interactive Tab Design */}
-            <div className="bg-white py-20 px-4 sm:px-6 lg:px-8">
+            <div className="bg-white py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
                     {/* Section Header */}
-                    <div className="text-center mb-12">
-                        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    <div className="text-center mb-8 sm:mb-10 md:mb-12">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-3 sm:mb-4">
                             Granular Scene-Level Control
                         </h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -137,10 +137,10 @@ const UserControl = () => {
                     </div>
 
                     {/* Interactive Tab Buttons */}
-                    <div className="flex justify-center gap-4 mb-12 flex-wrap">
+                    <div className="flex justify-center gap-2 sm:gap-3 md:gap-4 mb-8 sm:mb-10 md:mb-12 flex-wrap">
                         <button
                             onClick={() => setActiveEditTab('timeline')}
-                            className={`inline-flex items-center gap-3 px-6 py-3 rounded-2xl font-semibold text-base transition-all duration-300 ${
+                            className={`inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 rounded-xl sm:rounded-2xl font-semibold text-sm sm:text-base transition-all duration-300 ${
                                 activeEditTab === 'timeline'
                                     ? 'text-white shadow-lg scale-105'
                                     : 'bg-white text-gray-700 border-2 border-gray-200 hover:border-[#1470D2] hover:shadow-md'
@@ -155,7 +155,7 @@ const UserControl = () => {
 
                         <button
                             onClick={() => setActiveEditTab('reorder')}
-                            className={`inline-flex items-center gap-3 px-6 py-3 rounded-2xl font-semibold text-base transition-all duration-300 ${
+                            className={`inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 rounded-xl sm:rounded-2xl font-semibold text-sm sm:text-base transition-all duration-300 ${
                                 activeEditTab === 'reorder'
                                     ? 'text-white shadow-lg scale-105'
                                     : 'bg-white text-gray-700 border-2 border-gray-200 hover:border-[#1470D2] hover:shadow-md'
@@ -170,7 +170,7 @@ const UserControl = () => {
 
                         <button
                             onClick={() => setActiveEditTab('customize')}
-                            className={`inline-flex items-center gap-3 px-6 py-3 rounded-2xl font-semibold text-base transition-all duration-300 ${
+                            className={`inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 rounded-xl sm:rounded-2xl font-semibold text-sm sm:text-base transition-all duration-300 ${
                                 activeEditTab === 'customize'
                                     ? 'text-white shadow-lg scale-105'
                                     : 'bg-white text-gray-700 border-2 border-gray-200 hover:border-[#1470D2] hover:shadow-md'
@@ -185,8 +185,8 @@ const UserControl = () => {
                     </div>
 
                     {/* Content Block with Animation */}
-                    <div className="bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 rounded-3xl p-12 shadow-xl overflow-hidden">
-                        <div className="grid md:grid-cols-2 gap-12 items-center">
+                    <div className="bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 rounded-2xl md:rounded-3xl p-6 sm:p-8 md:p-12 shadow-xl overflow-hidden">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
                             {/* Left Column - Text Content */}
                             <div className="space-y-6">
                                 {activeEditTab === 'timeline' && (
@@ -269,7 +269,7 @@ const UserControl = () => {
                             </div>
 
                             {/* Right Column - Visual Element */}
-                            <div className="relative h-[450px] flex items-center justify-center">
+                            <div className="relative h-[300px] sm:h-[350px] md:h-[450px] flex items-center justify-center">
                                 {activeEditTab === 'timeline' && (
                                     <div className="animate-fade-in w-full h-full">
                                         {/* Timeline Visualization */}
@@ -438,9 +438,9 @@ const UserControl = () => {
             `}</style>
 
             {/* Text Customization Section */}
-            <div className="bg-gradient-to-b from-slate-50 to-white py-20 px-4 sm:px-6 lg:px-8">
+            <div className="bg-gradient-to-b from-slate-50 to-white py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
-                    <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center mb-10 sm:mb-12 md:mb-16">
                         {/* Left Side - Content */}
                     <div>
                             <div className="inline-flex items-center gap-2 bg-pink-100 text-pink-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">
@@ -607,7 +607,7 @@ const UserControl = () => {
                     </div>
 
                     {/* Additional Features Grid */}
-                    <div className="grid md:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
                         {/* Feature 1 */}
                         <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
                             <div className="w-12 h-12 bg-gradient-to-br from-pink-100 to-rose-100 rounded-xl flex items-center justify-center mb-4">
