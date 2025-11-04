@@ -13,64 +13,78 @@ function PricingCards() {
 
 	const plans = [
 		{
-			name: 'Starter',
-			description: 'Perfect for individuals and small teams getting started',
+			name: 'Basic',
+			description: 'Perfect for getting started',
 			icon: SparklesIcon,
-			monthlyPrice: 29,
-			yearlyPrice: 290,
+			monthlyPrice: 0,
+			yearlyPrice: 0,
+			priceLabel: 'Free',
 			popular: false,
+			videoLimit: '3 minutes of video per month',
 			features: [
-				{ name: 'Up to 10 videos per month', included: true },
-				{ name: 'HD video quality (1080p)', included: true },
-				{ name: 'Basic templates library', included: true },
-				{ name: 'AI voice-over (5 voices)', included: true },
-				{ name: 'Email support', included: true },
-				{ name: 'Watermark removal', included: false },
-				{ name: 'Custom branding', included: false },
-				{ name: 'Priority rendering', included: false },
-				{ name: 'API access', included: false },
+				{ name: 'Download your videos', included: true },
+				{ name: 'Up to 10 super prompted document summaries', included: true },
+				{ name: 'Anchor style avatar scenes', included: true },
+				{ name: '3 personalized avatars', included: true },
 			],
 			gradient: 'from-blue-500 to-cyan-500',
 			buttonClass: 'bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600',
 		},
 		{
-			name: 'Professional',
-			description: 'For growing businesses and content creators',
+			name: 'Hobbyist',
+			description: 'Everything in Basic +',
 			icon: RocketLaunchIcon,
-			monthlyPrice: 79,
-			yearlyPrice: 790,
+			monthlyPrice: 39,
+			yearlyPrice: 390,
 			popular: true,
+			videoLimit: '10 minutes of video per month',
 			features: [
-				{ name: 'Up to 50 videos per month', included: true },
-				{ name: '4K video quality', included: true },
-				{ name: 'Premium templates library', included: true },
-				{ name: 'AI voice-over (50+ voices)', included: true },
-				{ name: 'Priority email support', included: true },
-				{ name: 'Watermark removal', included: true },
-				{ name: 'Custom branding', included: true },
-				{ name: 'Priority rendering', included: true },
-				{ name: 'API access', included: false },
+				{ name: 'Remove Reel Reports Logo', included: true },
+				{ name: 'Up to 30 super prompted document summaries', included: true },
+				{ name: 'Infographic scenes', included: true },
+				{ name: 'Chart based scenes', included: true },
+				{ name: '10 personalized avatars', included: true },
 			],
 			gradient: 'from-purple-500 to-pink-500',
 			buttonClass: 'bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600',
 		},
 		{
+			name: 'Creator',
+			description: 'Everything in Hobbyist +',
+			icon: SparklesIcon,
+			monthlyPrice: 99,
+			yearlyPrice: 990,
+			popular: false,
+			videoLimit: '10 minutes of video per month',
+			features: [
+				{ name: 'Up to 90 super prompted document summaries', included: true },
+				{ name: 'Dynamic avatar scenes', included: true },
+				{ name: 'Unlimited personalized avatars', included: true },
+				{ name: 'Voice cloning', included: true },
+				{ name: 'Multiple brand profiles', included: true },
+			],
+			gradient: 'from-indigo-500 to-purple-500',
+			buttonClass: 'bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600',
+		},
+		{
 			name: 'Enterprise',
-			description: 'For large organizations with advanced needs',
+			description: 'Everything in Hobbyist +',
 			icon: BuildingOfficeIcon,
-			monthlyPrice: 199,
-			yearlyPrice: 1990,
+			monthlyPrice: null,
+			yearlyPrice: null,
+			priceLabel: "Let's talk",
+			customPricing: true,
+			videoLimit: 'Unlimited video minutes',
 			popular: false,
 			features: [
-				{ name: 'Unlimited videos', included: true },
-				{ name: '4K video quality', included: true },
-				{ name: 'All templates + custom templates', included: true },
-				{ name: 'AI voice-over (unlimited)', included: true },
-				{ name: '24/7 dedicated support', included: true },
-				{ name: 'Watermark removal', included: true },
-				{ name: 'Custom branding', included: true },
-				{ name: 'Priority rendering', included: true },
-				{ name: 'Full API access', included: true },
+				{ name: 'Unlimited video minutes', included: true },
+				{ name: 'Translation to +80 languages', included: true },
+				{ name: 'Script saving', included: true },
+				{ name: 'SAML / SSO', included: true },
+				{ name: 'Tailored onboarding', included: true },
+				{ name: 'System integration', included: true },
+				{ name: 'Dedicated chat/email support', included: true },
+				{ name: 'Adoption support campaign', included: true },
 			],
 			gradient: 'from-orange-500 to-red-500',
 			buttonClass: 'bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600',
@@ -117,7 +131,7 @@ function PricingCards() {
 				/>
 			</div>
 
-			<div className="mx-auto max-w-6xl relative z-10">
+			<div className="mx-auto max-w-7xl relative z-10">
 				{/* Header */}
 				<motion.div
 					initial={{ opacity: 0, y: -20 }}
@@ -137,7 +151,7 @@ function PricingCards() {
 					</p>
 
 					{/* Billing Toggle */}
-					<div className="mt-8 flex items-center justify-center gap-3">
+					{/* <div className="mt-8 flex items-center justify-center gap-3">
 						<span className={`text-sm font-medium ${!isYearly ? 'text-gray-900' : 'text-gray-500'}`}>
 							Monthly
 						</span>
@@ -170,16 +184,16 @@ function PricingCards() {
 								Save 17%
 							</motion.span>
 						)}
-					</div>
+					</div> */}
 				</motion.div>
 
 				{/* Pricing Cards */}
 				<motion.div
-					variants={containerVariants}
-					initial="hidden"
-					whileInView="visible"
-					viewport={{ once: true, amount: 0.2 }}
-					className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+				variants={containerVariants}
+				initial="hidden"
+				whileInView="visible"
+				viewport={{ once: true, amount: 0.2 }}
+				className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
 				>
 					{plans.map((plan, index) => (
 						<motion.div
@@ -229,41 +243,50 @@ function PricingCards() {
 								<h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
 								<p className="text-sm text-gray-600 mb-6">{plan.description}</p>
 
-								{/* Price */}
-								<div className="mb-8">
+							{/* Price */}
+							<div className="mb-8">
+								{plan.customPricing ? (
+									<div>
+										<motion.div
+											key="custom"
+											initial={{ opacity: 0, y: -10 }}
+											animate={{ opacity: 1, y: 0 }}
+											transition={{ duration: 0.3 }}
+											className="text-3xl font-bold text-gray-900 mb-2"
+										>
+											{plan.priceLabel}
+										</motion.div>
+										<p className="text-gray-600">Custom pricing</p>
+									</div>
+								) : (
+									<div>
 									<div className="flex items-baseline gap-2">
 										<motion.span
-											key={isYearly ? 'yearly' : 'monthly'}
 											initial={{ opacity: 0, y: -10 }}
 											animate={{ opacity: 1, y: 0 }}
 											transition={{ duration: 0.3 }}
 											className="text-5xl font-bold text-gray-900"
 										>
-											${isYearly ? plan.yearlyPrice : plan.monthlyPrice}
+											{plan.priceLabel || `$${plan.monthlyPrice}`}
 										</motion.span>
-										<span className="text-gray-600">
-											/{isYearly ? 'year' : 'month'}
-										</span>
+										{!plan.priceLabel && (
+											<span className="text-gray-600">
+												/month
+											</span>
+										)}
 									</div>
-									{isYearly && (
-										<motion.p
-											initial={{ opacity: 0 }}
-											animate={{ opacity: 1 }}
-											className="mt-2 text-sm text-green-600 font-medium"
-										>
-											${((plan.monthlyPrice * 12 - plan.yearlyPrice) / 12).toFixed(0)} off per month
-										</motion.p>
-									)}
 								</div>
+								)}
+							</div>
 
-								{/* CTA Button */}
-								<motion.button
-									whileHover={{ scale: 1.02 }}
-									whileTap={{ scale: 0.98 }}
-									className={`w-full py-3 px-6 rounded-xl text-white font-semibold shadow-lg transition-all duration-300 ${plan.buttonClass}`}
-								>
-									Get Started
-								</motion.button>
+							{/* CTA Button */}
+							<motion.button
+								whileHover={{ scale: 1.02 }}
+								whileTap={{ scale: 0.98 }}
+								className={`w-full py-3 px-6 rounded-xl text-white font-semibold shadow-lg transition-all duration-300 ${plan.buttonClass}`}
+							>
+								{plan.customPricing ? 'Contact Sales' : 'Get Started'}
+							</motion.button>
 
 								{/* Features */}
 								<div className="mt-8 pt-8 border-t border-gray-200">
@@ -278,15 +301,15 @@ function PricingCards() {
 												transition={{ delay: idx * 0.05 }}
 												className="flex items-start gap-3"
 											>
-												{feature.included ? (
-													<div className="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 flex items-center justify-center">
-														<CheckIcon className="w-3.5 h-3.5 text-green-600 font-bold" />
-													</div>
-												) : (
-													<div className="flex-shrink-0 w-5 h-5 rounded-full bg-gray-100 flex items-center justify-center">
-														<XMarkIcon className="w-3.5 h-3.5 text-gray-400" />
-													</div>
-												)}
+											{feature.included ? (
+												<div className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 flex items-center justify-center">
+													<CheckIcon className="w-3.5 h-3.5 text-indigo-600 font-bold" />
+												</div>
+											) : (
+												<div className="flex-shrink-0 w-5 h-5 rounded-full bg-gray-100 flex items-center justify-center">
+													<XMarkIcon className="w-3.5 h-3.5 text-gray-400" />
+												</div>
+											)}
 												<span
 													className={`text-sm leading-6 ${
 														feature.included ? 'text-gray-700' : 'text-gray-400'
@@ -298,6 +321,24 @@ function PricingCards() {
 										))}
 									</ul>
 								</div>
+
+								{/* Video Credits Section */}
+								{plan.videoLimit && (
+									<div className="mt-8 pt-8 border-t border-gray-200">
+										<p className="text-sm font-bold text-gray-900 mb-4 uppercase tracking-wide">
+											Includes X Credits / Mo
+										</p>
+										<p className="text-xs text-gray-600 mb-2">Useable for up to</p>
+										<div className="flex items-center gap-2">
+											<div className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 flex items-center justify-center">
+												<CheckIcon className="w-3.5 h-3.5 text-indigo-600 font-bold" />
+											</div>
+											<span className="text-sm font-medium text-gray-900">
+												{plan.videoLimit}
+											</span>
+										</div>
+									</div>
+								)}
 							</div>
 						</motion.div>
 					))}

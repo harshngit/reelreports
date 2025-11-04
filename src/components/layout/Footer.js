@@ -39,12 +39,12 @@ function Footer() {
 								</Link>
 							</li>
 							<li>
-							<Link to="/#pricing" className="text-sm text-[#000/80] hover:text-[#000] transition-colors">
+							<Link to="/pricing" className="text-sm text-[#000/80] hover:text-[#000] transition-colors">
 									Pricing
 								</Link>
 							</li>
 							<li>
-							<Link to="/#book-demo" className="text-sm text-[#000/80] hover:text-[#000] transition-colors">
+							<Link to="/book-demo" className="text-sm text-[#000/80] hover:text-[#000] transition-colors">
 									Book Demo
 								</Link>
 							</li>
@@ -56,8 +56,8 @@ function Footer() {
 					<h3 className="text-sm font-bold text-[#000] mb-4 uppercase tracking-wider">Company</h3>
 						<ul className="space-y-3">
 							<li>
-							<a href="#" className="text-sm text-[#000/80] hover:text-[#000] transition-colors">
-									About Us
+							<a href="/pricing" className="text-sm text-[#000/80] hover:text-[#000] transition-colors">
+									Pricing
 								</a>
 							</li>
 							<li>
@@ -66,13 +66,13 @@ function Footer() {
 								</a>
 							</li>
 							<li>
-								<a href="#" className="text-sm text-[#000/80] hover:text-[#000] transition-colors">
-									Blog
+								<a href="/book-demo" className="text-sm text-[#000/80] hover:text-[#000] transition-colors">
+									Book Demo
 								</a>
 							</li>
 							<li>
-							<a href="#" className="text-sm text-[#000/80] hover:text-[#000] transition-colors">
-									Careers
+							<a href="/get-started" className="text-sm text-[#000/80] hover:text-[#000] transition-colors">
+									Get Started
 								</a>
 							</li>
 						</ul>

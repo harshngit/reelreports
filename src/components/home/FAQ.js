@@ -6,28 +6,28 @@ function FAQ() {
 
 	const faqs = [
 		{
-			question: 'Is Synthesia free?',
-			answer: 'We have a free plan that lets you create free AI videos! It includes 3 minutes of video per month, 9 stock avatars and a full range of AI voices in 140+ languages. Learn more about all available plans or try our free AI video generator.'
+			question: 'Is ReelReport free?',
+			answer: 'Yes! We have a free Basic plan that lets you create AI-powered videos. It includes 3 minutes of video per month, anchor style avatar scenes, up to 10 document summaries, and 3 personalized avatars. Learn more about all available plans or try our free AI video generator.'
 		},
 		{
-			question: 'Can I customize AI videos to add brand identity?',
-			answer: 'Yes, you can fully customize your AI videos with your brand colors, logos, fonts, and more to maintain consistent brand identity across all your video content.'
+			question: 'What types of videos can I create with ReelReport?',
+			answer: 'ReelReport lets you transform documents into engaging video content with AI avatars, infographics, charts, and dynamic scenes. Perfect for creating training materials, report summaries, educational content, business presentations, and marketing videos.'
 		},
 		{
-			question: 'Does AI video creation integrate with existing LMS?',
-			answer: 'Absolutely! Our AI video creation platform integrates seamlessly with popular Learning Management Systems, making it easy to incorporate videos into your existing training workflows.'
+			question: 'How do document summaries work?',
+			answer: 'Our AI-powered super prompts analyze your documents and automatically generate video-ready summaries. Upload your document and our system creates a structured video script with key insights. Basic plan includes 10 summaries, Hobbyist gets 30, and Creator gets 90 per month.'
 		},
 		{
-			question: 'How does AI video creation improve employee productivity?',
-			answer: 'AI video creation significantly reduces the time and resources needed to produce training materials, allowing employees to focus on their core tasks while still accessing high-quality educational content.'
+			question: 'Can I use my own voice and brand identity?',
+			answer: 'Absolutely! With our Creator plan and above, you can use voice cloning to create videos with your own voice. You can also customize videos with your brand colors, logos, and create multiple brand profiles to maintain consistent brand identity across all content.'
 		},
 		{
-			question: 'Is it safe for businesses to create AI videos in Synthesia?',
-			answer: 'Yes, Synthesia is built with enterprise-grade security. We are SOC 2 Type II certified, GDPR compliant, and trusted by 90% of Fortune 100 companies for secure video creation.'
+			question: 'What are personalized avatars?',
+			answer: 'Personalized avatars are AI-generated video presenters that deliver your content. The Basic plan includes 3 avatars, Hobbyist gets 10, and Creator/Enterprise plans offer unlimited personalized avatars. Choose from anchor style, dynamic, infographic, and chart-based scenes.'
 		},
 		{
-			question: "What can you do with Synthesia's AI video tools?",
-			answer: 'With Synthesia, you can create professional training videos, product demos, marketing content, internal communications, and more - all without cameras, studios, or actors.'
+			question: 'Is ReelReport secure for enterprise use?',
+			answer: 'Yes, ReelReport is built with enterprise-grade security. Our Enterprise plan includes SAML/SSO authentication, dedicated support, system integration, and tailored onboarding. We ensure your data and content are protected with industry-standard security measures.'
 		}
 	];
 
