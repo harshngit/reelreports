@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../../assets/img/reportlogo.png';
+import logo from '../../assets/img/reellogo.png';
 import { ArrowRightIcon, Bars3Icon, XMarkIcon, ChevronDownIcon } from '@heroicons/react/24/outline';
 import FeatureDropdown from './FeatureDropdown';
 import SolutionDropdown from './SolutionDropdown';
@@ -11,6 +11,7 @@ const navItems = [
 	{ label: 'Feature', to: '/feature', hasDropdown: true, dropdownType: 'feature' },
 	{ label: 'Solution', to: '/solution', hasDropdown: true, dropdownType: 'solution' },
 	{ label: 'Pricing', to: '/pricing' },
+	{ label: 'Contact', to: '/contact' },
 ];
 
 function Navbar() {
@@ -104,7 +105,7 @@ function Navbar() {
 					{/* Left: logo + nav links */}
 					<div className="flex items-center gap-8">
 					<Link to="/" className="flex items-center gap-2">
-						<img src={logo} alt="Reel Reports" className="w-[150px]" />
+						<img src={logo} alt="Reel Reports" className="w-[120px]" />
 					</Link>
 					<div className="hidden md:flex items-center gap-6">
 						{navItems.map((item) => {
@@ -167,20 +168,20 @@ function Navbar() {
 
 					{/* Right: actions */}
 					<div className="hidden md:flex items-center gap-4">
-						<Link
-							to="/#book-demo"
-							className={getLinkClasses('#book-demo')}
-						>
-							Book Demo
-						</Link>
-						<Link
-							to="/#get-started"
-							className="inline-flex items-center rounded-md gap-2 px-4 py-2 text-md font-semibold text-[#fff] transition-all duration-300 shadow-sm"
-							style={{ backgroundImage: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' }}
-						>
-							Get started
-							<ArrowRightIcon className="w-4 h-4" />
-						</Link>
+					<Link
+						to="/book-demo"
+						className={getLinkClasses('/book-demo')}
+					>
+						Book Demo
+					</Link>
+					<Link
+						to="/get-started"
+						className="inline-flex items-center rounded-md gap-2 px-4 py-2 text-md font-semibold text-[#fff] transition-all duration-300 shadow-sm hover:shadow-lg"
+						style={{ backgroundImage: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' }}
+					>
+						Get started
+						<ArrowRightIcon className="w-4 h-4" />
+					</Link>
 					</div>
 
 				{/* Mobile hamburger */}
@@ -288,18 +289,18 @@ function Navbar() {
 								</Link>
 							);
 						})}
-						<hr className="my-3 border-gray-100" />
-						<Link to="/#book-demo" className="text-base font-semibold text-gray-700 hover:text-gray-900 px-2 py-2" onClick={() => setMobileOpen(false)}>
-							Book Demo
-						</Link>
-						<Link
-							to="/#get-started"
-							className="mt-2 inline-flex items-center justify-center rounded-md px-4 py-3 text-base font-semibold text-white shadow-sm"
-							style={{ backgroundImage: 'linear-gradient(90deg, #1470D2 0%, #8E23C0 100%)' }}
-							onClick={() => setMobileOpen(false)}
-						>
-							Get started
-						</Link>
+					<hr className="my-3 border-gray-100" />
+					<Link to="/book-demo" className="text-base font-semibold text-gray-700 hover:text-gray-900 px-2 py-2" onClick={() => setMobileOpen(false)}>
+						Book Demo
+					</Link>
+					<Link
+						to="/get-started"
+						className="mt-2 inline-flex items-center justify-center rounded-md px-4 py-3 text-base font-semibold text-white shadow-sm"
+						style={{ backgroundImage: 'linear-gradient(90deg, #1470D2 0%, #8E23C0 100%)' }}
+						onClick={() => setMobileOpen(false)}
+					>
+						Get started
+					</Link>
 					</nav>
 				</div>
 		</header>

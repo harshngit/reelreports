@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import logo from '../../assets/img/logoreelreports.png';
+import logo from '../../assets/img/reellogo.png';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
 function Footer() {
@@ -61,7 +61,7 @@ function Footer() {
 								</a>
 							</li>
 							<li>
-							<a href="#" className="text-sm text-[#000/80] hover:text-[#000] transition-colors">
+							<a href="/contact" className="text-sm text-[#000/80] hover:text-[#000] transition-colors">
 									Contact
 								</a>
 							</li>
