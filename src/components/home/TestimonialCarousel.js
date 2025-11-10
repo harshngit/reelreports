@@ -25,52 +25,52 @@ const TestimonialCarousel = () => {
   const testimonials = [
     {
       id: 1,
-      category: "TECHNICAL TRAINING",
-      logo: "opentext",
+      category: "Onboarding videos",
+      logo: "",
       quote: "50% faster content. Without sacrificing quality",
-      name: "Miki Ishikawa",
-      title: "Director, Learning Services",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=500&fit=crop",
+      name: "",
+      title: "",
+      image: "",
       bgColor: "bg-gray-200"
     },
     {
       id: 2,
-      category: "EMPLOYEE TRAINING",
-      logo: "sap",
+      category: "Doc Companion Reel",
+      logo: "",
       quote: "Teams adopt it fast and use it across the company.",
-      name: "Sabrina Childress",
-      title: "Innovation, Enablement, and Adoption",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=500&fit=crop",
+      name: "",
+      title: "",
+      image: "",
       bgColor: "bg-gray-900"
     },
     {
       id: 3,
-      category: "EMPLOYEE TRAINING",
-      logo: "boldyn",
-      quote: "Interactive video is redefining training for us",
-      name: "Jen Ruthven",
-      title: "Group Director, Learning & Career Development",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=500&fit=crop",
+      category: "Fast pre-reels",
+      logo: "",
+      quote: "1 minute summary getting everyone upto speed before the meeting begins",
+      name: "",
+      title: "",
+      image: "",
       bgColor: "bg-gray-700"
     },
     {
       id: 4,
-      category: "COMPLIANCE TRAINING",
-      logo: "BRINKS",
-      quote: "We push updates without touching the LMS.",
-      name: "Mark Stauffer",
-      title: "Senior Manager, Global L&D",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop",
+      category: "Video knoweldge database",
+      logo: "",
+      quote: "We summarized 100s of documents into 1 min reels easy consumption",
+      name: "",
+      title: "Senior Manager, Global Finance",
+      image: "",
       bgColor: "bg-gray-600"
     },
     {
       id: 5,
-      category: "EMPLOYEE TRAINING",
-      logo: "metrobank",
-      quote: "We saved $50K and hit 100+ customer videos",
-      name: "Matt Moser",
-      title: "Senior Director, Customer Engagement",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=500&fit=crop",
+      category: "Business Development",
+      logo: "",
+      quote: "We've trained our sales team to share tailored customer reels to close deals faster",
+      name: "",
+      title: "",
+      image: "",
       bgColor: "bg-gray-300"
     }
   ];
@@ -94,7 +94,7 @@ const TestimonialCarousel = () => {
 					USE CASES
 				</span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mt-4 sm:mt-6 px-2">
-            Train, market and sell like a<br className="hidden sm:block" />Fortune 100 company
+            Produce Agency-Quality videos <br className="hidden sm:block" />in-house, at scale
           </h2>
         </div>
 

@@ -8,7 +8,7 @@ import SolutionDropdown from './SolutionDropdown';
 const NAV_BG_COLOR = '#D4E4FF';
 
 const navItems = [
-	{ label: 'Feature', to: '/feature', hasDropdown: true, dropdownType: 'feature' },
+	{ label: 'Features', to: '/features', hasDropdown: true, dropdownType: 'features' },
 	{ label: 'Solution', to: '/solution', hasDropdown: true, dropdownType: 'solution' },
 	{ label: 'Pricing', to: '/pricing' },
 	{ label: 'Contact', to: '/contact' },

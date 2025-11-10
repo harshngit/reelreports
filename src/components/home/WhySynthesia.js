@@ -29,8 +29,8 @@ function WhySynthesia() {
 								</svg>
 							</div>
 						</div>
-						<h3 className="text-xl font-bold text-gray-900 mb-3">No video editing skills or equipment required.</h3>
-						<p className="text-gray-600 mb-4 leading-relaxed">90% of users publish their first video without needing a tutorial. And if you want to go deeper, there's a whole Academy.</p>
+						<h3 className="text-xl font-bold text-gray-900 mb-3">Intuitive & Familiar interface - no additional training required.</h3>
+						<p className="text-gray-600 mb-4 leading-relaxed">95% of users publish their first video without needing a tutorial.</p>
 						<a href="#" className="inline-flex items-center text-sm font-semibold gap-1 mt-auto" style={{ color: '#0013C1' }}>
 							Learn more about all features
 							<svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

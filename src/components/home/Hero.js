@@ -4,24 +4,28 @@ import reelbg from '../../assets/img/reelbg.png';
 import createImg from '../../assets/img/create.png';
 
 function Hero() {
-	const [activeTab, setActiveTab] = useState('Create');
+	const [activeTab, setActiveTab] = useState('Concept');
 
 	const tabData = {
-		'Create': {
+		'Concept': {
 			title: 'Create videos in minutes',
-			description: 'Start from a template or blank canvas. Produce studio‑quality videos without cameras, microphones, or actors.',
+			description: 'Start from a document, idea or blank canvas. Use simple text prompts to clarify the concept',
+		},
+		'Blueprint': {
+			title: 'Refine your concept',
+			description: 'Answer a dynamic super prompted questionnaire to create scenes and a script suited for your needs',
+		},
+		'Storyboard': {
+			title: 'Direct your Reel Report',
+			description: 'Review the Ai generated storyboard, make edits to the avatar, text, infographics, charts  in real-time',
 		},
 		'Edit': {
-			title: 'Refine Your Story',
-			description: 'Adjust visuals, scenes, and narration to match your brand and tone.',
-		},
-		'Build': {
-			title: 'Turn scripts into scenes',
-			description: 'Paste your script and let AI help structure scenes, voiceovers, and visuals in a snap.',
+			title: 'Refine and edit',
+			description: 'Make video edits to finalize the video for production',
 		},
 		'Share': {
 			title: 'Publish and Distribute',
-			description: 'Export, post, or send your finished video anywhere instantly..',
+			description: 'Export, or send your finished video anywhere instantly',
 		},
 	};
 	return (
@@ -29,12 +33,12 @@ function Hero() {
 			<section className="relative" style={{fontFamily:'var(--brand-font)', backgroundImage:`url(${reelbg})`, backgroundSize:'cover', backgroundPosition:'center', backgroundRepeat:'no-repeat'}}>
 			<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24">
 				<div className="text-center">
-					<motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="inline-flex items-center rounded-full px-2 py-1 sm:px-3 text-xs sm:text-sm md:text-md font-medium text-[#1470D2] border border-[#1470D2] shadow-sm" >#1 TEXT to VIDEO platform for business</motion.div>
+					<motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="inline-flex items-center rounded-full px-2 py-1 sm:px-3 text-xs sm:text-sm md:text-md font-medium text-[#1470D2] border border-[#1470D2] shadow-sm" >The simplest TEXT to VIDEO platform for business</motion.div>
 					<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }} className="max-w-6xl mx-auto mt-4 sm:mt-6 text-3xl md:text-5xl  font-extrabold tracking-tight text-gray-900 px-2">
 					Communication, brought to life, within branding guidelines <br className="hidden sm:block" /> <span className="text-[#1470D2] mt-1">and under your control</span>
 					</motion.div>
 					<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }} className="max-w-2xl mx-auto mt-4 sm:mt-6 text-sm md:text-base tracking-tight text-gray-900 px-2">
-					Summarize the deck in a brand aligned video with avatars, infographics, charts and
+					Summarize the doc in a brand aligned video with avatars, infographics, charts and
 					voiceover and save upto 90% of time and cost on video production					</motion.div>
 					
 					<motion.div initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5, delay: 0.2 }} className="mt-6 sm:mt-8 md:mt-10 flex items-center justify-center gap-4">

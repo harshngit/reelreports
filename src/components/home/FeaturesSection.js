@@ -52,7 +52,7 @@ function FeaturesSection() {
 			items: [
 				'Video editing tools',
 				'Scene level edits',
-				'Text'
+				'Fully editable predictive Text'
 			]
 		},
 	];

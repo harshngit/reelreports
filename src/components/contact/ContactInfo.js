@@ -13,6 +13,7 @@ import {
 	FaFacebook,
 	FaInstagram,
 	FaYoutube,
+	FaTiktok,
 } from 'react-icons/fa';
 
 function ContactInfo() {
@@ -20,15 +21,15 @@ function ContactInfo() {
 		{
 			icon: EnvelopeIcon,
 			title: 'Email Us',
-			content: 'support@reelreport.com',
+			content: 'info@reelreport.com',
 			subContent: 'sales@reelreport.com',
-			link: 'mailto:support@reelreport.com',
+			link: 'mailto:info@reelreport.com',
 			gradient: 'from-blue-500 to-cyan-500',
 		},
 		{
 			icon: PhoneIcon,
 			title: 'Call Us',
-			content: '+1 (555) 123-4567',
+			content: '+1 (647) 970-7700',
 			subContent: 'Mon-Fri, 9am-6pm EST',
 			link: 'tel:+15551234567',
 			gradient: 'from-purple-500 to-pink-500',
@@ -36,9 +37,9 @@ function ContactInfo() {
 		{
 			icon: MapPinIcon,
 			title: 'Visit Us',
-			content: '123 Innovation Street',
-			subContent: 'San Francisco, CA 94107',
-			link: 'https://maps.google.com',
+			content: 'DIFC, innovation hub',
+			subContent: 'Dubai, UAE',
+			link: 'https://maps.app.goo.gl/NkZdEJ4ENiUutSBU7',
 			gradient: 'from-orange-500 to-red-500',
 		},
 		{
@@ -51,10 +52,8 @@ function ContactInfo() {
 	];
 
 	const socialLinks = [
-		{ icon: FaTwitter, label: 'Twitter', link: 'https://twitter.com', color: '#1DA1F2' },
 		{ icon: FaLinkedin, label: 'LinkedIn', link: 'https://linkedin.com', color: '#0A66C2' },
-		{ icon: FaFacebook, label: 'Facebook', link: 'https://facebook.com', color: '#1877F2' },
-		{ icon: FaInstagram, label: 'Instagram', link: 'https://instagram.com', color: '#E4405F' },
+		{ icon: FaTiktok, label: 'Tik Tok', link: 'https://tiktok.com', color: '#000000' },
 		{ icon: FaYoutube, label: 'YouTube', link: 'https://youtube.com', color: '#FF0000' },
 	];
 
