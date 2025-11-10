@@ -8,7 +8,7 @@ function Hero() {
 
 	const tabData = {
 		'Create': {
-			title: 'Create videos in',
+			title: 'Create videos in minutes',
 			description: 'Start from a template or blank canvas. Produce studio‑quality videos without cameras, microphones, or actors.',
 		},
 		'Edit': {
