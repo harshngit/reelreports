@@ -100,7 +100,7 @@ const BroughtToLife = () => {
                             {/* CTA Buttons */}
                             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                                 <Link
-                                    to="/request-invite"
+                                    to="/book-demo"
                                     className="inline-flex items-center justify-center gap-2 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm sm:text-base"
                                     style={{ backgroundImage: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' }}
                                 >
@@ -110,13 +110,13 @@ const BroughtToLife = () => {
                                     </svg>
                                 </Link>
                                 
-                                <button className="inline-flex items-center justify-center gap-2 bg-white text-gray-700 font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-xl border-2 border-gray-200 hover:border-blue-300 hover:text-blue-600 transition-all duration-200 text-sm sm:text-base">
+                                {/* <button className="inline-flex items-center justify-center gap-2 bg-white text-gray-700 font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-xl border-2 border-gray-200 hover:border-blue-300 hover:text-blue-600 transition-all duration-200 text-sm sm:text-base">
                                     <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                     </svg>
                                     Watch Demo
-                                </button>
+                                </button> */}
                             </div>
                         </div>
                     </div>
@@ -157,7 +157,7 @@ const BroughtToLife = () => {
                                     is designed to deliver your content with natural gestures, expressions, and 
                                     professional presence that builds trust and credibility.
                                 </p>
-                                <Link 
+                                {/* <Link 
                                     to="#" 
                                     className="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-700 font-semibold text-lg group"
                                 >
@@ -165,7 +165,7 @@ const BroughtToLife = () => {
                                     <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                                 </svg>
-                                </Link>
+                                </Link> */}
                             </div>
 
                             {/* Right Column - Features Grid */}
@@ -180,7 +180,7 @@ const BroughtToLife = () => {
                                                 </svg>
                                             </div>
                                             <div>
-                                                <h4 className="font-bold text-gray-900 mb-2">150+ Avatars</h4>
+                                                <h4 className="font-bold text-gray-900 mb-2">Customizable Avatars</h4>
                                                 <p className="text-sm text-gray-600">Diverse presenters representing all demographics and professional styles</p>
                                             </div>
                                         </div>
@@ -301,8 +301,8 @@ const BroughtToLife = () => {
                                             and animated elements. Our AI-powered tools ensure every movement enhances your 
                                             message and keeps viewers engaged from start to finish.
                                         </p>
-                                        <Link
-                                            to="/request-invite"
+                                        {/* <Link
+                                            to="/book-demo"
                                             className="inline-flex items-center gap-2 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                                             style={{ backgroundImage: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' }}
                                         >
@@ -310,7 +310,7 @@ const BroughtToLife = () => {
                                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                                 </svg>
-                                        </Link>
+                                        </Link> */}
                                     </div>
                                 )}
 
@@ -327,8 +327,8 @@ const BroughtToLife = () => {
                                             fades to dynamic wipes and custom effects, maintain perfect viewer engagement as your 
                                             content flows from scene to scene with cinematic quality.
                                         </p>
-                                        <Link
-                                            to="/request-invite"
+                                        {/* <Link
+                                            to="/book-demo"
                                             className="inline-flex items-center gap-2 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                                             style={{ backgroundImage: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' }}
                                         >
@@ -336,7 +336,7 @@ const BroughtToLife = () => {
                                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                                 </svg>
-                                        </Link>
+                                        </Link> */}
                                     </div>
                                 )}
 
@@ -353,8 +353,8 @@ const BroughtToLife = () => {
                                             experts. Each preset is optimized for different content types and industries—simply 
                                             apply with one click and customize to match your unique brand style.
                                         </p>
-                                        <Link
-                                            to="/request-invite"
+                                        {/* <Link
+                                            to="/book-demo"
                                             className="inline-flex items-center gap-2 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                                             style={{ backgroundImage: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' }}
                                         >
@@ -362,7 +362,7 @@ const BroughtToLife = () => {
                                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                                 </svg>
-                                        </Link>
+                                        </Link> */}
                                     </div>
                                 )}
                             </div>
@@ -505,11 +505,11 @@ const BroughtToLife = () => {
 
             {/* AI Voices & Voice Cloning Section */}
             <div className="bg-white py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-7xl mx-auto">
+                <div className="max-w-7xl mx-[15px] md:mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center mb-12 sm:mb-16 md:mb-20">
                         {/* Left Side - Content */}
                         <div>
-                            <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                            <div className="inline-flex items-center gap-2 bg-purple-50 text-purple-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">
                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
                                 </svg>
@@ -528,11 +528,11 @@ const BroughtToLife = () => {
 
                             <div className="space-y-4 mb-8">
                                 <div className="flex items-start gap-3">
-                                    <div className="flex items-center justify-center h-6 w-6 rounded-full bg-purple-600 flex-shrink-0 mt-1">
+                                    <div className="flex items-center justify-center h-6 w-6 rounded-full bg-indigo-600 flex-shrink-0 mt-1">
                                         <FiCheck className="h-4 w-4 text-white" />
                                     </div>
                                     <div>
-                                        <h4 className="font-semibold text-gray-900 mb-1">400+ Premium Voices</h4>
+                                        <h4 className="font-semibold text-gray-900 mb-1">Premium Voices</h4>
                                         <p className="text-gray-600 text-sm">Diverse voice library covering all ages, genders, accents, and languages for global reach.</p>
                                     </div>
                                 </div>
@@ -545,8 +545,9 @@ const BroughtToLife = () => {
                                         <p className="text-gray-600 text-sm">Clone your voice with just 30 seconds of audio. Perfect for maintaining brand voice consistency.</p>
                                     </div>
                                 </div>
+                                
                                 <div className="flex items-start gap-3">
-                                    <div className="flex items-center justify-center h-6 w-6 rounded-full bg-violet-600 flex-shrink-0 mt-1">
+                                    <div className="flex items-center justify-center h-6 w-6 rounded-full bg-indigo-500 flex-shrink-0 mt-1">
                                         <FiCheck className="h-4 w-4 text-white" />
                                     </div>
                                     <div>
@@ -554,20 +555,21 @@ const BroughtToLife = () => {
                                         <p className="text-gray-600 text-sm">AI voices that understand context and deliver appropriate emotion, tone, and emphasis.</p>
                                     </div>
                                 </div>
+                                
                                 <div className="flex items-start gap-3">
-                                    <div className="flex items-center justify-center h-6 w-6 rounded-full bg-purple-500 flex-shrink-0 mt-1">
+                                    <div className="flex items-center justify-center h-6 w-6 rounded-full bg-indigo-500 flex-shrink-0 mt-1">
                                         <FiCheck className="h-4 w-4 text-white" />
                                     </div>
                                     <div>
-                                        <h4 className="font-semibold text-gray-900 mb-1">120+ Languages</h4>
+                                        <h4 className="font-semibold text-gray-900 mb-1">120+ Languages (Coming Soon)</h4>
                                         <p className="text-gray-600 text-sm">Multi-language support with native pronunciation and cultural nuances.</p>
                                     </div>
                                 </div>
                             </div>
 
                             <div className="flex flex-wrap gap-3">
-                                <Link 
-                                    to="/request-invite" 
+                                {/* <Link 
+                                    to="/book-demo" 
                                     className="inline-flex items-center gap-2 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 shadow-lg"
                                     style={{ backgroundImage: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' }}
                                 >
@@ -575,7 +577,7 @@ const BroughtToLife = () => {
                                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                                     </svg>
-                                </Link>
+                                </Link> */}
                             </div>
                         </div>
 
@@ -627,7 +629,7 @@ const BroughtToLife = () => {
                                     </div>
 
                                     {/* Voice 2 */}
-                                    <div className="bg-white rounded-lg p-4 border border-gray-200 hover:border-gray-300 transition-colors cursor-pointer">
+                                    <div className="bg-white rounded-lg p-4 border border-gray-200 hover:border-gray-300 transition-colors cursor-default">
                                         <div className="flex items-center justify-between mb-2">
                                             <div className="flex items-center gap-3">
                                                 <div className="w-10 h-10 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-full flex items-center justify-center">
@@ -650,7 +652,7 @@ const BroughtToLife = () => {
                                     </div>
 
                                     {/* Voice 3 */}
-                                    <div className="bg-white rounded-lg p-4 border border-gray-200 hover:border-gray-300 transition-colors cursor-pointer">
+                                    <div className="bg-white rounded-lg p-4 border border-gray-200 hover:border-gray-300 transition-colors cursor-default">
                                         <div className="flex items-center justify-between mb-2">
                                             <div className="flex items-center gap-3">
                                                 <div className="w-10 h-10 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full flex items-center justify-center">
@@ -704,7 +706,7 @@ const BroughtToLife = () => {
                                     </div>
                                     <div>
                                         <p className="text-sm font-semibold text-gray-900">120+</p>
-                                        <p className="text-xs text-gray-600">Languages</p>
+                                        <p className="text-xs text-gray-600">Languages <br/>(Coming Soon)</p>
                                     </div>
                                 </div>
                             </div>
@@ -737,10 +739,10 @@ const BroughtToLife = () => {
                         Request a platform invite and start creating professional videos today
                     </p>
                     <Link
-                        to="/request-invite"
+                        to="/book-demo"
                         className="inline-flex items-center gap-2 bg-white text-blue-600 font-semibold px-8 py-4 rounded-lg hover:bg-gray-100 transition-all duration-200 shadow-lg"
                     >
-                        Request Platform Invite
+                        Request a Demo Invite
                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>

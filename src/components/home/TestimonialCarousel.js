@@ -1,10 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Play } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import communicationVideo from '../../assets/communication.mp4';
+import NoorImage from '../../assets/fallbackimg/Noor.jpeg';
+import DawoodImage from '../../assets/fallbackimg/Dawood.jpeg';
+import NatashaImage from '../../assets/fallbackimg/Natasha.jpeg';
+import RajveerImage from '../../assets/fallbackimg/Rajveer.jpeg';
+import ManalImage from '../../assets/fallbackimg/Manal.jpeg';
+import NoorVideo from '../../assets/fallbackimg/Noor.mp4';
+import DawoodVideo from '../../assets/fallbackimg/Dawood.mp4';
+import NatashaVideo from '../../assets/fallbackimg/Natasha.mp4';
+import RajVideo from '../../assets/fallbackimg/Raj.mp4';
+import ManalVideo from '../../assets/fallbackimg/manal.mp4';
 
 const TestimonialCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [hoveredCard, setHoveredCard] = useState(null);
   const [visibleCards, setVisibleCards] = useState(3);
+  const videoRefs = useRef({});
 
   useEffect(() => {
     const handleResize = () => {
@@ -22,6 +34,27 @@ const TestimonialCarousel = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  const handleMouseEnter = (id) => {
+    setHoveredCard(id);
+    const currentVideo = videoRefs.current[id];
+    if (currentVideo) {
+      currentVideo.currentTime = 0;
+      const playPromise = currentVideo.play();
+      if (playPromise?.catch) {
+        playPromise.catch(() => {});
+      }
+    }
+  };
+
+  const handleMouseLeave = (id) => {
+    setHoveredCard(null);
+    const currentVideo = videoRefs.current[id];
+    if (currentVideo) {
+      currentVideo.pause();
+      currentVideo.currentTime = 0;
+    }
+  };
+
   const testimonials = [
     {
       id: 1,
@@ -29,8 +62,8 @@ const TestimonialCarousel = () => {
       logo: "",
       quote: "50% faster content. Without sacrificing quality",
       name: "",
-      title: "",
-      image: "",
+      image: NoorImage, // fallback image
+      videoSrc: NoorVideo, // video source
       bgColor: "bg-gray-200"
     },
     {
@@ -40,7 +73,8 @@ const TestimonialCarousel = () => {
       quote: "Teams adopt it fast and use it across the company.",
       name: "",
       title: "",
-      image: "",
+      image: DawoodImage,
+      videoSrc: DawoodVideo, // video source
       bgColor: "bg-gray-900"
     },
     {
@@ -50,7 +84,8 @@ const TestimonialCarousel = () => {
       quote: "1 minute summary getting everyone upto speed before the meeting begins",
       name: "",
       title: "",
-      image: "",
+      image: NatashaImage,
+      videoSrc: NatashaVideo, // video source
       bgColor: "bg-gray-700"
     },
     {
@@ -59,8 +94,9 @@ const TestimonialCarousel = () => {
       logo: "",
       quote: "We summarized 100s of documents into 1 min reels easy consumption",
       name: "",
-      title: "Senior Manager, Global Finance",
-      image: "",
+      title: "",
+      image: RajveerImage,
+      videoSrc: RajVideo, // video source
       bgColor: "bg-gray-600"
     },
     {
@@ -70,7 +106,8 @@ const TestimonialCarousel = () => {
       quote: "We've trained our sales team to share tailored customer reels to close deals faster",
       name: "",
       title: "",
-      image: "",
+      image: ManalImage,
+      videoSrc: ManalVideo, // video source
       bgColor: "bg-gray-300"
     }
   ];
@@ -106,73 +143,48 @@ const TestimonialCarousel = () => {
               className="flex transition-transform duration-500 ease-out gap-3 sm:gap-4 md:gap-6"
               style={{ transform: `translateX(-${currentIndex * (100 / visibleCards)}%)` }}
             >
-              {testimonials.map((testimonial) => (
+              {testimonials.map((testimonial) => {
+                return (
                 <div
                   key={testimonial.id}
                   className="min-w-[calc(100%-0.75rem)] sm:min-w-[calc(50%-0.5rem)] lg:min-w-[calc(33.333%-1rem)] flex-shrink-0"
                 >
                   <div 
-                    className={`${testimonial.bgColor} rounded-xl sm:rounded-2xl overflow-hidden shadow-lg h-[400px] sm:h-[450px] md:h-[500px] relative group cursor-pointer`}
-                    onMouseEnter={() => setHoveredCard(testimonial.id)}
-                    onMouseLeave={() => setHoveredCard(null)}
+                    className={`${testimonial.bgColor} rounded-xl sm:rounded-2xl overflow-hidden shadow-lg aspect-[9/16] max-h-[520px] w-full relative group cursor-default`}
+                    onMouseEnter={() => handleMouseEnter(testimonial.id)}
+                    onMouseLeave={() => handleMouseLeave(testimonial.id)}
                   >
-                    {/* Category Badge */}
-                    <div className="absolute top-4 left-4 sm:top-6 sm:left-6 z-10">
-                      <span className="bg-white px-2 py-1 sm:px-3 rounded-full text-xs font-semibold text-gray-700">
-                        {testimonial.category}
-                      </span>
-                    </div>
-
-                    {/* Logo */}
-                    <div className="absolute top-4 right-4 sm:top-6 sm:right-6 z-10">
-                      <div className="text-white font-bold text-lg sm:text-xl">
-                        {testimonial.logo}
-                      </div>
-                    </div>
-
-                    {/* Image */}
-                    <div className="absolute inset-0">
-                      <img 
-                        src={testimonial.image} 
-                        alt={testimonial.name}
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-                    </div>
-
-                    {/* Content - Slides down and disappears on hover */}
-                    <div className={`absolute bottom-0 backdrop-blur-sm bg-black/20 left-0 right-0 p-4 sm:p-6 md:p-8 text-white transition-all duration-500 ease-out ${
-                      hoveredCard === testimonial.id 
-                        ? 'translate-y-full opacity-0' 
-                        : 'translate-y-0 opacity-100'
-                    }`}>
-                      <div className="p-0">
-                        <p className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3 md:mb-4 leading-tight">
-                          "{testimonial.quote}"
-                        </p>
-                        <p className="font-semibold text-xs sm:text-sm">{testimonial.name}</p>
-                        <p className="text-xs sm:text-sm text-gray-300">{testimonial.title}</p>
-                      </div>
-                    </div>
-
-                    {/* Play Button - Appears in content area on hover */}
-                    <div className={`absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-8 flex items-center justify-center z-20 transition-all duration-500 ease-out ${
-                      hoveredCard === testimonial.id 
-                        ? 'translate-y-0 opacity-100' 
-                        : 'translate-y-full opacity-0'
-                    }`}>
-                      <div className="bg-white rounded-full px-3 py-1.5 sm:px-4 sm:py-2 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200 flex items-center gap-2 sm:gap-3">
-                        {/* Circular Play Icon */}
-                        <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border border-gray-200 bg-white flex items-center justify-center">
-                          <Play className="w-3 h-3 sm:w-4 sm:h-4 text-gray-800 fill-gray-800 ml-0.5" />
-                        </div>
-                        {/* Play Text */}
-                        <span className="text-gray-800 font-medium text-xs sm:text-sm">Play story</span>
-                      </div>
+                    <div className="absolute inset-0 overflow-hidden">
+                      {testimonial.videoSrc ? (
+                        <video
+                          ref={(el) => {
+                            if (el) {
+                              videoRefs.current[testimonial.id] = el;
+                            } else {
+                              delete videoRefs.current[testimonial.id];
+                            }
+                          }}
+                          src={testimonial.videoSrc}
+                          poster={testimonial.image}
+                          muted
+                          loop
+                          playsInline
+                          preload="metadata"
+                          className="w-full h-full object-cover object-center transition-all duration-500 ease-out"
+                        />
+                      ) : (
+                        <img
+                          src={testimonial.image}
+                          alt={testimonial.name}
+                          className="w-full h-full object-cover object-center"
+                        />
+                      )}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent pointer-events-none"></div>
                     </div>
                   </div>
                 </div>
-              ))}
+              );
+              })}
             </div>
           </div>
 
@@ -202,8 +214,8 @@ const TestimonialCarousel = () => {
         <div className="text-center mt-8 sm:mt-10 md:mt-12 px-4">
           <p className="text-sm sm:text-base text-gray-700">
             Get custom pricing, a personalized tour, and learn how teams like yours succeed.{' '}
-            <a href="#" className="text-blue-600 font-semibold hover:underline inline-flex items-center gap-1">
-              Book demo →
+            <a href="/book-demo" className="text-blue-600 font-semibold hover:underline inline-flex items-center gap-1">
+              Request a Demo →
             </a>
           </p>
         </div>

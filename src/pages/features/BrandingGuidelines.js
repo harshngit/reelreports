@@ -99,7 +99,7 @@ const BrandingGuidelines = () => {
                             {/* CTA Buttons */}
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <Link
-                                    to="/request-invite"
+                                    to="/book-demo"
                                     className="inline-flex items-center justify-center gap-2 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                                     style={{ backgroundImage: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' }}
                                 >
@@ -109,13 +109,13 @@ const BrandingGuidelines = () => {
                                     </svg>
                                 </Link>
                                 
-                                <button className="inline-flex items-center justify-center gap-2 bg-white text-gray-700 font-semibold px-8 py-4 rounded-xl border-2 border-gray-200 hover:border-indigo-300 hover:text-indigo-600 transition-all duration-200">
+                                {/* <button className="inline-flex items-center justify-center gap-2 bg-white text-gray-700 font-semibold px-8 py-4 rounded-xl border-2 border-gray-200 hover:border-indigo-300 hover:text-indigo-600 transition-all duration-200">
                                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                                     </svg>
                                     See How It Works
-                                </button>
+                                </button> */}
                             </div>
                         </div>
                     </div>
@@ -124,7 +124,7 @@ const BrandingGuidelines = () => {
 
             {/* Multiple Brand Profiles Section */}
             <div className="bg-white py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-7xl mx-auto">
+                <div className="max-w-7xl mx-[15px] md:mx-auto">
                     {/* Header */}
                     <div className="text-center mb-10 sm:mb-12 md:mb-16">
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-3 sm:mb-4">
@@ -267,14 +267,14 @@ const BrandingGuidelines = () => {
                                         <FiCheck className="h-4 w-4 text-white" />
                                     </div>
                                     <div>
-                                        <h4 className="font-semibold text-gray-900 mb-1">Team Collaboration</h4>
+                                        <h4 className="font-semibold text-gray-900 mb-1">Team Collaboration (Coming Soon)</h4>
                                         <p className="text-gray-600 text-sm">Share specific brand profiles with team members based on their client assignments.</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <Link
-                                to="/request-invite"
+                            {/* <Link
+                                to="/book-demo"
                                 className="inline-flex items-center gap-2 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                                 style={{ backgroundImage: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' }}
                             >
@@ -282,7 +282,7 @@ const BrandingGuidelines = () => {
                                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                                 </svg>
-                            </Link>
+                            </Link> */}
                         </div>
                     </div>
                 </div>
@@ -491,10 +491,10 @@ const BrandingGuidelines = () => {
                         Request a platform invite and protect your brand identity across all videos
                     </p>
                     <Link
-                        to="/request-invite"
+                        to="/book-demo"
                         className="inline-flex items-center gap-2 bg-white text-indigo-600 font-semibold px-8 py-4 rounded-lg hover:bg-gray-100 transition-all duration-200 shadow-lg"
                     >
-                        Request Platform Invite
+                        Request a Demo Invite
                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>

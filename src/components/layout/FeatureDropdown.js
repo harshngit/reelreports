@@ -161,8 +161,8 @@ const FeatureDropdown = ({ isActive, onClose }) => {
                 </div>
 
                 {/* Bottom Section */}
-                <div className="grid grid-cols-2 gap-6 pt-8 border-t border-gray-200">
-                    {/* AI Safety & Security */}
+                {/* <div className="grid grid-cols-2 gap-6 pt-8 border-t border-gray-200">
+
                     <Link
                         to="/safety-security"
                         className="group p-6 rounded-xl bg-gray-50/80 hover:bg-gray-100/80 transition-all duration-200"
@@ -198,7 +198,6 @@ const FeatureDropdown = ({ isActive, onClose }) => {
                         </div>
                     </Link>
 
-                    {/* All Features */}
                     <Link
                         to="/features"
                         className="group p-6 rounded-xl bg-gradient-to-br from-[#1470D2]/10 to-[#8E23C0]/10 hover:from-[#1470D2]/20 hover:to-[#8E23C0]/20 transition-all duration-200 relative overflow-hidden"
@@ -215,18 +214,18 @@ const FeatureDropdown = ({ isActive, onClose }) => {
                                 A secure environment for businesses.
                             </p>
                         </div>
-                        {/* Background Decorative Image */}
+
                         <div className="absolute right-0 bottom-0 w-64 h-40 opacity-40 pointer-events-none">
                             <div className="absolute inset-0 bg-gradient-to-br from-[#1470D2]/30 via-[#8E23C0]/30 to-[#F96A17]/30 rounded-tl-[80px]"></div>
                             <div className="absolute right-4 bottom-4 w-20 h-20 bg-white/60 rounded-lg transform rotate-12"></div>
                             <div className="absolute right-16 bottom-8 w-16 h-16 bg-white/50 rounded-lg transform -rotate-6"></div>
                         </div>
                     </Link>
-                </div>
+                </div> */}
             </div>
 
             {/* Bottom CTA Bar */}
-            <div className="bg-gradient-to-r from-[#1470D2] to-[#8E23C0] px-12 py-5 flex items-center justify-between">
+            {/* <div className="bg-gradient-to-r from-[#1470D2] to-[#8E23C0] px-12 py-5 flex items-center justify-between">
                 <Link
                     to="/create-free"
                     className="text-white font-semibold text-base hover:text-indigo-200 transition-colors"
@@ -253,7 +252,7 @@ const FeatureDropdown = ({ isActive, onClose }) => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                 </Link>
-            </div>
+            </div> */}
         </div>
     );
 };

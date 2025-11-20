@@ -9,6 +9,7 @@ import {
 	PaperAirplaneIcon,
 	CheckCircleIcon,
 } from '@heroicons/react/24/outline';
+import { submitContactMessage } from '../../lib/sanityClient';
 
 function ContactForm() {
 	const [formData, setFormData] = useState({
@@ -21,20 +22,27 @@ function ContactForm() {
 	});
 
 	const [isSubmitted, setIsSubmitted] = useState(false);
+	const [isSubmitting, setIsSubmitting] = useState(false);
+	const [errorMessage, setErrorMessage] = useState(null);
 	const [focusedField, setFocusedField] = useState(null);
 
 	const handleChange = (e) => {
 		setFormData({ ...formData, [e.target.name]: e.target.value });
 	};
 
-	const handleSubmit = (e) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault();
-		console.log('Form submitted:', formData);
-		setIsSubmitted(true);
+		setErrorMessage(null);
+		setIsSubmitting(true);
+		try {
+			await submitContactMessage(formData);
+			setIsSubmitted(true);
 
-		// Reset after 5 seconds
-		setTimeout(() => {
-			setIsSubmitted(false);
+			// Reset after 5 seconds
+			setTimeout(() => {
+				setIsSubmitted(false);
+			}, 5000);
+
 			setFormData({
 				name: '',
 				email: '',
@@ -43,7 +51,14 @@ function ContactForm() {
 				subject: '',
 				message: '',
 			});
-		}, 5000);
+		} catch (error) {
+			console.error('Failed to submit contact form', error);
+			setErrorMessage(
+				error?.message || 'Something went wrong while sending your message. Please try again.',
+			);
+		} finally {
+			setIsSubmitting(false);
+		}
 	};
 
 	const subjects = [
@@ -69,7 +84,7 @@ function ContactForm() {
 					initial={{ opacity: 0, scale: 0.8 }}
 					animate={{ opacity: 1, scale: 1 }}
 					exit={{ opacity: 0, scale: 0.8 }}
-					className="absolute inset-0 z-10 flex items-center justify-center bg-white/95 backdrop-blur-sm rounded-3xl"
+					className="absolute inset-0 z-30 flex items-center justify-center bg-white/40 backdrop-blur-sm rounded-3xl"
 				>
 					<div className="text-center p-8">
 						<motion.div
@@ -307,9 +322,14 @@ function ContactForm() {
 							type="submit"
 							whileHover={{ scale: 1.02, y: -2 }}
 							whileTap={{ scale: 0.98 }}
-							className="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold shadow-lg hover:shadow-xl transition-all inline-flex items-center justify-center gap-2 group"
+							disabled={isSubmitting}
+							className={`w-full py-4 px-6 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all inline-flex items-center justify-center gap-2 group ${
+								isSubmitting
+									? 'bg-gray-400 cursor-not-allowed text-white'
+									: 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white'
+							}`}
 						>
-							Send Message
+							{isSubmitting ? 'Sending...' : 'Send Message'}
 							<motion.div
 								animate={{ x: [0, 3, 0] }}
 								transition={{ repeat: Infinity, duration: 1.5 }}
@@ -317,6 +337,10 @@ function ContactForm() {
 								<PaperAirplaneIcon className="w-5 h-5" />
 							</motion.div>
 						</motion.button>
+
+						{errorMessage && (
+							<p className="text-sm text-center text-red-500">{errorMessage}</p>
+						)}
 
 						<p className="text-xs text-center text-gray-500">
 							We typically respond within 24 hours during business days.

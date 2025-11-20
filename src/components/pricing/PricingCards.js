@@ -114,7 +114,7 @@ function PricingCards() {
 	};
 
 	return (
-		<section className="relative py-20 px-4" style={{ fontFamily: 'var(--brand-font)' }}>
+		<section className="relative section-spacing px-4" style={{ fontFamily: 'var(--brand-font)' }}>
 			{/* Background decorative elements */}
 			<div className="absolute inset-0 overflow-hidden pointer-events-none">
 				<motion.div
@@ -255,10 +255,10 @@ function PricingCards() {
 											className="text-3xl font-bold text-gray-900 mb-2"
 										>
 											{plan.priceLabel}
-										</motion.div>
-										<p className="text-gray-600">Custom pricing</p>
-									</div>
-								) : (
+											</motion.div>
+											<p className="text-gray-600">Custom pricing</p>
+										</div>
+									) : (
 									<div>
 									<div className="flex items-baseline gap-2">
 										<motion.span
@@ -313,8 +313,8 @@ function PricingCards() {
 												<span
 													className={`text-sm leading-6 ${
 														feature.included ? 'text-gray-700' : 'text-gray-400'
-													}`}
-												>
+												}`}
+											>
 													{feature.name}
 												</span>
 											</motion.li>

@@ -45,7 +45,7 @@ function PricingTrust() {
 	];
 
 	return (
-		<section className="relative py-20 px-4" style={{ fontFamily: 'var(--brand-font)' }}>
+		<section className="relative section-spacing px-4" style={{ fontFamily: 'var(--brand-font)' }}>
 			<div className="mx-auto max-w-6xl">
 				{/* Trust Badges */}
 				<motion.div

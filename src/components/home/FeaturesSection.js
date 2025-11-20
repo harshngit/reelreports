@@ -58,7 +58,7 @@ function FeaturesSection() {
 	];
 
 	return (
-		<section id="feature" className="relative py-20" style={{ fontFamily: 'var(--brand-font)' }}>
+		<section id="feature" className="relative section-spacing" style={{ fontFamily: 'var(--brand-font)' }}>
 			<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 				<div className="mb-10 text-center">
 					<span className="inline-flex items-center rounded-full px-4 py-2 text-xs font-semibold tracking-wide uppercase border border-[#c6c1f0]">Features</span>

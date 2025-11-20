@@ -8,9 +8,9 @@ import SolutionDropdown from './SolutionDropdown';
 const NAV_BG_COLOR = '#D4E4FF';
 
 const navItems = [
-	{ label: 'Features', to: '/features', hasDropdown: true, dropdownType: 'features' },
+	{ label: 'Feature', to: '/feature', hasDropdown: true, dropdownType: 'feature' },
 	{ label: 'Solution', to: '/solution', hasDropdown: true, dropdownType: 'solution' },
-	{ label: 'Pricing', to: '/pricing' },
+	// { label: 'Pricing', to: '/pricing' },
 	{ label: 'Contact', to: '/contact' },
 ];
 
@@ -170,16 +170,10 @@ function Navbar() {
 					<div className="hidden md:flex items-center gap-4">
 					<Link
 						to="/book-demo"
-						className={getLinkClasses('/book-demo')}
-					>
-						Book Demo
-					</Link>
-					<Link
-						to="/get-started"
 						className="inline-flex items-center rounded-md gap-2 px-4 py-2 text-md font-semibold text-[#fff] transition-all duration-300 shadow-sm hover:shadow-lg"
 						style={{ backgroundImage: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' }}
 					>
-						Get started
+						Request a Demo
 						<ArrowRightIcon className="w-4 h-4" />
 					</Link>
 					</div>
@@ -215,7 +209,7 @@ function Navbar() {
 							<XMarkIcon className="w-6 h-6" />
 						</button>
 					</div>
-					<nav className="px-4 py-4 flex flex-col gap-2">
+					<nav className="px-4 py-4 flex flex-col gap-2 bg-white">
 						{navItems.map((item) => {
 							const hash = item.to.replace('/', '');
 							const active = currentHash === hash;
@@ -238,10 +232,11 @@ function Navbar() {
 								];
 								
 								const solutionSubItems = [
-									{ title: 'Sales acceleration', path: '/solution/sales-acceleration' },
+									{ title: 'Sales acceleration', path: '/solution/sales' },
 									{ title: 'Marketing', path: '/solution/marketing' },
-									{ title: 'Internal communication', path: '/solution/internal-communication' },
-									{ title: 'Knowledge management', path: '/solution/knowledge-management' }
+									{ title: 'Internal communication', path: '/solution/internal' },
+									{ title: 'Knowledge management', path: '/solution/knowledge' },
+									{ title: 'Financial reporting', path: '/solution/financial' }
 								];
 								
 								const subItems = isFeature ? featureSubItems : solutionSubItems;
@@ -290,16 +285,13 @@ function Navbar() {
 							);
 						})}
 					<hr className="my-3 border-gray-100" />
-					<Link to="/book-demo" className="text-base font-semibold text-gray-700 hover:text-gray-900 px-2 py-2" onClick={() => setMobileOpen(false)}>
-						Book Demo
-					</Link>
 					<Link
 						to="/get-started"
 						className="mt-2 inline-flex items-center justify-center rounded-md px-4 py-3 text-base font-semibold text-white shadow-sm"
 						style={{ backgroundImage: 'linear-gradient(90deg, #1470D2 0%, #8E23C0 100%)' }}
 						onClick={() => setMobileOpen(false)}
 					>
-						Get started
+						Request Demo
 					</Link>
 					</nav>
 				</div>

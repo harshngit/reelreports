@@ -3,14 +3,14 @@ import React from 'react';
 function LogoMarquee() {
 	// Array of company names - you can replace these with actual logo images
 	const companies = [
-		{ name: '', className: 'text-3xl font-bold' },
-		{ name: '', className: 'text-3xl font-bold' },
-		{ name: '', className: 'text-3xl font-bold' },
-		{ name: "", className: 'text-3xl font-bold' },
-		{ name: '', className: 'text-2xl font-semibold' },
-		{ name: '', className: 'text-3xl font-bold' },
-		{ name: '', className: 'text-3xl font-bold' },
-		{ name: '', className: 'text-3xl font-bold' },
+		{ name: 'SAP', className: 'text-3xl font-bold' },
+		{ name: 'MERCK', className: 'text-3xl font-bold' },
+		{ name: 'Heineken', className: 'text-3xl font-bold' },
+		{ name: "MOODY'S", className: 'text-3xl font-bold' },
+		{ name: 'REUTERS', className: 'text-2xl font-semibold' },
+		{ name: 'zoom', className: 'text-3xl font-bold' },
+		{ name: 'SAP', className: 'text-3xl font-bold' },
+		{ name: 'Nielsen', className: 'text-3xl font-bold' },
 	];
 
 	return (

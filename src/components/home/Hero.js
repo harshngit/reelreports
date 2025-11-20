@@ -1,37 +1,46 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import reelbg from '../../assets/img/reelbg.png';
-import createImg from '../../assets/img/create.png';
+import conceptImg from '../../assets/img/create.png';
+import blueprintImg from '../../assets/img/blueprint.png';
+import storyboardImg from '../../assets/img/storyboard.png';
+import editImg from '../../assets/img/edit.png';
+import shareImg from '../../assets/img/create.png'
 
 function Hero() {
 	const [activeTab, setActiveTab] = useState('Concept');
 
 	const tabData = {
 		'Concept': {
-			title: 'Create videos in minutes',
-			description: 'Start from a document, idea or blank canvas. Use simple text prompts to clarify the concept',
+			title: 'No video editing skills required',
+			description: 'Start from a document, idea or blank canvas. Use simple text prompts to clarify your concept',
+			image: conceptImg,
 		},
 		'Blueprint': {
 			title: 'Refine your concept',
-			description: 'Answer a dynamic super prompted questionnaire to create scenes and a script suited for your needs',
+			description: 'Answer a dynamic super prompted questionnaire adapted to your content and context to create scenes and a script suited for your needs',
+			image: blueprintImg,
 		},
 		'Storyboard': {
 			title: 'Direct your Reel Report',
 			description: 'Review the Ai generated storyboard, make edits to the avatar, text, infographics, charts  in real-time',
+			image: storyboardImg,
 		},
 		'Edit': {
 			title: 'Refine and edit',
 			description: 'Make video edits to finalize the video for production',
+			image: editImg,
 		},
 		'Share': {
 			title: 'Publish and Distribute',
 			description: 'Export, or send your finished video anywhere instantly',
+			image: conceptImg,
 		},
 	};
 	return (
 		<>
-			<section className="relative" style={{fontFamily:'var(--brand-font)', backgroundImage:`url(${reelbg})`, backgroundSize:'cover', backgroundPosition:'center', backgroundRepeat:'no-repeat'}}>
-			<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24">
+			<section className="relative section-spacing" style={{fontFamily:'var(--brand-font)', backgroundImage:`url(${reelbg})`, backgroundSize:'cover', backgroundPosition:'center', backgroundRepeat:'no-repeat'}}>
+			<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 				<div className="text-center">
 					<motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="inline-flex items-center rounded-full px-2 py-1 sm:px-3 text-xs sm:text-sm md:text-md font-medium text-[#1470D2] border border-[#1470D2] shadow-sm" >The simplest TEXT to VIDEO platform for business</motion.div>
 					<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }} className="max-w-6xl mx-auto mt-4 sm:mt-6 text-3xl md:text-5xl  font-extrabold tracking-tight text-gray-900 px-2">
@@ -42,16 +51,16 @@ function Hero() {
 					voiceover and save upto 90% of time and cost on video production					</motion.div>
 					
 					<motion.div initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5, delay: 0.2 }} className="mt-6 sm:mt-8 md:mt-10 flex items-center justify-center gap-4">
-						<a href="#get-started" className="inline-flex items-center rounded-md px-5 py-2.5 sm:px-6 sm:py-3 text-sm sm:text-base font-semibold text-white shadow-sm" style={{
+						<a href="/book-demo" className="inline-flex items-center rounded-md px-5 py-2.5 sm:px-6 sm:py-3 text-sm sm:text-base font-semibold text-white shadow-sm" style={{
 							backgroundImage:'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)'
-						}}>Request platform invite</a>
+						}}>Request a Demo invite</a>
 					</motion.div>
 				</div>
 			</div>
 		</section>
 		
 		{/* Tabs Section */}
-		<section className="relative py-10 sm:py-12 md:py-16 bg-gradient-to-b from-gray-50/50 to-white" style={{fontFamily:'var(--brand-font)'}}>
+		<section className="relative section-spacing bg-gradient-to-b from-gray-50/50 to-white" style={{fontFamily:'var(--brand-font)'}}>
 			<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 				{/* Mobile & Tablet: Scrollable container */}
 				<div className="flex justify-center lg:justify-center">
@@ -78,7 +87,7 @@ function Hero() {
 										activeTab === tab 
 											? 'text-white shadow-md' 
 											: 'text-gray-700 hover:bg-gray-50'
-									}`} 
+										}`} 
 									style={{
 										backgroundImage: activeTab === tab ? 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' : 'none',
 									}}
@@ -97,7 +106,7 @@ function Hero() {
 				</motion.div>
 				<motion.div key={activeTab + '-img'} initial={{ opacity: 0, x: 10 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.35 }} className="relative">
 					<div className="rounded-xl overflow-hidden shadow-lg ring-1 ring-black/5 bg-white">
-						<img src={createImg} alt="Feature preview" className="w-full h-auto object-cover" />
+						<img src={tabData[activeTab].image} alt={`${activeTab} preview`} className="w-full h-auto object-cover" />	
 					</div>
 				</motion.div>
 			</div>

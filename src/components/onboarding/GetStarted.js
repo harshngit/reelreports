@@ -62,7 +62,7 @@ function GetStarted() {
 	// Success Screen
 	if (step === 4) {
 		return (
-			<section className="relative py-20 px-4 min-h-screen flex items-center" style={{ fontFamily: 'var(--brand-font)' }}>
+			<section className="relative section-spacing px-4 min-h-screen flex items-center" style={{ fontFamily: 'var(--brand-font)' }}>
 				<div className="mx-auto max-w-2xl w-full text-center">
 					
 
@@ -126,7 +126,7 @@ function GetStarted() {
 	}
 
 	return (
-		<section className="relative py-20 px-4 min-h-screen flex items-center" style={{ fontFamily: 'var(--brand-font)' }}>
+		<section className="relative section-spacing px-4 min-h-screen flex items-center" style={{ fontFamily: 'var(--brand-font)' }}>
 			{/* Background decorative elements */}
 			<div className="absolute inset-0 overflow-hidden pointer-events-none">
 				<motion.div
@@ -339,7 +339,7 @@ function GetStarted() {
 													onChange={handleChange}
 													className="sr-only"
 												/>
-												<div className="flex items-center justify-between">
+												<div className="flex items-center justify_between">
 													<div>
 														<div className="font-bold text-gray-900 mb-1">{level.label}</div>
 														<div className="text-sm text-gray-600">{level.description}</div>
@@ -363,7 +363,7 @@ function GetStarted() {
 									onClick={handleBack}
 									whileHover={{ scale: 1.05 }}
 									whileTap={{ scale: 0.95 }}
-									className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-gray-700 font-semibold bg-gray-100 hover:bg-gray-200 transition-all"
+									className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text_gray-700 font-semibold bg-gray-100 hover:bg-gray-200 transition-all"
 								>
 									<ArrowLeftIcon className="w-5 h-5" />
 									Back
@@ -411,14 +411,14 @@ function GetStarted() {
 				</motion.div>
 
 				{/* Social Proof */}
-				<motion.div
+				{/* <motion.div
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ delay: 0.3 }}
 					className="mt-8 text-center text-sm text-gray-600"
 				>
 					<p>Join 50,000+ creators already using ReelReport</p>
-				</motion.div>
+				</motion.div> */}
 			</div>
 		</section>
 	);

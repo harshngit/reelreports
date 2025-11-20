@@ -46,11 +46,11 @@ const SalesAcceleration = () => {
                     {/* CTA Button */}
                     <div className="mb-4">
                         <Link
-                            to="/create-free"
+                            to="/book-demo"
                             className="inline-flex items-center gap-2 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200 shadow-lg hover:opacity-90"
                             style={{ background: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' }}
                         >
-                            Create free pitch reel
+                            Try Creating a Free Pitch Reel
                             <ArrowRightIcon className="w-5 h-5" />
                         </Link>
                     </div>
@@ -61,8 +61,7 @@ const SalesAcceleration = () => {
                     </p>
                         
                         {/* Social Proof */}
-                    <div className="flex items-center gap-4">
-                        {/* Avatar Stack */}
+                    {/* <div className="flex items-center gap-4">
                         <div className="flex -space-x-3">
                             {[1, 2, 3, 4].map((i) => (
                                 <div 
@@ -77,10 +76,8 @@ const SalesAcceleration = () => {
                             ))}
                             </div>
                             
-                            {/* Rating */}
                         <div className="flex flex-col">
                             <div className="flex items-center gap-2">
-                                {/* Stars */}
                                 <div className="flex gap-0.5">
                                     {[1, 2, 3, 4, 5].map((i) => (
                                         <svg key={i} className="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
@@ -92,15 +89,14 @@ const SalesAcceleration = () => {
                             </div>
                             <span className="text-sm text-gray-600">from 2,000+ reviews on G2</span>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
 
             {/* Sales Pitch Reel Showcase Section */}
-            <div className="bg-gradient-to-b from-gray-50 to-white py-20" style={{ fontFamily: 'var(--brand-font)' }}>
+            {/* <div className="bg-gradient-to-b from-gray-50 to-white py-20" style={{ fontFamily: 'var(--brand-font)' }}>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    {/* Video/Image Container */}
-                    <div className="mb-16">
+                    <div className="mb-0">
                         <img 
                             src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&h=675&fit=crop" 
                             alt="Sales Pitch Reel Showcase"
@@ -112,14 +108,13 @@ const SalesAcceleration = () => {
                         />
                 </div>
                     
-                    {/* Company Logos Section */}
                     <div className="flex flex-col md:flex-row items-center justify-between gap-8">
                         <div className="text-left">
                             <p className="text-base text-gray-700 font-medium">Trusted by over 50,000</p>
                             <p className="text-base text-gray-600">companies of all sizes</p>
                         </div>
 
-                        {/* Logos Marquee */}
+                        
                         <div className="flex items-center gap-12 flex-wrap justify-center md:justify-end flex-1">
                             <div className="text-2xl font-bold text-gray-700" style={{ fontFamily: 'Arial, sans-serif' }}>
                                 zoom
@@ -148,7 +143,7 @@ const SalesAcceleration = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             {/* Quick and Easy - Voiceovers Section */}
             <div className="py-20 bg-white" style={{ fontFamily: 'var(--brand-font)' }}>
@@ -206,11 +201,11 @@ const SalesAcceleration = () => {
 
                         {/* CTA Button - White with brand color border */}
                         <Link
-                            to="/create-pitch-reel"
+                            to="/book-demo"
                             className="inline-flex items-center gap-2 px-6 py-3 bg-white text-gray-900 font-semibold text-base rounded-lg hover:opacity-90 transition-all group"
                             style={{ border: '2px solid #1470D2' }}
                         >
-                            Create pitch reel
+                            Try Creating a Free Pitch Reel
                             <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                             </svg>
@@ -228,42 +223,32 @@ const SalesAcceleration = () => {
                                 className="w-full aspect-video object-cover"
                             />
 
-                            {/* Play Button - Upper Left Corner, White Circular with Brand Color Triangle */}
-                            <div className="absolute top-4 left-4">
-                                <button className="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition-transform">
-                                    <svg className="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 24 24" style={{ color: '#cf7bff' }}>
-                                        <path d="M8 5v14l11-7z" />
-                                    </svg>
-                                </button>
-                            </div>
+                            
                         </div>
 
                         {/* Language Selection Buttons */}
-                        <div className="flex gap-3">
-                            {/* US ENGLISH - Selected (Brand Purple) */}
+                        {/* <div className="flex gap-3">
+                            
                             <button className="flex-1 flex items-center justify-center gap-2 px-4 py-3 text-white font-semibold rounded-lg border-2 border-white shadow-md hover:opacity-90 transition-colors" style={{ background: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' }}>
                                 <span className="text-lg">🇺🇸</span>
                                 <span className="text-xs">US ENGLISH</span>
                             </button>
 
-                            {/* GERMAN - Unselected (White) */}
                             <button className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-50 transition-colors" style={{ border: '2px solid #E5E2FF' }}>
                                 <span className="text-lg">🇩🇪</span>
                                 <span className="text-xs">GERMAN</span>
                             </button>
 
-                            {/* FRENCH - Unselected (White) */}
                             <button className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-50 transition-colors" style={{ border: '2px solid #E5E2FF' }}>
                                 <span className="text-lg">🇫🇷</span>
                                 <span className="text-xs">FRENCH</span>
                             </button>
 
-                            {/* SPANISH - Unselected (White) */}
                             <button className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-50 transition-colors" style={{ border: '2px solid #E5E2FF' }}>
                                 <span className="text-lg">🇪🇸</span>
                                 <span className="text-xs">SPANISH</span>
                             </button>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
@@ -290,7 +275,7 @@ const SalesAcceleration = () => {
                         <div className="bg-[#F8F9FC] rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
                             {/* Logo */}
                             <div className="mb-6">
-                                <h3 className="text-2xl font-bold" style={{ color: '#2D3748' }}>DUPONT</h3>
+                                <h3 className="text-2xl font-bold" style={{ color: '#2D3748' }}>Client Sales Team</h3>
                             </div>
 
                             {/* Metric */}
@@ -307,8 +292,8 @@ const SalesAcceleration = () => {
                             </p>
 
                             {/* CTA Link */}
-                            <Link
-                                to="/case-study/dupont"
+                            {/* <Link
+                                to="/book-demo"
                                 className="inline-flex items-center gap-2 text-base font-medium hover:gap-3 transition-all"
                                 style={{ color: '#1470D2' }}
                             >
@@ -316,14 +301,14 @@ const SalesAcceleration = () => {
                                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                 </svg>
-                            </Link>
+                            </Link> */}
                         </div>
 
                         {/* Card 2: Deal Cycle */}
                         <div className="bg-[#F8F9FC] rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
                             {/* Logo */}
                             <div className="mb-6">
-                                <h3 className="text-2xl font-bold" style={{ color: '#2D3748' }}>zoom</h3>
+                                <h3 className="text-2xl font-bold" style={{ color: '#2D3748' }}>Client Sales Team</h3>
                             </div>
 
                             {/* Metric */}
@@ -340,8 +325,8 @@ const SalesAcceleration = () => {
                             </p>
 
                             {/* CTA Link */}
-                            <Link
-                                to="/case-study/zoom"
+                            {/* <Link
+                                to="/book-demo"
                                 className="inline-flex items-center gap-2 text-base font-medium hover:gap-3 transition-all"
                                 style={{ color: '#1470D2' }}
                             >
@@ -349,14 +334,14 @@ const SalesAcceleration = () => {
                                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                 </svg>
-                            </Link>
+                            </Link> */}
                         </div>
 
                         {/* Card 3: Conversion Rate */}
                         <div className="bg-[#F8F9FC] rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
                             {/* Logo */}
                             <div className="mb-6">
-                                <h3 className="text-2xl font-bold" style={{ color: '#2D3748' }}>SAP</h3>
+                                <h3 className="text-2xl font-bold" style={{ color: '#2D3748' }}>Client Sales Team</h3>
                             </div>
 
                             {/* Metric */}
@@ -373,8 +358,8 @@ const SalesAcceleration = () => {
                             </p>
 
                             {/* CTA Link */}
-                            <Link
-                                to="/case-study/sap"
+                            {/* <Link
+                                to="/book-demo"
                                 className="inline-flex items-center gap-2 text-base font-medium hover:gap-3 transition-all"
                                 style={{ color: '#1470D2' }}
                             >
@@ -382,7 +367,7 @@ const SalesAcceleration = () => {
                                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                 </svg>
-                            </Link>
+                            </Link> */}
                         </div>
                     </div>
                 </div>

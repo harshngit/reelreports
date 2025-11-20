@@ -56,7 +56,7 @@ function QuickHelp() {
 	];
 
 	return (
-		<section className="relative py-20 px-4 bg-gradient-to-b from-gray-50 to-white" style={{ fontFamily: 'var(--brand-font)' }}>
+		<section className="relative section-spacing px-4 bg-gradient-to-b from-gray-50 to-white" style={{ fontFamily: 'var(--brand-font)' }}>
 			<div className="mx-auto max-w-7xl">
 				{/* Header */}
 				<motion.div
@@ -121,7 +121,7 @@ function QuickHelp() {
 				</div>
 
 				{/* Bottom CTA */}
-				<motion.div
+				{/* <motion.div
 					initial={{ opacity: 0, y: 20 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true }}
@@ -148,7 +148,7 @@ function QuickHelp() {
 							Call Support
 						</motion.button>
 					</div>
-				</motion.div>
+				</motion.div> */}
 			</div>
 		</section>
 	);

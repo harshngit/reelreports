@@ -29,9 +29,9 @@ function ContactInfo() {
 		{
 			icon: PhoneIcon,
 			title: 'Call Us',
-			content: '+1 (647) 970-7700',
+			content: '+971 (055) 112-3383',
 			subContent: 'Mon-Fri, 9am-6pm EST',
-			link: 'tel:+15551234567',
+			link: 'tel:+971551123383',
 			gradient: 'from-purple-500 to-pink-500',
 		},
 		{
@@ -51,11 +51,11 @@ function ContactInfo() {
 		},
 	];
 
-	const socialLinks = [
-		{ icon: FaLinkedin, label: 'LinkedIn', link: 'https://linkedin.com', color: '#0A66C2' },
-		{ icon: FaTiktok, label: 'Tik Tok', link: 'https://tiktok.com', color: '#000000' },
-		{ icon: FaYoutube, label: 'YouTube', link: 'https://youtube.com', color: '#FF0000' },
-	];
+	//const socialLinks = [
+	//	{ icon: FaLinkedin, label: 'LinkedIn', link: 'https://linkedin.com', color: '#0A66C2' },
+	//	{ icon: FaTiktok, label: 'Tik Tok', link: 'https://tiktok.com', color: '#000000' },
+	//	{ icon: FaYoutube, label: 'YouTube', link: 'https://youtube.com', color: '#FF0000' },
+	//];
 
 	return (
 		<div className="space-y-6">
@@ -99,7 +99,7 @@ function ContactInfo() {
 			))}
 
 			{/* Live Chat Card */}
-			<motion.div
+			{/* <motion.div
 				initial={{ opacity: 0, x: -20 }}
 				animate={{ opacity: 1, x: 0 }}
 				transition={{ delay: 0.4, duration: 0.5 }}
@@ -127,9 +127,10 @@ function ContactInfo() {
 				>
 					Open Chat
 				</motion.button>
-			</motion.div>
-
-			{/* Social Media */}
+			</motion.div> */}
+			
+			{/*
+			
 			<motion.div
 				initial={{ opacity: 0, x: -20 }}
 				animate={{ opacity: 1, x: 0 }}
@@ -157,9 +158,10 @@ function ContactInfo() {
 					))}
 				</div>
 			</motion.div>
+		*/}
 
 			{/* Trust Badge */}
-			<motion.div
+			{/* <motion.div
 				initial={{ opacity: 0, x: -20 }}
 				animate={{ opacity: 1, x: 0 }}
 				transition={{ delay: 0.6, duration: 0.5 }}
@@ -172,7 +174,7 @@ function ContactInfo() {
 						All information is encrypted and never shared with third parties.
 					</p>
 				</div>
-			</motion.div>
+			</motion.div> */}
 		</div>
 	);
 }

@@ -22,7 +22,7 @@ function HeroCTA({ variant = 'default' }) {
 	// Full Hero Section
 	if (variant === 'hero') {
 		return (
-			<section className="relative py-20 px-4 overflow-hidden" style={{ fontFamily: 'var(--brand-font)' }}>
+			<section className="relative section-spacing px-4 overflow-hidden" style={{ fontFamily: 'var(--brand-font)' }}>
 				{/* Background decorative elements */}
 				<div className="absolute inset-0 overflow-hidden pointer-events-none">
 					<motion.div
@@ -183,7 +183,7 @@ function HeroCTA({ variant = 'default' }) {
 	// Simple CTA Banner
 	if (variant === 'banner') {
 		return (
-			<section className="relative py-16 px-4" style={{ fontFamily: 'var(--brand-font)' }}>
+			<section className="relative section-spacing px-4" style={{ fontFamily: 'var(--brand-font)' }}>
 				<motion.div
 					initial={{ opacity: 0, y: 20 }}
 					whileInView={{ opacity: 1, y: 0 }}

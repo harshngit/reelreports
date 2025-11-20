@@ -46,7 +46,7 @@ const KnowledgeManagement = () => {
                     {/* CTA Button */}
                     <div className="mb-4">
                         <Link
-                            to="/create-free"
+                            to="/book-demo"
                             className="inline-flex items-center gap-2 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200 shadow-lg hover:opacity-90"
                             style={{ background: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' }}
                         >
@@ -61,8 +61,8 @@ const KnowledgeManagement = () => {
                     </p>
 
                     {/* Social Proof */}
-                    <div className="flex items-center gap-4">
-                        {/* Avatar Stack */}
+                    {/* <div className="flex items-center gap-4">
+                        
                         <div className="flex -space-x-3">
                             {[1, 2, 3, 4].map((i) => (
                                 <div 
@@ -77,10 +77,10 @@ const KnowledgeManagement = () => {
                             ))}
                         </div>
 
-                        {/* Rating */}
+
                         <div className="flex flex-col">
                             <div className="flex items-center gap-2">
-                                {/* Stars */}
+
                                 <div className="flex gap-0.5">
                                     {[1, 2, 3, 4, 5].map((i) => (
                                         <svg key={i} className="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
@@ -92,7 +92,7 @@ const KnowledgeManagement = () => {
                             </div>
                             <span className="text-sm text-gray-600">from 2,000+ reviews on G2</span>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
 
@@ -100,7 +100,7 @@ const KnowledgeManagement = () => {
             <div className="bg-gradient-to-b from-gray-50 to-white py-20" style={{ fontFamily: 'var(--brand-font)' }}>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     {/* Video/Image Container */}
-                    <div className="mb-16">
+                    <div className="mb-0">
                         <img 
                             src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&h=675&fit=crop" 
                             alt="Knowledge Management Video Showcase"
@@ -113,13 +113,13 @@ const KnowledgeManagement = () => {
                     </div>
                     
                     {/* Company Logos Section */}
-                    <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+                    {/* <div className="flex flex-col md:flex-row items-center justify-between gap-8">
                         <div className="text-left">
                             <p className="text-base text-gray-700 font-medium">Trusted by over 50,000</p>
                             <p className="text-base text-gray-600">companies of all sizes</p>
                         </div>
                         
-                        {/* Logos Marquee */}
+                        
                         <div className="flex items-center gap-12 flex-wrap justify-center md:justify-end flex-1">
                             <div className="text-2xl font-bold text-gray-700" style={{ fontFamily: 'Arial, sans-serif' }}>
                                 zoom
@@ -146,7 +146,7 @@ const KnowledgeManagement = () => {
                                 <span className="text-xl font-bold text-gray-800">REUTERS</span>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
 
@@ -206,7 +206,7 @@ const KnowledgeManagement = () => {
 
                         {/* CTA Button - White with brand color border */}
                         <Link
-                            to="/create-knowledge-reel"
+                            to="/book-demo"
                             className="inline-flex items-center gap-2 px-6 py-3 bg-white text-gray-900 font-semibold text-base rounded-lg hover:opacity-90 transition-all group"
                             style={{ border: '2px solid #1470D2' }}
                         >
@@ -228,42 +228,32 @@ const KnowledgeManagement = () => {
                                 className="w-full aspect-video object-cover"
                             />
 
-                            {/* Play Button - Upper Left Corner, White Circular with Brand Color Triangle */}
-                            <div className="absolute top-4 left-4">
-                                <button className="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition-transform">
-                                    <svg className="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 24 24" style={{ color: '#1470D2' }}>
-                                        <path d="M8 5v14l11-7z" />
-                                    </svg>
-                                </button>
-                            </div>
+                            
                         </div>
 
                         {/* Language Selection Buttons */}
-                        <div className="flex gap-3">
-                            {/* US ENGLISH - Selected (Brand Purple) */}
+                        {/* <div className="flex gap-3">
+                            
                             <button className="flex-1 flex items-center justify-center gap-2 px-4 py-3 text-white font-semibold rounded-lg border-2 border-white shadow-md hover:opacity-90 transition-colors" style={{ background: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' }}>
                                 <span className="text-lg">🇺🇸</span>
                                 <span className="text-xs">US ENGLISH</span>
                             </button>
 
-                            {/* GERMAN - Unselected (White) */}
                             <button className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-50 transition-colors" style={{ border: '2px solid #E5E2FF' }}>
                                 <span className="text-lg">🇩🇪</span>
                                 <span className="text-xs">GERMAN</span>
                             </button>
 
-                            {/* FRENCH - Unselected (White) */}
                             <button className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-50 transition-colors" style={{ border: '2px solid #E5E2FF' }}>
                                 <span className="text-lg">🇫🇷</span>
                                 <span className="text-xs">FRENCH</span>
                             </button>
 
-                            {/* SPANISH - Unselected (White) */}
                             <button className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-50 transition-colors" style={{ border: '2px solid #E5E2FF' }}>
                                 <span className="text-lg">🇪🇸</span>
                                 <span className="text-xs">SPANISH</span>
                             </button>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
@@ -307,7 +297,7 @@ const KnowledgeManagement = () => {
                             </p>
 
                             {/* CTA Link */}
-                            <Link
+                            {/* <Link
                                 to="/case-study/merck"
                                 className="inline-flex items-center gap-2 text-base font-medium hover:gap-3 transition-all"
                                 style={{ color: '#1470D2' }}
@@ -316,7 +306,7 @@ const KnowledgeManagement = () => {
                                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                 </svg>
-                            </Link>
+                            </Link> */}
                         </div>
 
                         {/* Card 2: Learning Engagement */}
@@ -340,7 +330,7 @@ const KnowledgeManagement = () => {
                             </p>
 
                             {/* CTA Link */}
-                            <Link
+                            {/* <Link
                                 to="/case-study/reuters"
                                 className="inline-flex items-center gap-2 text-base font-medium hover:gap-3 transition-all"
                                 style={{ color: '#1470D2' }}
@@ -349,7 +339,7 @@ const KnowledgeManagement = () => {
                                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                 </svg>
-                            </Link>
+                            </Link> */}
                         </div>
 
                         {/* Card 3: Time to Knowledge */}
@@ -373,7 +363,7 @@ const KnowledgeManagement = () => {
                             </p>
 
                             {/* CTA Link */}
-                            <Link
+                            {/* <Link
                                 to="/case-study/opentext"
                                 className="inline-flex items-center gap-2 text-base font-medium hover:gap-3 transition-all"
                                 style={{ color: '#1470D2' }}
@@ -382,7 +372,7 @@ const KnowledgeManagement = () => {
                                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                 </svg>
-                            </Link>
+                            </Link> */}
                         </div>
                     </div>
                 </div>

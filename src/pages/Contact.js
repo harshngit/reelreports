@@ -11,7 +11,7 @@ const Contact = () => {
 	return (
 		<AppLayout>
 			{/* Hero Section */}
-			<section className="relative py-20 px-4 overflow-hidden" style={{ fontFamily: 'var(--brand-font)' }}>
+			<section className="relative section-spacing px-4 overflow-hidden" style={{ fontFamily: 'var(--brand-font)' }}>
 				{/* Background decorative elements */}
 				<div className="absolute inset-0 overflow-hidden pointer-events-none">
 					<motion.div
@@ -75,18 +75,18 @@ const Contact = () => {
 			</section>
 
 			{/* Map Section */}
-			<ContactMap />
+			{/* <ContactMap /> */}
 
 			{/* Quick Help Section */}
-			<QuickHelp />
+			{/* <QuickHelp /> */}
 
 			{/* Stats Section */}
-			<motion.section
+			{/* <motion.section
 				initial={{ opacity: 0, y: 20 }}
 				whileInView={{ opacity: 1, y: 0 }}
 				viewport={{ once: true }}
 				transition={{ duration: 0.6 }}
-				className="relative py-16 px-4"
+				className="relative section-spacing px-4"
 				style={{ fontFamily: 'var(--brand-font)' }}
 			>
 				<div className="mx-auto max-w-7xl">
@@ -118,7 +118,7 @@ const Contact = () => {
 						</div>
 					</div>
 				</div>
-			</motion.section>
+			</motion.section> */}
 		</AppLayout>
 	);
 };

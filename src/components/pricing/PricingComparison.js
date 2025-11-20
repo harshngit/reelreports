@@ -74,7 +74,7 @@ function PricingComparison() {
 	};
 
 	return (
-		<section className="relative py-20 px-4 bg-gradient-to-b from-gray-50 to-white" style={{ fontFamily: 'var(--brand-font)' }}>
+		<section className="relative section-spacing px-4 bg-gradient-to-b from-gray-50 to-white" style={{ fontFamily: 'var(--brand-font)' }}>
 			<div className="mx-auto max-w-6xl">
 				{/* Header */}
 				<motion.div
@@ -191,7 +191,7 @@ function PricingComparison() {
 							</motion.div>
 						);
 					})}
-				</div>
+			</div>
 			</div>
 		</section>
 	);

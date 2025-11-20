@@ -1,10 +1,11 @@
 import React, { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-    RocketLaunchIcon, 
-    MegaphoneIcon, 
+import {
+    RocketLaunchIcon,
+    MegaphoneIcon,
     ChatBubbleLeftRightIcon,
-    BookOpenIcon
+    BookOpenIcon,
+    ChartBarIcon
 } from '@heroicons/react/24/outline';
 
 const SolutionDropdown = ({ isActive, onClose }) => {
@@ -60,6 +61,14 @@ const SolutionDropdown = ({ isActive, onClose }) => {
             bgColor: '#EDE9FE',
             title: 'Knowledge management',
             description: 'Summarize knowledge in engaging teaser reels',
+        },
+        {
+            key: 'financial',
+            icon: ChartBarIcon,
+            color: '#8B5CF6',
+            bgColor: '#EDE9FE',
+            title: 'Financial reporting',
+            description: 'Translate KPIs into board-ready recap reels',
         }
     ];
 
@@ -76,7 +85,7 @@ const SolutionDropdown = ({ isActive, onClose }) => {
         >
             <div className="px-12 py-10">
                 {/* Solutions Grid */}
-                <div className="grid grid-cols-4 gap-6">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
                     {solutions.map((solution) => {
                         const IconComponent = solution.icon;
                         return (
@@ -115,7 +124,7 @@ const SolutionDropdown = ({ isActive, onClose }) => {
             </div>
 
             {/* Bottom CTA Bar */}
-            <div className="bg-gradient-to-r from-[#1470D2] to-[#8E23C0] px-12 py-5 flex items-center justify-between">
+            {/* <div className="bg-gradient-to-r from-[#1470D2] to-[#8E23C0] px-12 py-5 flex items-center justify-between">
                 <Link
                     to="/create-free"
                     className="text-white font-semibold text-base hover:text-indigo-200 transition-colors"
@@ -142,7 +151,7 @@ const SolutionDropdown = ({ isActive, onClose }) => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                 </Link>
-            </div>
+            </div> */}
         </div>
     );
 };

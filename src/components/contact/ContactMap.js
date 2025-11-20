@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { MapPinIcon, GlobeAltIcon, BuildingOfficeIcon } from '@heroicons/react/24/outline';
 
+
 function ContactMap() {
 	const offices = [
 		{
@@ -28,7 +29,7 @@ function ContactMap() {
 	];
 
 	return (
-		<section className="relative py-20 px-4" style={{ fontFamily: 'var(--brand-font)' }}>
+		<section className="relative section-spacing px-4" style={{ fontFamily: 'var(--brand-font)' }}>
 			<div className="mx-auto max-w-7xl">
 				{/* Header */}
 				<motion.div

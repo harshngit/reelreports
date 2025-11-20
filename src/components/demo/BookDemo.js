@@ -10,6 +10,7 @@ import {
 	CheckCircleIcon,
 	SparklesIcon,
 } from '@heroicons/react/24/outline';
+import { submitBookDemoRequest } from '../../lib/sanityClient';
 
 function BookDemo() {
 	const [formData, setFormData] = useState({
@@ -22,16 +23,34 @@ function BookDemo() {
 	});
 
 	const [isSubmitted, setIsSubmitted] = useState(false);
+	const [isSubmitting, setIsSubmitting] = useState(false);
+	const [errorMessage, setErrorMessage] = useState(null);
 
 	const handleChange = (e) => {
 		setFormData({ ...formData, [e.target.name]: e.target.value });
 	};
 
-	const handleSubmit = (e) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault();
-		// Handle form submission
-		console.log('Form submitted:', formData);
-		setIsSubmitted(true);
+		setErrorMessage(null);
+		setIsSubmitting(true);
+		try {
+			await submitBookDemoRequest(formData);
+			setIsSubmitted(true);
+			setFormData({
+				name: '',
+				email: '',
+				phone: '',
+				company: '',
+				teamSize: '',
+				message: '',
+			});
+		} catch (error) {
+			console.error('Failed to submit demo request', error);
+			setErrorMessage(error?.message || 'Something went wrong while scheduling your demo. Please try again.');
+		} finally {
+			setIsSubmitting(false);
+		}
 	};
 
 	const benefits = [
@@ -54,15 +73,15 @@ function BookDemo() {
 
 	if (isSubmitted) {
 		return (
-			<section className="relative py-20 px-4 min-h-screen flex items-center" style={{ fontFamily: 'var(--brand-font)' }}>
+			<section className="relative section-spacing px-4 min-h-screen flex items-center" style={{ fontFamily: 'var(--brand-font)' }}>
 				<div className="mx-auto max-w-2xl w-full text-center">
 					<motion.div
-						initial={{ scale: 0 }}
-						animate={{ scale: 1 }}
+						initial={{ opacity: 0.4,scale: 0 }}
+						animate={{ opacity: 1, scale: 1 }}
 						transition={{ type: 'spring', duration: 0.6 }}
 						className="mb-8"
 					>
-						<div className="w-24 h-24 mx-auto rounded-full bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center shadow-2xl">
+						<div className="w-24 h-24 mx-auto rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center shadow-2xl">
 							<CheckCircleIcon className="w-12 h-12 text-white" />
 						</div>
 					</motion.div>
@@ -85,23 +104,14 @@ function BookDemo() {
 						We've received your demo request. Our team will reach out to you within 24 hours to schedule your personalized demo.
 					</motion.p>
 
-					<motion.div
-						initial={{ opacity: 0, y: 20 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ delay: 0.5 }}
-						className="p-6 rounded-2xl bg-gradient-to-br from-blue-50 to-purple-50 border border-[#c6c1f0]"
-					>
-						<p className="text-sm text-gray-600">
-							In the meantime, check your email for confirmation and resources to help you get started.
-						</p>
-					</motion.div>
+					
 				</div>
 			</section>
 		);
 	}
 
 	return (
-		<section className="relative py-20 px-4" style={{ fontFamily: 'var(--brand-font)' }}>
+		<section className="relative section-spacing px-4" style={{ fontFamily: 'var(--brand-font)' }}>
 			{/* Background decorative elements */}
 			<div className="absolute inset-0 overflow-hidden pointer-events-none">
 				<motion.div
@@ -321,12 +331,21 @@ function BookDemo() {
 
 							<motion.button
 								type="submit"
-								whileHover={{ scale: 1.02 }}
-								whileTap={{ scale: 0.98 }}
-								className="w-full mt-6 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold shadow-lg hover:shadow-xl transition-all duration-300"
+								whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
+								whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
+								disabled={isSubmitting}
+								className={`w-full mt-6 py-4 rounded-xl font-bold shadow-lg transition-all duration-300 ${
+									isSubmitting
+										? 'bg-gray-400 cursor-not-allowed text-white'
+										: 'bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:shadow-xl'
+								}`}
 							>
-								Schedule My Demo
+								{isSubmitting ? 'Scheduling...' : 'Schedule My Demo'}
 							</motion.button>
+
+							{errorMessage && (
+								<p className="mt-3 text-sm text-center text-red-500">{errorMessage}</p>
+							)}
 
 							<p className="mt-4 text-xs text-center text-gray-500">
 								By submitting, you agree to our Terms of Service and Privacy Policy

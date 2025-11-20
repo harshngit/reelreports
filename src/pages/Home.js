@@ -2,7 +2,7 @@ import React from 'react'
 import AppLayout from '../components/layout/AppLayout'
 import Hero from '../components/home/Hero'
 import TestimonialCarousel from '../components/home/TestimonialCarousel'
-import WhySynthesia from '../components/home/WhySynthesia'
+import WhyReelReports from '../components/home/WhyReelReports'
 import FeaturesSection from '../components/home/FeaturesSection'
 import SolutionsSection from '../components/home/SolutionsSection'
 import LogoMarquee from '../components/home/LogoMarquee'
@@ -19,18 +19,18 @@ const Home = () => {
       <motion.div {...base} transition={{ duration: 0.5, delay: 0.05 }}>
         <TestimonialCarousel />
       </motion.div>
-      <motion.div {...base} transition={{ duration: 0.5, delay: 0.1 }}>
-        <WhySynthesia />
-      </motion.div>
+      {/* <motion.div {...base} transition={{ duration: 0.5, delay: 0.1 }}>
+        <WhyReelReports />
+      </motion.div> */}
       <motion.div {...base} transition={{ duration: 0.5, delay: 0.15 }}>
         <FeaturesSection />
       </motion.div>
       <motion.div {...base} transition={{ duration: 0.5, delay: 0.2 }}>
         <SolutionsSection />
       </motion.div>
-      <motion.div {...base} transition={{ duration: 0.5, delay: 0.25 }}>
+      {/* <motion.div {...base} transition={{ duration: 0.5, delay: 0.25 }}>
         <LogoMarquee />
-      </motion.div>
+      </motion.div> */}
       <motion.div {...base} transition={{ duration: 0.5, delay: 0.3 }}>
         <FAQ />
       </motion.div>

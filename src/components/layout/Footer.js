@@ -6,7 +6,7 @@ import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
 function Footer() {
     return (
-		<footer className="relative mt-20" style={{ fontFamily: 'var(--brand-font)', backgroundColor: '#E5E2FF' }}>
+		<footer className="relative " style={{ fontFamily: 'var(--brand-font)', backgroundColor: '#E5E2FF' }}>
 			{/* white-to-transparent fade at top */}
 			<div aria-hidden="true" className="pointer-events-none absolute -top-2 left-0 right-0 h-10" style={{
 				backgroundImage:'linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0))'
@@ -38,16 +38,7 @@ function Footer() {
 									Solutions
 								</Link>
 							</li>
-							<li>
-							<Link to="/pricing" className="text-sm text-[#000/80] hover:text-[#000] transition-colors">
-									Pricing
-								</Link>
-							</li>
-							<li>
-							<Link to="/book-demo" className="text-sm text-[#000/80] hover:text-[#000] transition-colors">
-									Book Demo
-								</Link>
-							</li>
+							
 						</ul>
 					</div>
 
@@ -55,11 +46,11 @@ function Footer() {
 					<div>
 					<h3 className="text-sm font-bold text-[#000] mb-4 uppercase tracking-wider">Company</h3>
 						<ul className="space-y-3">
-							<li>
+							{/* <li>
 							<a href="/pricing" className="text-sm text-[#000/80] hover:text-[#000] transition-colors">
 									Pricing
 								</a>
-							</li>
+							</li> */}
 							<li>
 							<a href="/contact" className="text-sm text-[#000/80] hover:text-[#000] transition-colors">
 									Contact
@@ -67,14 +58,10 @@ function Footer() {
 							</li>
 							<li>
 								<a href="/book-demo" className="text-sm text-[#000/80] hover:text-[#000] transition-colors">
-									Book Demo
+									Request a Demo
 								</a>
 							</li>
-							<li>
-							<a href="/get-started" className="text-sm text-[#000/80] hover:text-[#000] transition-colors">
-									Get Started
-								</a>
-							</li>
+							
 						</ul>
 					</div>
 				</motion.div>
@@ -84,7 +71,7 @@ function Footer() {
 					<div className="text-sm" style={{ color:'#000' }}>
 						© {new Date().getFullYear()} Reel Reports. All rights reserved.
 					</div>
-					<div className="flex gap-6">
+					{/* <div className="flex gap-6">
 						<a href="#" className="text-sm text-[#000/80] hover:text-[#000] transition-colors">
 							Privacy Policy
 						</a>
@@ -94,7 +81,7 @@ function Footer() {
 						<a href="#" className="text-sm text-[#000/80] hover:text-[#000] transition-colors">
 							Cookie Policy
 						</a>
-					</div>
+					</div> */}
 				</motion.div>
 			</div>
 		</footer>

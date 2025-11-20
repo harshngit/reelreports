@@ -135,7 +135,7 @@ const Communication = () => {
                             {/* CTA Buttons */}
                             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                                 <Link
-                                    to="/request-invite"
+                                    to="/book-demo"
                                     className="inline-flex items-center justify-center gap-2 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm sm:text-base"
                                     style={{ backgroundImage: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' }}
                                 >
@@ -145,15 +145,13 @@ const Communication = () => {
                                     </svg>
                                 </Link>
                                 
-                                <button className="inline-flex items-center justify-center gap-2 bg-white text-gray-700 font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-xl border-2 border-gray-200 hover:border-purple-300 hover:text-purple-600 transition-all duration-200 text-sm sm:text-base">
+                                {/* <button className="inline-flex items-center justify-center gap-2 bg-white text-gray-700 font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-xl border-2 border-gray-200 hover:border-purple-300 hover:text-purple-600 transition-all duration-200 text-sm sm:text-base">
                                     <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                                     </svg>
                                     Upload Document
-                                </button>
+                                </button> */}
                             </div>
-
-                            
                         </div>
                     </div>
                 </div>
@@ -175,29 +173,28 @@ const Communication = () => {
                         </p>
                     </div>
 
-                    {/* Two Column Card */}
                     <div className="bg-white rounded-2xl md:rounded-3xl shadow-2xl overflow-hidden border border-gray-100">
                         <div className="grid grid-cols-1 md:grid-cols-2">
                             {/* Left Column - Feature Description */}
                             <div className="p-6 sm:p-8 md:p-12 flex flex-col justify-center md:border-r border-gray-100">
-                                <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex items-center justify-center mb-6">
-                                    <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex items-center justify-center mb-4 sm:mb-6">
+                                    <svg className="w-7 h-7 sm:w-8 sm:h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                                     </svg>
                                 </div>
-                                <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                                <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
                                     Optimized Prompt Library
                                 </h3>
-                                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                                <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 leading-relaxed">
                                     Access our collection of professionally engineered prompts optimized for different industries, 
                                     content types, and use cases. Each prompt is tested and refined for optimal AI performance.
                                 </p>
                                 <Link 
                                     to="#" 
-                                    className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold text-lg group"
+                                    className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold text-base sm:text-lg group"
                                 >
                                     Browse Prompt Library
-                                    <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <svg className="w-4 h-4 sm:w-5 sm:h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                                     </svg>
                                 </Link>
@@ -209,21 +206,19 @@ const Communication = () => {
                                 <div className="space-y-4">
                                     {/* Prompt Category Selector */}
                                     <div className="bg-white rounded-xl p-4 shadow-md border border-blue-100">
-                                        <div className="flex items-center gap-3 mb-3">
+                                        <div className="flex flex-col sm:flex-row sm:items-center gap-3 mb-3">
                                             <div className="flex-1">
-                                                <div className="flex items-center gap-2 text-sm text-gray-500 mb-2">
+                                                <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-500 mb-2">
                                                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
                                                     </svg>
                                                     Select Prompt Template
                                                 </div>
-                                                <p className="text-sm text-gray-700 font-medium">
+                                                <p className="text-sm sm:text-base text-gray-700 font-medium">
                                                     Product Launch Announcement - B2B Tech
                                                 </p>
                                             </div>
-                                            <button className="px-4 py-2 text-white rounded-lg text-sm font-semibold hover:shadow-lg transition-shadow" style={{ backgroundImage: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' }}>
-                                                Apply
-                                            </button>
+                                            
                                         </div>
                                     </div>
 
@@ -237,10 +232,10 @@ const Communication = () => {
                                         </div>
                                         <div className="space-y-3 text-sm text-gray-700 leading-relaxed">
                                             <p className="font-medium text-gray-800">
-                                                🎯 Target Audience: <span className="bg-blue-100 text-blue-900 px-1 rounded">Tech Decision Makers</span>
+                                                🎯 Target Audience: <span className="inline-flex items-center bg-blue-100 text-blue-900 px-2 py-0.5 rounded text-xs sm:text-sm">Tech Decision Makers</span>
                                             </p>
                                             <p className="font-medium text-gray-800">
-                                                📊 Key Message: <span className="bg-cyan-100 text-cyan-900 px-1 rounded">Innovation & ROI</span>
+                                                📊 Key Message: <span className="inline-flex items-center bg-cyan-100 text-cyan-900 px-2 py-0.5 rounded text-xs sm:text-sm">Innovation & ROI</span>
                                             </p>
                                             <p className="text-gray-600 italic">
                                                 "Introducing [Product Name] - the revolutionary solution that reduces costs by 40% 
@@ -249,20 +244,20 @@ const Communication = () => {
                                         </div>
                                         
                                         {/* Action Buttons */}
-                                        <div className="flex gap-2 mt-6 pt-4 border-t border-gray-100">
-                                            <button className="flex items-center gap-2 px-4 py-2 text-sm bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition-colors">
+                                        <div className="flex flex-col sm:flex-row flex-wrap gap-2 mt-6 pt-4 border-t border-gray-100">
+                                            <button className="w-full cursor-default sm:w-auto flex items-center justify-center gap-2 px-4 py-2 text-sm bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition-colors">
                                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
                                                 </svg>
                                                 Customize
                                             </button>
-                                            <button className="flex items-center gap-2 px-4 py-2 text-sm bg-cyan-50 text-cyan-700 rounded-lg hover:bg-cyan-100 transition-colors">
+                                            <button className="w-full cursor-default sm:w-auto flex items-center justify-center gap-2 px-4 py-2 text-sm bg-cyan-50 text-cyan-700 rounded-lg hover:bg-cyan-100 transition-colors">
                                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" />
                                                 </svg>
                                                 Save Template
                                             </button>
-                                            <button className="flex items-center gap-2 px-4 py-2 text-sm bg-indigo-50 text-indigo-700 rounded-lg hover:bg-green-100 transition-colors ml-auto">
+                                            <button className="w-full cursor-default sm:w-auto flex items-center justify-center gap-2 px-4 py-2 text-sm bg-indigo-50 text-indigo-700 rounded-lg hover:bg-green-100 transition-colors sm:ml-auto">
                                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                                                 </svg>
@@ -277,10 +272,8 @@ const Communication = () => {
                 </div>
             </div>
 
-            {/* Infographics brought to life */}
             <div className="bg-gradient-to-b from-slate-50 to-white py-20 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
-                    {/* Section Header */}
                     <div className="text-center mb-16">
                         <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                             Infographics Brought to Life
@@ -294,7 +287,6 @@ const Communication = () => {
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
-                        {/* Card 1: Animated Charts */}
                         <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-shadow duration-300">
                             <div className="p-6 sm:p-8">
                                 <div className="w-12 h-12 bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl flex items-center justify-center mb-4">
@@ -308,19 +300,17 @@ const Communication = () => {
                                 <p className="text-gray-600 mb-6 leading-relaxed">
                                     Bring bar charts, pie charts, and line graphs to life with smooth animations that reveal data progressively for maximum impact.
                                 </p>
-                                <Link to="#" className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold group">
+                                {/* <Link to="#" className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold group">
                                     See Animation Styles
                                     <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                     </svg>
-                                </Link>
+                                </Link> */}
                             </div>
                             
-                            {/* Video Preview */}
-                            <div className="relative bg-gradient-to-br from-blue-50 to-indigo-50 h-64 flex items-center justify-center group cursor-pointer">
+                            <div className="relative bg-gradient-to-br from-blue-50 to-indigo-50 h-64 flex items-center justify-center group cursor-default">
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                                 
-                                {/* Chart Preview */}
                                 <div className="w-full h-full p-8 flex items-end gap-2 justify-center">
                                     <div className="w-12 h-24 bg-gradient-to-t from-blue-500 to-blue-400 rounded-t-lg shadow-lg transform group-hover:scale-105 transition-transform"></div>
                                     <div className="w-12 h-32 bg-gradient-to-t from-indigo-500 to-indigo-400 rounded-t-lg shadow-lg transform group-hover:scale-105 transition-transform delay-75"></div>
@@ -328,18 +318,16 @@ const Communication = () => {
                                     <div className="w-12 h-40 bg-gradient-to-t from-pink-500 to-pink-400 rounded-t-lg shadow-lg transform group-hover:scale-105 transition-transform delay-150"></div>
                                 </div>
                                 
-                                {/* Play Button */}
-                                <div className="absolute inset-0 flex items-center justify-center">
+                                {/* <div className="absolute inset-0 flex items-center justify-center">
                                     <div className="w-16 h-16 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
                                         <svg className="w-7 h-7 text-indigo-600 ml-1" fill="currentColor" viewBox="0 0 24 24">
                                             <path d="M8 5v14l11-7z" />
                                         </svg>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
 
-                        {/* Card 2: Visual Storytelling */}
                         <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-shadow duration-300">
                             <div className="p-8">
                                 <div className="w-12 h-12 bg-gradient-to-br from-purple-100 to-purple-200 rounded-xl flex items-center justify-center mb-4">
@@ -353,19 +341,17 @@ const Communication = () => {
                                 <p className="text-gray-600 mb-6 leading-relaxed">
                                     Convert static infographics into compelling video narratives with zoom effects, highlights, and progressive reveals.
                                 </p>
-                                <Link to="#" className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-semibold group">
+                                {/* <Link to="#" className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-semibold group">
                                     Explore Effects
                                     <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                     </svg>
-                                </Link>
+                                </Link> */}
                             </div>
                             
-                            {/* Document Preview */}
-                            <div className="relative bg-gradient-to-br from-purple-50 to-pink-50 h-64 p-8 group cursor-pointer overflow-hidden">
+                            <div className="relative bg-gradient-to-br from-purple-50 to-pink-50 h-64 p-8 group cursor-default overflow-hidden">
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                                 
-                                {/* Document Pages */}
                                 <div className="relative h-full">
                                     <div className="absolute top-0 left-4 w-48 h-56 bg-white rounded-lg shadow-xl p-4 transform rotate-2 group-hover:rotate-3 transition-transform">
                                         <div className="space-y-2">
@@ -384,18 +370,16 @@ const Communication = () => {
                                     </div>
                                 </div>
                                 
-                                {/* Play Button */}
-                                <div className="absolute inset-0 flex items-center justify-center">
+                                {/* <div className="absolute inset-0 flex items-center justify-center">
                                     <div className="w-16 h-16 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
                                         <svg className="w-7 h-7 text-purple-600 ml-1" fill="currentColor" viewBox="0 0 24 24">
                                             <path d="M8 5v14l11-7z" />
                                         </svg>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
 
-                        {/* Card 3: Interactive Elements */}
                         <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-shadow duration-300">
                             <div className="p-8">
                                 <div className="w-12 h-12 bg-gradient-to-br from-indigo-100 to-indigo-200 rounded-xl flex items-center justify-center mb-4">
@@ -409,50 +393,46 @@ const Communication = () => {
                                 <p className="text-gray-600 mb-6 leading-relaxed">
                                     Add professional transitions, callouts, and emphasis effects that guide viewer attention to key data points automatically.
                                 </p>
-                                <Link to="#" className="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-700 font-semibold group">
+                                {/* <Link to="#" className="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-700 font-semibold group">
                                     View Transitions
                                     <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                     </svg>
-                                </Link>
+                                </Link> */}
                             </div>
                             
-                            {/* Language Selector Preview */}
-                            <div className="relative bg-gradient-to-br from-indigo-50 to-blue-50 h-64 p-6 group cursor-pointer">
+                            <div className="relative bg-gradient-to-br from-indigo-50 to-blue-50 h-64 p-6 group cursor-default">
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                                 
-                                {/* Video Player with Language Menu */}
                                 <div className="relative bg-gray-900 rounded-lg h-full overflow-hidden shadow-xl">
                                     <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-teal-500/20"></div>
                                     
-                                    {/* Language Dropdown */}
                                     <div className="absolute top-4 right-4 bg-white rounded-lg shadow-xl p-2 min-w-[160px]">
-                                        <div className="flex items-center gap-2 px-3 py-2 hover:bg-green-50 rounded cursor-pointer">
+                                        <div className="flex items-center gap-2 px-3 py-2 hover:bg-green-50 rounded cursor-default">
                                             <div className="w-2 h-2 bg-indigo-500 rounded-full"></div>
                                             <span className="text-sm font-medium text-gray-700">EN English</span>
                                         </div>
-                                        <div className="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 rounded cursor-pointer">
+                                        <div className="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 rounded cursor-default">
                                             <div className="w-2 h-2 bg-transparent border border-gray-300 rounded-full"></div>
                                             <span className="text-sm text-gray-600">FR Français</span>
                                         </div>
-                                        <div className="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 rounded cursor-pointer">
+                                        <div className="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 rounded cursor-default">
                                             <div className="w-2 h-2 bg-transparent border border-gray-300 rounded-full"></div>
                                             <span className="text-sm text-gray-600">ES Español</span>
                                         </div>
-                                        <div className="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 rounded cursor-pointer">
+                                        <div className="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 rounded cursor-default">
                                             <div className="w-2 h-2 bg-transparent border border-gray-300 rounded-full"></div>
                                             <span className="text-sm text-gray-600">DE Deutsch</span>
                                         </div>
                                     </div>
                                     
-                                    {/* Play Button */}
-                                    <div className="absolute inset-0 flex items-center justify-center">
+                                    {/* <div className="absolute inset-0 flex items-center justify-center">
                                         <div className="w-16 h-16 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
                                             <svg className="w-7 h-7 text-indigo-600 ml-1" fill="currentColor" viewBox="0 0 24 24">
                                                 <path d="M8 5v14l11-7z" />
                                             </svg>
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
@@ -481,12 +461,12 @@ const Communication = () => {
                                     Create pixel-perfect, data-accurate charts and visualizations that maintain integrity 
                                     while delivering stunning visual impact. Every number counts.
                                 </p>
-                                <button className="inline-flex items-center gap-2 px-6 py-3 bg-white border-2 border-gray-200 text-gray-700 font-semibold rounded-lg hover:border-emerald-300 hover:text-emerald-600 transition-all duration-200">
+                                {/* <button className="inline-flex items-center gap-2 px-6 py-3 bg-white border-2 border-gray-200 text-gray-700 font-semibold rounded-lg hover:border-emerald-300 hover:text-emerald-600 transition-all duration-200">
                                     Explore Chart Types
                                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                                     </svg>
-                                </button>
+                                </button> */}
                             </div>
                         </div>
 
@@ -526,7 +506,7 @@ const Communication = () => {
                             <div className="bg-gray-50 rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
                                 <div className="w-12 h-12 bg-blue-700 rounded-xl flex items-center justify-center mb-4">
                                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 014.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                                     </svg>
                                 </div>
                                 <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -556,10 +536,8 @@ const Communication = () => {
                 </div>
             </div>
 
-                 {/* Captions & Subtitles Section */}
-                <div className="mb-20 max-w-7xl mx-auto rounded-3xl pt-12">
-                    <div className="grid md:grid-cols-2 gap-12 items-center">
-                        {/* Left Side - Content */}
+                {/* <div className="mb-0 max-w-7xl md:mx-auto rounded-3xl bg-white shadow-xl mx-[15px] overflow-hidden">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-14 items-center  px-6 sm:px-10 lg:px-16 py-12 sm:py-16">
                         <div>
                             <div className="inline-flex items-center gap-2 bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">
                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -568,11 +546,11 @@ const Communication = () => {
                                 Caption Technology
                             </div>
                             
-                            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
                                 Auto-Generated Captions & Subtitles
                             </h2>
                             
-                            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                            <p className="text-base sm:text-lg text-gray-600 mb-8 leading-relaxed">
                                 Create perfectly synchronized captions and subtitles automatically with our AI-powered 
                                 transcription technology. Support for 140+ languages with industry-leading accuracy.
                             </p>
@@ -618,7 +596,7 @@ const Communication = () => {
 
                             <div className="flex flex-wrap gap-3">
                                 <Link 
-                                    to="/request-invite" 
+                                    to="/book-demo" 
                                     className="inline-flex items-center gap-2 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 shadow-lg"
                                     style={{ backgroundImage: 'linear-gradient(90deg, rgb(20, 112, 210) 0%, rgb(142, 35, 192) 100%)' }}
                                 >
@@ -630,11 +608,8 @@ const Communication = () => {
                             </div>
                         </div>
 
-                        {/* Right Side - Visual Demo */}
-                        <div className="relative">
-                            {/* Video Player Mockup */}
-                            <div className="bg-gray-900 rounded-2xl overflow-hidden shadow-2xl">
-                                {/* Video Content */}
+                        <div className="relative flex justify-center">
+                            <div className="bg-gray-900 rounded-2xl overflow-hidden shadow-2xl w-full max-w-md">
                                 <div className="relative aspect-video bg-gradient-to-br from-gray-800 to-gray-900">
                                     <video 
                                         src={communicationVideo} 
@@ -645,7 +620,6 @@ const Communication = () => {
                                         className="w-full h-full object-cover"
                                     />
                                     
-                                    {/* Caption Overlay */}
                                     <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-11/12">
                                         <div className="bg-black/80 backdrop-blur-sm rounded-lg px-6 py-3 border border-white/20">
                                             <p className="text-white text-center font-medium text-lg leading-relaxed">
@@ -655,7 +629,6 @@ const Communication = () => {
                                     </div>
                                 </div>
 
-                                {/* Caption Controls */}
                                 <div className="bg-gray-800 px-6 py-4">
                                     <div className="flex items-center justify-between mb-3">
                                         <span className="text-gray-300 text-sm font-medium">Captions</span>
@@ -683,8 +656,7 @@ const Communication = () => {
                                 </div>
                             </div>
 
-                            {/* Floating Feature Cards */}
-                            <div className="absolute -right-4 top-8 bg-white rounded-xl shadow-xl p-4 max-w-[200px] border border-gray-100">
+                            <div className="hidden md:flex absolute -right-6 top-6 bg-white rounded-xl shadow-xl p-4 max-w-[200px] border border-gray-100">
                                 <div className="flex items-center gap-3 mb-2">
                                     <div className="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center">
                                         <svg className="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -698,7 +670,7 @@ const Communication = () => {
                                 </div>
                             </div>
 
-                            <div className="absolute -left-4 bottom-20 bg-white rounded-xl shadow-xl p-4 max-w-[200px] border border-gray-100">
+                            <div className="hidden md:flex absolute -left-6 bottom-16 bg-white rounded-xl shadow-xl p-4 max-w-[200px] border border-gray-100">
                                 <div className="flex items-center gap-3 mb-2">
                                     <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
                                         <svg className="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -713,67 +685,57 @@ const Communication = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
             {/* Features Section */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
                 
-                <div className=" flex items-center justify-center px-4 sm:px-6 lg:px-8 pb-20 pt-12">
-                    <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    {/* Left Content */}
-                    <div className="flex flex-col justify-center">
-                        <h1 className="text-3xl md:text-4xl font-bold text-black mb-12 leading-tight">
-                        Generate bespoke b-roll footage
+                {/* <div className="mb-20 grid md:grid-cols-2 gap-12 items-center">
+                    <div className="md:pr-6">
+                        <h1 className="text-3xl md:text-4xl font-bold text-black mb-6 leading-tight">
+                            Generate bespoke b-roll footage
                         </h1>
 
-                        <div className="space-y-8">
-                        {/* Feature 1 */}
-                        <div className="flex gap-4 items-start">
-                            <div className="flex-shrink-0 mt-1">
-                            <div className="flex items-center justify-center h-6 w-6 rounded-full bg-blue-600">
-                                <FiCheck className="h-4 w-4 text-white" />
+                        <div className="space-y-6">
+                            <div className="flex gap-3 items-start">
+                                <div className="flex-shrink-0 mt-1">
+                                    <div className="flex items-center justify-center h-6 w-6 rounded-full bg-blue-600">
+                                        <FiCheck className="h-4 w-4 text-white" />
+                                    </div>
+                                </div>
+                                <p className="text-gray-700">
+                                    Integrate AI-generated assets seamlessly into your  videos
+                                </p>
                             </div>
-                            </div>
-                            <p className="text-lg text-gray-700">
-                            Integrate AI-generated assets seamlessly into your Synthesia videos
-                            </p>
-                        </div>
 
-                        {/* Feature 2 */}
-                        <div className="flex gap-4 items-start">
-                            <div className="flex-shrink-0 mt-1">
-                            <div className="flex items-center justify-center h-6 w-6 rounded-full bg-blue-600">
-                                <FiCheck className="h-4 w-4 text-white" />
+                            <div className="flex gap-3 items-start">
+                                <div className="flex-shrink-0 mt-1">
+                                    <div className="flex items-center justify-center h-6 w-6 rounded-full bg-blue-600">
+                                        <FiCheck className="h-4 w-4 text-white" />
+                                    </div>
+                                </div>
+                                <p className="text-gray-700">
+                                    Create custom, cinematic-quality b-roll and scene backgrounds simply by typing a prompt
+                                </p>
                             </div>
-                            </div>
-                            <p className="text-lg text-gray-700">
-                            Create custom, cinematic-quality b-roll and scene backgrounds simply by typing a prompt
-                            </p>
-                        </div>
 
-                        {/* Feature 3 */}
-                        <div className="flex gap-4 items-start">
-                            <div className="flex-shrink-0 mt-1">
-                            <div className="flex items-center justify-center h-6 w-6 rounded-full bg-blue-600">
-                                <FiCheck className="h-4 w-4 text-white" />
+                            <div className="flex gap-3 items-start">
+                                <div className="flex-shrink-0 mt-1">
+                                    <div className="flex items-center justify-center h-6 w-6 rounded-full bg-blue-600">
+                                        <FiCheck className="h-4 w-4 text-white" />
+                                    </div>
+                                </div>
+                                <p className="text-gray-700">
+                                    Add industry-specific materials and branded content to enhance your content
+                                </p>
                             </div>
-                            </div>
-                            <p className="text-lg text-gray-700">
-                            Add industry-specific materials and branded content to enhance your content
-                            </p>
-                        </div>
                         </div>
                     </div>
 
-                    {/* Right Video Display */}
-                    <div className="relative">
-                        {/* Main Video Display */}
-                        <div className="absolute inset-0 flex items-center justify-center">
-                            {/* Background blur effect */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-transparent" />
-
-                            {/* Main Video Frame */}
-                            <div className="relative z-10 w-full h-[350px] rounded-br-[60px] overflow-hidden border-4 border-white shadow-lg">
+                    <div className="relative w-full">
+                        <div className="hidden md:block absolute inset-0 -z-10 bg-gradient-to-br from-blue-900/20 to-transparent rounded-br-[60px]" />
+                        <div className="w-full rounded-br-[32px] sm:rounded-br-[40px] lg:rounded-br-[60px] overflow-hidden border-4 border-white shadow-lg">
+                            <div className="aspect-[4/3] sm:aspect-video">
                                 <video 
                                     src={communicationVideo} 
                                     autoPlay 
@@ -785,13 +747,13 @@ const Communication = () => {
                             </div>
                         </div>
                     </div>
-                    </div>
-            </div>
+                </div> */}
 
 
                 {/* Accurate Charting */}
                 <div className="mb-20 grid md:grid-cols-2 gap-12 items-center">
-                <div className="relative z-10 w-full h-[350px] rounded-bl-[60px] overflow-hidden border-4 border-white shadow-lg">
+                <div className="order-2 md:order-1 relative z-10 w-full rounded-bl-[32px] sm:rounded-bl-[40px] lg:rounded-bl-[60px] overflow-hidden border-4 border-white shadow-lg mb-0">
+                                <div className="aspect-[4/3] sm:aspect-video">
                                 <video 
                                     src={communicationVideo} 
                                     autoPlay 
@@ -800,6 +762,7 @@ const Communication = () => {
                                     playsInline
                                     className="w-full h-full object-cover"
                                 />
+                                </div>
                             </div>
                     {/* <div className="order-2 md:order-1 bg-gradient-to-br from-green-100 to-teal-100 rounded-2xl p-8 h-80 flex items-center justify-center">
                         <div className="text-center">
@@ -875,7 +838,8 @@ const Communication = () => {
                         </ul>
                     </div>
                     {/* Main Video Frame */}
-                    <div className="relative z-10 w-full h-[350px] rounded-br-[60px] overflow-hidden border-4 border-white shadow-lg">
+                    <div className="relative z-10 w-full rounded-br-[32px] sm:rounded-br-[40px] lg:rounded-br-[60px] overflow-hidden border-4 border-white shadow-lg mt-8 md:mt-0">
+                                <div className="aspect-[4/3] sm:aspect-video">
                                 <video 
                                     src={communicationVideo} 
                                     autoPlay 
@@ -884,8 +848,9 @@ const Communication = () => {
                                     playsInline
                                     className="w-full h-full object-cover"
                                 />
+                                </div>
                             </div>
-                        </div>
+                </div>
 
 
 
@@ -898,10 +863,10 @@ const Communication = () => {
                         Request a platform invite and start creating engaging video content today
                     </p>
                     <Link
-                        to="/request-invite"
+                        to="/book-demo"
                         className="inline-flex items-center gap-2 bg-white text-indigo-600 font-semibold px-8 py-4 rounded-lg hover:bg-gray-100 transition-all duration-200 shadow-lg"
                     >
-                        Request Platform Invite
+                        Request a Demo
                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
